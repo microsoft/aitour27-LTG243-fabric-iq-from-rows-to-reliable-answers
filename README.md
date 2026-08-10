@@ -33,7 +33,7 @@ Fill in the sections below yourself, then:
 
 # [Microsoft AI Tour 2027](https://aitour.microsoft.com)
 
-## 🔥 BRKXXX: SESSION TITLE
+## 🔥 LTG243: Fabric IQ: From rows to reliable answers
 
 ### Session description
 
