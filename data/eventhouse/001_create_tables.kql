@@ -1,0 +1,7 @@
+.create-merge table SalesObservations (timestamp:datetime, regionId:string, productId:string, channel:string, units:int, revenueUsd:real, orderCount:int)
+.create-merge table ForecastActualDaily (timestamp:datetime, regionId:string, productId:string, forecastUnits:int, actualUnits:int, variancePct:real, forecastVersion:string, signalAffected:bool)
+.create-merge table CampaignSignals (timestamp:datetime, campaignId:string, regionId:string, productId:string, impressions:long, engagements:long, spendUsd:real, attributedUnits:int, revenueUsd:real, contributionMarginPct:real)
+.create-merge table LineSignals (timestamp:datetime, lineId:string, plantId:string, productionOrderId:string, ratedRateUnitsPerMin:real, actualRateUnitsPerMin:real, rateFactor:real, utilisation:real, producing:bool, state:string, cumulativeStressIndex:real)
+.create-merge table ClimateSignalObservations (timestamp:datetime, signalId:string, regionId:string, seaSurfaceAnomalyC:real, uvIndex:real, anomalyVsBaselineC:real, provenance:string)
+.create-merge table InventorySnapshots (timestamp:datetime, regionId:string, productId:string, availableUnits:int, reservedUnits:int, coverageDays:real)
+.create-merge table PlanStateTransitions (timestamp:datetime, entityType:string, entityId:string, fromState:string, toState:string, actorRole:string, caseId:string)

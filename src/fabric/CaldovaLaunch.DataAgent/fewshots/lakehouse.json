@@ -1,0 +1,46 @@
+[
+  {
+    "question": "What is driving the increase in Hydration Sunscreen sales, and is it likely to continue?",
+    "query": "SELECT regionId, region, signalAffected, forecastVariancePct, modelledWeatherUpliftPct,\n       meanUvIndexAnomaly, meanTemperatureAnomalyC, signalName, providerName,\n       persistenceProbability, persistenceThrough, observedThrough,\n       forecastHorizonEndsOn, campaignEndsOn, horizonCoversCampaign, explanation\nFROM demand_signal_explanation\nORDER BY forecastVariancePct DESC;"
+  },
+  {
+    "question": "What is the evidence chain for the Hydration Sunscreen uplift case?",
+    "query": "SELECT hop, relation, fromEntityId, fromLabel, toEntityIds, toLabels, supportingValues\nFROM signal_evidence_trace\nWHERE caseId = 'CASE-2026-HS-001'\n  AND scopeKey = 'LP-2026-SUN/PROD-HS-100'\nORDER BY hop;"
+  },
+  {
+    "question": "Is SIG-ENSO-2026-07 likely to continue through the campaign?",
+    "query": "SELECT a.signalId, a.name, a.persistenceProbability, a.persistenceThrough, a.sourceLabel AS advisorySourceLabel,\n       b.briefingId, b.issueDate, b.forecastTargetStartDate, b.horizonEndDate, b.sourceLabel AS forecastSourceLabel, b.narrative\nFROM climate_advisories AS a\nCROSS JOIN forecast_briefings AS b\nWHERE a.signalId = 'SIG-ENSO-2026-07'\n  AND b.issueDate = '2026-08-03';"
+  },
+  {
+    "question": "Which regions are affected versus control regions for Hydration Sunscreen variance?",
+    "query": "SELECT region_id, region, product_id, product, forecast_units, actual_units, variance_pct, signal_affected_flag\nFROM dash_forecast_variance_by_region\nWHERE product_id = 'PROD-HS-100'\nORDER BY variance_pct DESC;"
+  },
+  {
+    "question": "Does the weather-uplift model reconcile to observed sales variance?",
+    "query": "SELECT region_id, region, model_id, modelled_weather_uplift_pct, actual_sales_variance_pct, difference_pct, provenance, source_label\nFROM dash_weather_demand_reconciliation\nORDER BY modelled_weather_uplift_pct DESC;"
+  },
+  {
+    "question": "Where does the 57,920-unit shortfall come from?",
+    "query": "WITH baseline AS (\n    SELECT\n        SUM(TRY_CAST(plannedUnits AS BIGINT)) AS capacityWithoutMaintenanceUnits,\n        SUM(CASE WHEN maintenanceWindowId IS NOT NULL AND maintenanceWindowId <> '' THEN TRY_CAST(plannedUnits AS BIGINT) ELSE 0 END) AS maintenanceCapacityLostUnits,\n        MAX(TRY_CAST(existingCommittedUnits AS BIGINT)) AS existingCommitmentsUnits,\n        MAX(TRY_CAST(campaignCommitmentUnits AS BIGINT)) AS requiredIncrementalUnits\n    FROM capacity_plan\n    WHERE planVariant = 'baseline'\n      AND lineId = 'PKG-02'\n)\nSELECT capacityWithoutMaintenanceUnits,\n       maintenanceCapacityLostUnits,\n       capacityWithoutMaintenanceUnits - maintenanceCapacityLostUnits AS capacityWithMaintenanceUnits,\n       capacityWithoutMaintenanceUnits - existingCommitmentsUnits AS headroomWithoutMaintenanceUnits,\n       capacityWithoutMaintenanceUnits - maintenanceCapacityLostUnits - existingCommitmentsUnits AS capacityHeadroomUnits,\n       requiredIncrementalUnits,\n       requiredIncrementalUnits - (capacityWithoutMaintenanceUnits - maintenanceCapacityLostUnits - existingCommitmentsUnits) AS capacityShortfallUnits\nFROM baseline;"
+  },
+  {
+    "question": "Look up CASE-2026-HS-001 and show whether approvals, receipts or outcomes exist.",
+    "query": "SELECT c.caseId, c.title, c.status, c.originSignalId, c.commitmentId,\n       ga.actionId, ga.actionType, ga.apiName, ga.approvedByRole, ga.policyId, ga.policyVersion, ga.receiptId,\n       r.outcome AS receiptOutcome,\n       o.outcomeId, o.metricName, o.metricValue, o.plannedValue, o.resultCode\nFROM decision_cases AS c\nLEFT JOIN decision_case_actions AS dca ON dca.caseId = c.caseId\nLEFT JOIN governed_actions AS ga ON ga.actionId = dca.actionId\nLEFT JOIN action_receipts AS r ON r.receiptId = dca.receiptId\nLEFT JOIN decision_outcomes AS o ON o.caseId = c.caseId\nWHERE c.caseId = 'CASE-2026-HS-001'\nORDER BY ga.receiptId, o.outcomeId;"
+  },
+  {
+    "question": "Has any campaign scenario been approved or committed yet?",
+    "query": "SELECT scenarioId, scenarioName, recommended, approved, commitmentExists,\n       governedActionsExecuted, receiptsIssued, decisionState,\n       incrementalBudgetUsd, incrementalUnits, incrementalRevenueUsd,\n       blockedByPolicyId, asOfDate\nFROM campaign_decision_status\nORDER BY recommended DESC, incrementalUnits DESC;"
+  },
+  {
+    "question": "Which campaign scenario is recommended, and what is its approval status?",
+    "query": "SELECT scenarioId, scenarioName, recommended, approved, commitmentExists,\n       governedActionsExecuted, receiptsIssued, decisionState,\n       incrementalBudgetUsd, incrementalUnits, incrementalRevenueUsd,\n       blockedByPolicyId, asOfDate\nFROM campaign_decision_status\nORDER BY recommended DESC, incrementalUnits DESC;"
+  },
+  {
+    "question": "What is the capacity shortfall and what maintenance deferral does the recommended option need?",
+    "query": "SELECT optionId, optionName, recommended, meetsCommitment, policyCompliant, rejectionReason,\n       campaignShortfallUnits, requiredIncrementalUnits, headroomWithMaintenanceUnits,\n       maintenanceWindowId, maintenanceOriginalStart, maintenanceDeferredStart, deferralDays,\n       projectedStressPctOfThreshold, stressCeilingPct, withinStressCeiling, conflictCause\nFROM capacity_conflict_summary\nORDER BY recommended DESC, optionId;"
+  },
+  {
+    "question": "What is the production capacity conflict on PKG-02 and how is it resolved?",
+    "query": "SELECT optionId, optionName, recommended, meetsCommitment, policyCompliant, rejectionReason,\n       campaignShortfallUnits, requiredIncrementalUnits, headroomWithMaintenanceUnits,\n       maintenanceWindowId, maintenanceOriginalStart, maintenanceDeferredStart, deferralDays,\n       projectedStressPctOfThreshold, stressCeilingPct, withinStressCeiling, conflictCause\nFROM capacity_conflict_summary\nORDER BY recommended DESC, optionId;"
+  }
+]

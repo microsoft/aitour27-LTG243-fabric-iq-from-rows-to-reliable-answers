@@ -427,3 +427,13 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# LTG243 generated deployment data and private tenant state.
+build/
+tmp/
+data/.staging/
+.env
+.env.*
+*.log
+src/fabric/CaldovaLaunch.SemanticModel/definition/
+src/fabric/CaldovaLaunch.SemanticModel/definition.pbism

@@ -1,0 +1,104 @@
+{
+  "name": "CaldovaAnalyst",
+  "description": "Grounded commercial analyst for Caldova launch planning.",
+  "instructionsFile": "instructions.md",
+  "fewShotDirectory": "fewshots",
+  "dataSources": [
+    {
+      "key": "semanticModel",
+      "itemName": "CaldovaLaunchModel",
+      "artifactType": "SemanticModel",
+      "attachAs": "DataSource",
+      "consumedVia": "data-agent datasource",
+      "instructions": "Use this source first for governed business metrics and named measures. Prefer measures such as Opportunity Incremental Units, Opportunity Incremental Revenue USD, Signal Persistence Probability, Hero Forecast Variance %, Modelled Weather Uplift %, Capacity Shortfall Units and Outcome Delivered Incremental Units instead of recomputing metrics from raw rows.",
+      "selectedElements": [
+        "products",
+        "regions",
+        "capacity_plan",
+        "maintenance_policy_evaluations",
+        "production_options",
+        "decision_outcomes"
+      ],
+      "fewShotFile": "fewshots/semantic-model.json",
+      "fewShotsUploadable": false,
+      "fewShotPurpose": "Reference DAX only. SemanticModel data sources do not support uploaded few-shots, so deploy scripts must not call data-agent upload-fewshots for this file."
+    },
+    {
+      "key": "ontology",
+      "itemName": "CaldovaBusinessMeaning",
+      "artifactType": "Ontology",
+      "attachAs": "PeerSurface",
+      "consumedVia": "fabio ontology search and fabio ontology mcp-url",
+      "instructions": "Do not attach this item as a data-agent data source. Ontologies are consumed through the ontology surface. Use ontology search/MCP when the user asks why, what a metric touches, or how a decision relates to products, regions, campaigns, forecasts, policies, actions and outcomes. Traverse approved entity types and relationships; do not invent joins or approval paths.",
+      "selectedElements": [
+        "ExternalSignal",
+        "Region",
+        "Product",
+        "Campaign",
+        "DemandForecast",
+        "ForecastAssumption",
+        "WeatherForecast",
+        "WeatherDemandModel",
+        "CampaignScenario",
+        "CampaignCommitment",
+        "ApprovedPolicy",
+        "ProductionLine",
+        "MaintenanceWindow",
+        "ProductionOption",
+        "DecisionCase",
+        "Correction",
+        "Action",
+        "Outcome",
+        "Persona"
+      ],
+      "fewShotFile": "fewshots/ontology.json",
+      "fewShotsUploadable": false,
+      "fewShotPurpose": "Natural-language prompt examples for fabio ontology search, not data-agent uploaded few-shots."
+    },
+    {
+      "key": "signalsKql",
+      "itemName": "CaldovaSignals",
+      "artifactType": "KQLDatabase",
+      "attachAs": "DataSource",
+      "consumedVia": "data-agent datasource",
+      "instructions": "Use this source for raw time-series evidence: daily sales versus forecast, campaign signals, weather observations and forecasts, climate-signal observations, and production-line telemetry. Keep outputs aggregated to the question grain and preserve provenance and provider attribution when weather rows are returned.",
+      "selectedElements": [
+        "ForecastActualDaily",
+        "CampaignSignals",
+        "ClimateSignalObservations",
+        "WeatherForecastDaily",
+        "WeatherObservationsDaily",
+        "LineSignals"
+      ],
+      "fewShotFile": "fewshots/kql.json",
+      "fewShotsUploadable": true
+    },
+    {
+      "key": "analyticsLakehouse",
+      "itemName": "CaldovaAnalytics",
+      "artifactType": "Lakehouse",
+      "attachAs": "DataSource",
+      "consumedVia": "data-agent datasource",
+      "instructions": "Use this source for tabular narrative evidence, decision records and Lakehouse analytical Delta tables. The climate_advisories, forecast_briefings, forecast_briefing_regions, signal_evidence_trace and weather_provider tables are the authoritative grounding tables for the external signal, Meridian Climate Services attribution and forecast horizon.",
+      "selectedElements": [
+        "demand_signal_explanation",
+        "campaign_decision_status",
+        "capacity_conflict_summary",
+        "climate_advisories",
+        "forecast_briefings",
+        "signal_evidence_trace",
+        "weather_provider",
+        "capacity_plan",
+        "production_options",
+        "maintenance_windows",
+        "maintenance_policy_evaluations",
+        "approved_policies",
+        "decision_cases",
+        "decision_corrections",
+        "decision_outcomes"
+      ],
+      "fewShotFile": "fewshots/lakehouse.json",
+      "fewShotsUploadable": true
+    }
+  ]
+}

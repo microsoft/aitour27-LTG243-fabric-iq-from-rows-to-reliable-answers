@@ -1,0 +1,492 @@
+{
+  "dataset": "Caldova Hydration Sunscreen launch dataset",
+  "schemaVersion": "3.0.0",
+  "scenarioGeneratedFor": "2026-08-03",
+  "generatorSeed": 20270607,
+  "synthetic": true,
+  "fictional": true,
+  "containsPersonLevelBusinessData": false,
+  "approverRolesUsed": [
+    "ROLE-COMMERCIAL-APPROVER",
+    "ROLE-OPERATIONS-APPROVER",
+    "ROLE-MAINTENANCE-APPROVER",
+    "ROLE-QUALITY-APPROVER",
+    "ROLE-DEMAND-PLANNER",
+    "ROLE-KNOWLEDGE-STEWARD"
+  ],
+  "deploymentBoundary": "Deploys the LTG243 dataset and demo items to Microsoft Fabric using the fabio CLI. Fabric SQL Database is created as a Fabric item; no separate Azure SQL server or application host is required.",
+  "fileCount": 94,
+  "totalBytes": 8416152,
+  "files": [
+    {
+      "path": "data/evaluation/expected-results.json",
+      "bytes": 9035,
+      "sha256": "c2e459e449d08d0bee07b6cf8d8d86b8d6b476ba0e60f94f9044197a47d192cf"
+    },
+    {
+      "path": "data/evaluation/questions.json",
+      "bytes": 3638,
+      "sha256": "823ccc51a193a2e511ec73fa9746cbb4518436609ff70ce21b1b0abf9fe24679"
+    },
+    {
+      "path": "data/eventhouse/001_create_tables.kql",
+      "bytes": 1337,
+      "sha256": "695ba8be511cd539e08b8c8f25e58aeffc08c65e11f2fa2dcd48268f937072ba"
+    },
+    {
+      "path": "data/eventhouse/002_ingestion_mappings.kql",
+      "bytes": 4725,
+      "sha256": "7c0b9d89442e3d115c8039c8c0fe743f25d6a32a3977e0d10c86e2e73f1bea43"
+    },
+    {
+      "path": "data/eventhouse/003_stage_queries.kql",
+      "bytes": 5080,
+      "sha256": "56fd7d9c245838a39ea46203c2ee3f8521b34a1095c63eb98a231560d66bb4ad"
+    },
+    {
+      "path": "data/eventhouse/004_weather_tables.kql",
+      "bytes": 1550,
+      "sha256": "befe8eafd8d7d6b27575d1ea8a7a47df760db83ac84b8cf606b372d6422afa15"
+    },
+    {
+      "path": "data/eventhouse/005_weather_mappings.kql",
+      "bytes": 5468,
+      "sha256": "1a84ebf1d31341c654a5f3422be1be961d389ddce9c9a984218b52ed807597b9"
+    },
+    {
+      "path": "data/eventhouse/006_weather_stage_queries.kql",
+      "bytes": 4468,
+      "sha256": "cff14a07a0abd03a19b2b9a16aaf0e780e7cdc24a3853e714c36120d3afa7234"
+    },
+    {
+      "path": "data/eventhouse/CampaignSignals.csv.gz",
+      "bytes": 183844,
+      "sha256": "e4d53daca09ea71eb01dc0778de1d5076aed448e6914b463015e48dd545660f0"
+    },
+    {
+      "path": "data/eventhouse/ClimateSignalObservations.csv",
+      "bytes": 41436,
+      "sha256": "d7dd87ad9ab8531694b349ebf0264ba7754866c05c7d96013967799e546a90fe"
+    },
+    {
+      "path": "data/eventhouse/ForecastActualDaily.csv.gz",
+      "bytes": 187269,
+      "sha256": "daad69238ee1764d06a75b7c7e170ac9028c91e3a984a3f9aa9cb3b7cf7fd900"
+    },
+    {
+      "path": "data/eventhouse/InventorySnapshots.csv",
+      "bytes": 335157,
+      "sha256": "4374048385bd7c6ccc5847b960ab4ec43a740017f6d7a2b07c8ad0f4dbf61373"
+    },
+    {
+      "path": "data/eventhouse/LineSignals.csv.gz",
+      "bytes": 1255078,
+      "sha256": "477a795e897a0958204d70ae4bbf1fc97f2b6e426aefdd3dd219c4d10347d758"
+    },
+    {
+      "path": "data/eventhouse/PlanStateTransitions.csv",
+      "bytes": 280,
+      "sha256": "d132369460d75e01d576003c4511d7786b208cbf769c9609d45e76e7185fa19d"
+    },
+    {
+      "path": "data/eventhouse/SalesObservations.csv.gz",
+      "bytes": 830913,
+      "sha256": "0f238d2dd8dc838fa904da62204fba3dbd8de6d4043cf29f883a164d8c91f193"
+    },
+    {
+      "path": "data/eventhouse/WeatherEvents.csv",
+      "bytes": 24074,
+      "sha256": "38248f1173ba73b21859b444451bfe9d5ac184939796c3e649e481d0553691ec"
+    },
+    {
+      "path": "data/eventhouse/WeatherForecastDaily.csv.gz",
+      "bytes": 296084,
+      "sha256": "cdb0cbb47f7bb9af00a988eb673a7b5c2de1feafc2b655d6743cf842c27c3a59"
+    },
+    {
+      "path": "data/eventhouse/WeatherObservationsDaily.csv",
+      "bytes": 177048,
+      "sha256": "e514706e6f47d6b509e205d6644826559ac09ad03767d1c7a48f90522d0bd1f6"
+    },
+    {
+      "path": "data/eventhouse/WeatherObservationsHourly.csv",
+      "bytes": 606999,
+      "sha256": "d6e380b3420312dc0c3a55a0b6267139a02d88e2bcf4a47420591fd0568c341a"
+    },
+    {
+      "path": "data/fabric-sql/001_schema.sql",
+      "bytes": 18419,
+      "sha256": "9a6e1d9ad88a402abff6e3c519b857eecd79752ce03872ba2236a5ad304f619b"
+    },
+    {
+      "path": "data/fabric-sql/002_stage_views.sql",
+      "bytes": 9568,
+      "sha256": "aaea960d4db3e760aa849661ef55d36cc2a4e0ed975992623f2fc4baa3e47c76"
+    },
+    {
+      "path": "data/fabric-sql/003_weather_schema.sql",
+      "bytes": 3741,
+      "sha256": "4e813ea89413ae79a080357ae8de24f783ae2c816381f5ea3049674230ae2a4f"
+    },
+    {
+      "path": "data/fabric-sql/004_weather_views.sql",
+      "bytes": 5119,
+      "sha256": "79443e883af83b33efc1ae0fd4d53e22a7120b60c057e38b456fb68f0ca0394e"
+    },
+    {
+      "path": "data/fabric-sql/005_decision_memory_schema.sql",
+      "bytes": 4751,
+      "sha256": "aa8fd438086b24f5125c5a500281cfb4e709e5469c76345916f89255fdf8c34e"
+    },
+    {
+      "path": "data/fabric-sql/006_decision_memory_views.sql",
+      "bytes": 7526,
+      "sha256": "f01af606c983fccf5c4d732edeb0b013b69e8948b7bb7a2b1e62596a4459d03c"
+    },
+    {
+      "path": "data/fabric-sql/007_bridge_schema.sql",
+      "bytes": 966,
+      "sha256": "267dd841c0412bc6bca3f922fed2f11f018c7ebbda3a4b5f71686741f1b39669"
+    },
+    {
+      "path": "data/fabric-sql/action_receipts.csv",
+      "bytes": 91,
+      "sha256": "b066a5f1522e38fa1ef84175393aa6e40fe34cacc507ab351916baa4cb0b6f06"
+    },
+    {
+      "path": "data/fabric-sql/approved_policies.csv",
+      "bytes": 1178,
+      "sha256": "aff4ee7230f0758fbd5ce41fbefb15cba7f8c5bdc89fde58c993a6e8252d0b8a"
+    },
+    {
+      "path": "data/fabric-sql/campaign_commitments.csv",
+      "bytes": 143,
+      "sha256": "bc31c4cbb458e3e96f4ecefad74a993b77302ed6757777b82bd3854433241829"
+    },
+    {
+      "path": "data/fabric-sql/campaign_forecast_links.csv",
+      "bytes": 615,
+      "sha256": "53ec81938f52de328d66140b232a9478789c16226e413fef98e5c6805603f0d0"
+    },
+    {
+      "path": "data/fabric-sql/campaign_scenarios.csv",
+      "bytes": 1180,
+      "sha256": "c5e8a89df022415319739d5bf3a341c6d391b2100843906e05d0e435c6ab97bd"
+    },
+    {
+      "path": "data/fabric-sql/campaigns.csv",
+      "bytes": 721,
+      "sha256": "474d123e2816416d3b9498bfdcf24a3df1652882975789e91b9d4d4efd84b7b7"
+    },
+    {
+      "path": "data/fabric-sql/capacity_plan.csv",
+      "bytes": 5923,
+      "sha256": "0adaeebb47de8fb6c875bd64afc89daae5deecb0eb5a8e4e0be0f8d7e5c5402d"
+    },
+    {
+      "path": "data/fabric-sql/climate_normals.csv",
+      "bytes": 212893,
+      "sha256": "28ec226e8d61366f707b5ac3b586ca99ec8706db7d87f7deb9cee96f254cb3e4"
+    },
+    {
+      "path": "data/fabric-sql/decision_case_actions.csv",
+      "bytes": 26,
+      "sha256": "3be903f87c59f604e0ca9db2cbf7624b4786e06b36ff67e907f3ad78c3420ac7"
+    },
+    {
+      "path": "data/fabric-sql/decision_case_campaigns.csv",
+      "bytes": 312,
+      "sha256": "21cbe8b4f4826d3957f0c3309596e91ce4a74f7ec45ff020041f5ddea5683645"
+    },
+    {
+      "path": "data/fabric-sql/decision_case_policies.csv",
+      "bytes": 445,
+      "sha256": "b0227c8436afcf7754e121662aa4333e681ccf5bae6ec2817ae71cfc5cc67c46"
+    },
+    {
+      "path": "data/fabric-sql/decision_case_states.csv",
+      "bytes": 2579,
+      "sha256": "867403031657a7b3aa8a3d88090e7988758dc06a8e03314ff1bc7256284b05f2"
+    },
+    {
+      "path": "data/fabric-sql/decision_case_triggers.csv",
+      "bytes": 556,
+      "sha256": "ccc14d43f4931489b7f3d218434b427d80f1f56b4cf53d6ebd0bde849487ab1a"
+    },
+    {
+      "path": "data/fabric-sql/decision_cases.csv",
+      "bytes": 1812,
+      "sha256": "d99a1e7087a8d08979759abd2f36f08ee6d59e890a8cc5ab3c26ffa2d6984117"
+    },
+    {
+      "path": "data/fabric-sql/decision_corrections.csv",
+      "bytes": 98,
+      "sha256": "c557be5457db838a21b1fe4206036f9f519309ee4b24fbf089eb486e6348ac22"
+    },
+    {
+      "path": "data/fabric-sql/decision_outcomes.csv",
+      "bytes": 1087,
+      "sha256": "2c575e4f8961ff19b3cc427449794f7edee272bc6ab0735019986df5fdadabe7"
+    },
+    {
+      "path": "data/fabric-sql/external_signals.csv",
+      "bytes": 331,
+      "sha256": "79c04e998686eb454b873cb26f0e4ab3f1f3cd5932d393bfeab8d528fc76c181"
+    },
+    {
+      "path": "data/fabric-sql/forecast_assumptions.csv",
+      "bytes": 544,
+      "sha256": "16037e254718e9dec4a49117719316aadd792ae64e74233348117885b57215bd"
+    },
+    {
+      "path": "data/fabric-sql/forecast_lines.csv",
+      "bytes": 3495,
+      "sha256": "f97534e1fd2f5eb5e587304013160419abfb8dd6feee204ead3b50aff01b2aaa"
+    },
+    {
+      "path": "data/fabric-sql/forecast_versions.csv",
+      "bytes": 294,
+      "sha256": "3a8547cebe72a26a936ab011cd2c05b3bcb07f07f47b0e0be3e9844860e2d745"
+    },
+    {
+      "path": "data/fabric-sql/governed_actions.csv",
+      "bytes": 136,
+      "sha256": "803225f46b8824ba7283c60d3b3c9089085b6d79b3ecfca02847c641254c65b3"
+    },
+    {
+      "path": "data/fabric-sql/inventory_positions.csv",
+      "bytes": 280935,
+      "sha256": "b36a757cef37b91e6455576e8d3497be558969be2de43b23427618bc983d29bc"
+    },
+    {
+      "path": "data/fabric-sql/launch_plans.csv",
+      "bytes": 107,
+      "sha256": "45fedc0e3d3c8108562f30a3a714703e5505e10bfae908d5417b9258ba776c2a"
+    },
+    {
+      "path": "data/fabric-sql/maintenance_policy_evaluations.csv",
+      "bytes": 477,
+      "sha256": "5bd894c2f6edb64e4f37905a0f4536fffdd7ae4c11ed666c4d8cb6af715aefe6"
+    },
+    {
+      "path": "data/fabric-sql/maintenance_windows.csv",
+      "bytes": 900,
+      "sha256": "0f6b9d6f26b64f8b107ee3c50f57d012c69b3179dfc9d430109ee4eacc0ba653"
+    },
+    {
+      "path": "data/fabric-sql/material_reservations.csv",
+      "bytes": 778313,
+      "sha256": "67172098cccef15b77bd87c6420be3512a91c7ea7373268adabd9d440f69790d"
+    },
+    {
+      "path": "data/fabric-sql/metric_definitions.csv",
+      "bytes": 583,
+      "sha256": "a0ba595fc009247de9a3eb22e52f52ea85b32074c986c6c1908d0388d52afc8a"
+    },
+    {
+      "path": "data/fabric-sql/personas.csv",
+      "bytes": 251,
+      "sha256": "b416427ab16bb4f312a0cf2b839c5bfe08960707215bd5a530537fc32dcc8178"
+    },
+    {
+      "path": "data/fabric-sql/plants.csv",
+      "bytes": 112,
+      "sha256": "1b7fcbf5058a2e715b0c6be5418d003bfca9b797c9874ccf553729a29caa8500"
+    },
+    {
+      "path": "data/fabric-sql/production_lines.csv",
+      "bytes": 700,
+      "sha256": "10939b9f09ebef19e74a011983fcac39fc09488462421cd3dbb4636a47369a2e"
+    },
+    {
+      "path": "data/fabric-sql/production_options.csv",
+      "bytes": 2367,
+      "sha256": "6eed86bace448d3499b4ed775f6bb9a6a4792ffe8240f0b7b80675fd621e7e5f"
+    },
+    {
+      "path": "data/fabric-sql/production_orders.csv",
+      "bytes": 685403,
+      "sha256": "9bc253c477872b52fc84f6ca7c14618efc0bf18ec0d296c8ba25e3945ba8e540"
+    },
+    {
+      "path": "data/fabric-sql/products.csv",
+      "bytes": 419,
+      "sha256": "22965df1e4e5f81bfb0cf4e8aee7d866c101e5d2e275c51ffcdb7db0879f5f99"
+    },
+    {
+      "path": "data/fabric-sql/regions.csv",
+      "bytes": 420,
+      "sha256": "c4b3a6eb6ef7a830358aa5fe730d80c940fd6ce69bb2e13ee28b4a01c2009edc"
+    },
+    {
+      "path": "data/fabric-sql/sales_order_lines.csv.gz",
+      "bytes": 1700576,
+      "sha256": "b03f953a0eaf3dc99917517d786e72c691a9c5038741f23614473aef7e4f85bb"
+    },
+    {
+      "path": "data/fabric-sql/scenario_region_allocation.csv",
+      "bytes": 652,
+      "sha256": "fc9a10848cce23deb72b8f676e02770f13e82ddac90c56f150b2de3528063cf4"
+    },
+    {
+      "path": "data/fabric-sql/shift_schedules.csv",
+      "bytes": 30220,
+      "sha256": "8397c9b6f422359ac99684e7412501bf79ae0cc68534332b6eb20c5b9e9bb9bd"
+    },
+    {
+      "path": "data/fabric-sql/signal_region_impact.csv",
+      "bytes": 234,
+      "sha256": "6c60a1e76e7724545d5b6a32b228bf28bbb0061cd37cd05702396254caef51e8"
+    },
+    {
+      "path": "data/fabric-sql/weather_demand_response.csv",
+      "bytes": 75321,
+      "sha256": "2dbc72888210c62b89b30f34d0e561f76ccdc7e70ee79400a17064a3291b5e02"
+    },
+    {
+      "path": "data/fabric-sql/weather_elasticity_params.csv",
+      "bytes": 491,
+      "sha256": "21225983ade486edf5a82f897028e32851587565311b72630bbdfb0233c0be7b"
+    },
+    {
+      "path": "data/fabric-sql/weather_events.csv",
+      "bytes": 23801,
+      "sha256": "894fd2ba4ad1734ab6cf6e761609edc64a5030ed922feea109edee1a61e15a71"
+    },
+    {
+      "path": "data/fabric-sql/weather_stations.csv",
+      "bytes": 763,
+      "sha256": "8f79a218de7268eab1a6f0c29975299d5613f730888d99e3da6b233e11dfc291"
+    },
+    {
+      "path": "data/lakehouse/dashboard/campaign-performance.csv",
+      "bytes": 1000,
+      "sha256": "1f2cfcb4da4143f5beae0f3a5ecbceeff27da34bf08874e665ba4e0f12c8531d"
+    },
+    {
+      "path": "data/lakehouse/dashboard/forecast-assumptions.csv",
+      "bytes": 580,
+      "sha256": "82577eaf63fdbcda33a181b9f6a96915a2231ba8be9f9445c18fc8903018af7a"
+    },
+    {
+      "path": "data/lakehouse/dashboard/forecast-variance-by-region.csv",
+      "bytes": 577,
+      "sha256": "a25fd72fd550e69160ea0cd391cb37077046d6cc438923be5c22cfee2c5322a8"
+    },
+    {
+      "path": "data/lakehouse/dashboard/hero-demand-trend.csv",
+      "bytes": 77204,
+      "sha256": "5a05b6ec578a2a61daf50698a618a5037b96194d1e976a7982f4b375f2dd70e4"
+    },
+    {
+      "path": "data/lakehouse/dashboard/weather-anomaly-by-region.csv",
+      "bytes": 1177,
+      "sha256": "855eff90c860d419daf061500f62c5be4e6d09250efa52201333fedc688a0001"
+    },
+    {
+      "path": "data/lakehouse/dashboard/weather-demand-reconciliation.csv",
+      "bytes": 954,
+      "sha256": "ba035cc07805f85104c967aee0e6d68ede0e251ee13c0c03f4fb1503b746f5ac"
+    },
+    {
+      "path": "data/lakehouse/dashboard/weather-forecast-outlook.csv",
+      "bytes": 29289,
+      "sha256": "57c210d25e810c31b24040ca8b2e477620a626d547e4480e02d4d98e61b38113"
+    },
+    {
+      "path": "data/lakehouse/decision-cases/decision-case-timeline.jsonl",
+      "bytes": 1724,
+      "sha256": "9d2e6bc235608918665333c6ec896ad7c6d2ff508e89db48be6777d1d24f09d3"
+    },
+    {
+      "path": "data/lakehouse/decision-cases/decision-cases.jsonl",
+      "bytes": 22909,
+      "sha256": "8b796c6abc21281c1c4f167af1ec89de477a4b3b3b69b95950177214fd239aaf"
+    },
+    {
+      "path": "data/lakehouse/evidence/campaign_decision_status.csv",
+      "bytes": 1244,
+      "sha256": "736759f756613d417f1c24e4aef75f7ca4120ace23317e2fdac349777028894e"
+    },
+    {
+      "path": "data/lakehouse/evidence/capacity_conflict_summary.csv",
+      "bytes": 2505,
+      "sha256": "53f5dcad190f577e98b3ad0081676d05b7de93d85774c1e292c5c880219cac61"
+    },
+    {
+      "path": "data/lakehouse/evidence/climate_advisories.csv",
+      "bytes": 3118,
+      "sha256": "2782a6618557bdd242c5bc18f5b1d37fda2f31c23d0e9daf33f15d21c5293680"
+    },
+    {
+      "path": "data/lakehouse/evidence/demand_signal_explanation.csv",
+      "bytes": 4675,
+      "sha256": "7c2c92235205970fa254271161e74583ab21cca20fd628ae7c0fbf63346c280c"
+    },
+    {
+      "path": "data/lakehouse/evidence/forecast_briefing_regions.csv",
+      "bytes": 5077,
+      "sha256": "277eeab4c33e20e85cee52731f224a5cab37c517d586eab6d028615ef69f5530"
+    },
+    {
+      "path": "data/lakehouse/evidence/forecast_briefings.csv",
+      "bytes": 7410,
+      "sha256": "1f9b0f3f3bf284738291b2a5dae763ec8bb8b2c81d77fe36ccaca0d783049e96"
+    },
+    {
+      "path": "data/lakehouse/evidence/signal_evidence_trace.csv",
+      "bytes": 3378,
+      "sha256": "34128e90a20c92e45ce7360f3f294080dc9d91aa8ebbd3089947c683db3d7b22"
+    },
+    {
+      "path": "data/lakehouse/evidence/weather_provider.csv",
+      "bytes": 266,
+      "sha256": "ea6771f20a82b0e8574c71b7686e223baa08ef86ff00802b9a31fd6dd35a56bc"
+    },
+    {
+      "path": "data/lakehouse/external-signals/climate-advisories.jsonl",
+      "bytes": 4643,
+      "sha256": "1377bc33a4f83bc7dba5f902e0792b12c302fa08f012555366ce1d8c3635d11a"
+    },
+    {
+      "path": "data/lakehouse/external-signals/forecast-briefings.jsonl",
+      "bytes": 34454,
+      "sha256": "89f6db7ae17f61e864811471fef749fd3f4bf83a44c94338559c8bc732c5706e"
+    },
+    {
+      "path": "data/lakehouse/external-signals/signal-evidence-trace.jsonl",
+      "bytes": 3474,
+      "sha256": "24428a1be537d5004fddc23b4b20874ce0811c3c4a1e961c4049c1bdc705a19b"
+    },
+    {
+      "path": "data/lakehouse/external-signals/weather-events.jsonl",
+      "bytes": 117230,
+      "sha256": "4392a9c65d902c4f28e9c0bbd612faf0868b160fec9f51cf299cbd2fdc882506"
+    },
+    {
+      "path": "data/lakehouse/external-signals/weather-provider.json",
+      "bytes": 3126,
+      "sha256": "5db808dc055e0bdfbd7ef2d56ba4cb06cf76acde776544c15e734a8c846f4bdc"
+    },
+    {
+      "path": "data/lakehouse/retrieval/retrieval-corpus.jsonl",
+      "bytes": 199435,
+      "sha256": "31098a4ece84697a58547d4f43a832afdbdd7b1d8c91f23bc5ffd4476c7f183b"
+    },
+    {
+      "path": "data/lakehouse/retrieval/retrieval-probes.jsonl",
+      "bytes": 1637,
+      "sha256": "cfb5d78582fd200d1effc27b05b23285a1916428d0dc3518f9243d302e86c76f"
+    },
+    {
+      "path": "data/receipts/action-receipts.json",
+      "bytes": 6333,
+      "sha256": "1b7e2253705b5ace378428a5a488832d7b106090c68117f9b848d59f9970209c"
+    },
+    {
+      "path": "data/scenario.json",
+      "bytes": 41656,
+      "sha256": "513f81681971eea1a6aec6e6bec145ba12894c599f2beb6eb2fd8da8ba016c34"
+    }
+  ]
+}

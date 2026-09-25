@@ -1,0 +1,2 @@
+signalId,signalName,signalType,provenance,sourceLabel,observationPeriodStart,observationPeriodEnd,persistenceThrough,persistenceProbability,confidence,seaSurfaceAnomalyC
+SIG-ENSO-2026-07,Persistent El Nino advisory,climate,external,Meridian Climate Services seasonal climate advisory,2026-05-01,2026-07-31,2026-11-26,0.78,0.78,1.4

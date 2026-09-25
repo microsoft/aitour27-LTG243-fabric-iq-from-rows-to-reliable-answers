@@ -1,0 +1,4 @@
+personaId,displayName,title,roleId
+PERSONA-TIM,Tim de Boer,Marketing Manager,ROLE-COMMERCIAL-APPROVER
+PERSONA-KARIN,Karin Blair,Factory Supervisor,ROLE-OPERATIONS-APPROVER
+PERSONA-CARLOS,Carlos Slattery,Chief Technology Officer,ROLE-KNOWLEDGE-STEWARD

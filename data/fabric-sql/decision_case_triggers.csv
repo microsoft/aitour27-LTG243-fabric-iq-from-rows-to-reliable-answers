@@ -1,0 +1,11 @@
+caseId,triggerType,triggerId
+CASE-2026-HS-001,forecastVariance,FCV-2026-HS-001
+CASE-2026-HS-001,externalSignal,SIG-ENSO-2026-07
+CASE-PKG-2024-001,packaging_changeover,TRG-PKG-2024-001
+CASE-SUP-2024-002,supplier_delay,TRG-SUP-2024-002
+CASE-LBL-2025-003,label_revision,TRG-LBL-2025-003
+CASE-CAP-2025-004,capacity_rebalance,TRG-CAP-2025-004
+CASE-QAL-2025-005,quality_hold_release,TRG-QAL-2025-005
+CASE-MNT-2025-006,maintenance_schedule,TRG-MNT-2025-006
+CASE-BUD-2026-007,budget_guardrail,TRG-BUD-2026-007
+CASE-DSP-2026-008,distribution_shift,TRG-DSP-2026-008

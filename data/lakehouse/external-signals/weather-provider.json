@@ -1,0 +1,111 @@
+{
+  "providerId": "WX-MCS-001",
+  "name": "Meridian Climate Services",
+  "shortName": "MCS",
+  "provenance": "external",
+  "sourceLabel": "Meridian Climate Services regional observation and forecast feed",
+  "licence": "Commercial subscription, internal analytical use",
+  "refreshCadence": "daily",
+  "issueTimeUtc": "05:00:00",
+  "variablesPublished": [
+    "temperatureMinC",
+    "temperatureMaxC",
+    "temperatureMeanC",
+    "feelsLikeC",
+    "heatIndexC",
+    "uvIndex",
+    "uvAlertLevel",
+    "humidityPct",
+    "precipitationMm",
+    "rainDay",
+    "cloudCoverPct",
+    "sunshineHours",
+    "windSpeedKph",
+    "seaSurfaceTemperatureC",
+    "pressureHpa"
+  ],
+  "anomalyVariablesPublished": [
+    "temperatureMeanAnomalyC",
+    "uvIndexAnomaly",
+    "humidityAnomalyPct",
+    "precipitationAnomalyMm",
+    "sunshineAnomalyHours",
+    "seaSurfaceAnomalyC"
+  ],
+  "climatology": {
+    "baselinePeriodStart": "2015-01-01",
+    "baselinePeriodEnd": "2024-12-31",
+    "baselineLabel": "10-year climate normal",
+    "grain": "day-of-year"
+  },
+  "observationWindow": {
+    "dailyStart": "2026-02-27",
+    "dailyEnd": "2026-11-26",
+    "hourlyStart": "2026-06-22",
+    "hourlyEnd": "2026-09-01"
+  },
+  "forecastPublication": {
+    "horizonDays": 30,
+    "issueStart": "2026-05-28",
+    "issueEnd": "2026-10-27",
+    "quantiles": [
+      10,
+      50,
+      90
+    ],
+    "skillNote": "Forecast error shrinks as lead time shortens; p50 converges toward the eventually observed value and the p10-p90 band narrows.",
+    "revisionNote": "Anomaly forecasts are revised upward through May and early June, which is itself evidence that the signal is strengthening rather than fading.",
+    "decisionDayIssue": "2026-08-03",
+    "decisionDayHorizonEnd": "2026-09-02",
+    "leadDayRange": "1..30, so the horizon covers the 30 days following the issue date"
+  },
+  "stationCoverage": {
+    "stationCount": 6,
+    "regionsCovered": [
+      "REG-COASTAL",
+      "REG-SOUTH",
+      "REG-DELTA",
+      "REG-ISLAND",
+      "REG-NORTH",
+      "REG-CENTRAL"
+    ],
+    "stations": [
+      {
+        "regionId": "REG-COASTAL",
+        "regionName": "Coastal Region",
+        "stationId": "WXS-COASTAL-01",
+        "stationName": "Coastway Coastal Station"
+      },
+      {
+        "regionId": "REG-SOUTH",
+        "regionName": "Southern Region",
+        "stationId": "WXS-SOUTH-01",
+        "stationName": "Southmoor Station"
+      },
+      {
+        "regionId": "REG-DELTA",
+        "regionName": "Delta Region",
+        "stationId": "WXS-DELTA-01",
+        "stationName": "Delta Basin Station"
+      },
+      {
+        "regionId": "REG-ISLAND",
+        "regionName": "Island Region",
+        "stationId": "WXS-ISLAND-01",
+        "stationName": "Island Point Station"
+      },
+      {
+        "regionId": "REG-NORTH",
+        "regionName": "Northern Region",
+        "stationId": "WXS-NORTH-01",
+        "stationName": "Northgate Station"
+      },
+      {
+        "regionId": "REG-CENTRAL",
+        "regionName": "Central Region",
+        "stationId": "WXS-CENTRAL-01",
+        "stationName": "Central Plains Station"
+      }
+    ]
+  }
+}

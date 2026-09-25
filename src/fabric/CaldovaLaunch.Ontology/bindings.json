@@ -1,0 +1,1046 @@
+{
+  "source": {
+    "type": "LakehouseTable",
+    "sourceSchema": "dbo"
+  },
+  "entities": {
+    "LaunchPlan": {
+      "table": "launch_plans",
+      "columns": {
+        "launchPlanId": "launchPlanId",
+        "planName": "planName",
+        "status": "status",
+        "startsOn": "startsOn",
+        "endsOn": "endsOn"
+      }
+    },
+    "Campaign": {
+      "timeseriesProperties": [
+        "impressions",
+        "engagements",
+        "spendUsd",
+        "attributedUnits",
+        "revenueUsd",
+        "contributionMarginPct"
+      ],
+      "bindings": [
+        {
+          "table": "campaigns",
+          "dataBindingType": "NonTimeSeries",
+          "properties": [
+            "campaignId",
+            "launchPlanId",
+            "regionId",
+            "productId",
+            "campaignName",
+            "channel",
+            "status",
+            "baseBudgetUsd",
+            "incrementalBudgetUsd"
+          ],
+          "columns": {
+            "campaignId": "campaignId",
+            "launchPlanId": "launchPlanId",
+            "regionId": "regionId",
+            "productId": "productId",
+            "campaignName": "campaignName",
+            "channel": "channel",
+            "status": "status",
+            "baseBudgetUsd": "baseBudgetUsd",
+            "incrementalBudgetUsd": "incrementalBudgetUsd"
+          }
+        },
+        {
+          "source": {
+            "type": "KustoTable",
+            "itemId": "__EVENTHOUSE_ID__",
+            "clusterUri": "__KUSTO_CLUSTER_URI__",
+            "databaseName": "__KQL_DATABASE__"
+          },
+          "table": "CampaignSignals",
+          "dataBindingType": "TimeSeries",
+          "timestampColumn": "timestamp",
+          "properties": [
+            "campaignId",
+            "impressions",
+            "engagements",
+            "spendUsd",
+            "attributedUnits",
+            "revenueUsd",
+            "contributionMarginPct"
+          ],
+          "columns": {
+            "campaignId": "campaignId",
+            "impressions": "impressions",
+            "engagements": "engagements",
+            "spendUsd": "spendUsd",
+            "attributedUnits": "attributedUnits",
+            "revenueUsd": "revenueUsd",
+            "contributionMarginPct": "contributionMarginPct"
+          }
+        }
+      ]
+    },
+    "Product": {
+      "table": "products",
+      "columns": {
+        "productId": "productId",
+        "productName": "productName",
+        "category": "category",
+        "handlingClass": "handlingClass",
+        "unitPriceUsd": "unitPriceUsd",
+        "hero": "hero"
+      }
+    },
+    "Region": {
+      "table": "regions",
+      "columns": {
+        "regionId": "regionId",
+        "regionName": "regionName",
+        "marketCode": "marketCode",
+        "signalAffected": "signalAffected",
+        "baselineForecastUnits30d": "baselineForecastUnits30d",
+        "variancePct": "variancePct",
+        "incrementalUnits": "incrementalUnits"
+      }
+    },
+    "DemandForecast": {
+      "table": "forecast_versions",
+      "columns": {
+        "forecastVersionId": "forecastVersionId",
+        "versionName": "versionName",
+        "versionType": "versionType",
+        "forecastDate": "forecastDate",
+        "productId": "productId",
+        "horizonDays": "horizonDays",
+        "analysisWindowStartDate": "analysisWindowStartDate",
+        "analysisWindowEndDate": "analysisWindowEndDate"
+      }
+    },
+    "ForecastAssumption": {
+      "table": "forecast_assumptions",
+      "columns": {
+        "assumptionId": "assumptionId",
+        "forecastVersionId": "forecastVersionId",
+        "statement": "statement",
+        "heldAfterSignal": "heldAfterSignal",
+        "invalidatedBySignalId": "invalidatedBySignalId"
+      }
+    },
+    "CampaignScenario": {
+      "table": "campaign_scenarios",
+      "columns": {
+        "scenarioId": "scenarioId",
+        "scenarioName": "scenarioName",
+        "incrementalBudgetUsd": "incrementalBudgetUsd",
+        "incrementalUnits": "incrementalUnits",
+        "incrementalRevenueUsd": "incrementalRevenueUsd",
+        "confidence": "confidence",
+        "supplyFeasible": "supplyFeasible",
+        "recommended": "recommended",
+        "approved": "approved",
+        "blockedByPolicyId": "blockedByPolicyId",
+        "blockedByPolicyVersion": "blockedByPolicyVersion",
+        "rationale": "rationale"
+      }
+    },
+    "CampaignCommitment": {
+      "table": "campaign_commitments",
+      "columns": {
+        "commitmentId": "commitmentId",
+        "scenarioId": "scenarioId",
+        "launchPlanId": "launchPlanId",
+        "productId": "productId",
+        "committedUnits": "committedUnits",
+        "committedRevenueUsd": "committedRevenueUsd",
+        "approvedByRole": "approvedByRole",
+        "approvedAt": "approvedAt",
+        "status": "status",
+        "originSignalId": "originSignalId",
+        "originCaseId": "originCaseId"
+      }
+    },
+    "InventoryPosition": {
+      "table": "inventory_positions",
+      "columns": {
+        "snapshotDate": "snapshotDate",
+        "regionId": "regionId",
+        "productId": "productId",
+        "availableUnits": "availableUnits",
+        "reservedUnits": "reservedUnits",
+        "coverageDays": "coverageDays"
+      }
+    },
+    "Plant": {
+      "table": "plants",
+      "columns": {
+        "plantId": "plantId",
+        "plantName": "plantName",
+        "regionCode": "regionCode"
+      }
+    },
+    "ProductionLine": {
+      "timeseriesProperties": [
+        "actualRateUnitsPerMin",
+        "rateFactor",
+        "utilisation",
+        "cumulativeStressIndex"
+      ],
+      "bindings": [
+        {
+          "table": "production_lines",
+          "dataBindingType": "NonTimeSeries",
+          "properties": [
+            "lineId",
+            "plantId",
+            "lineName",
+            "family",
+            "ratedRateUnitsPerMin",
+            "scheduledHoursPerDay",
+            "baselineUtilisation",
+            "status",
+            "sunCareQualified",
+            "preferredForHeroProduct",
+            "alternateLineForHeroProduct",
+            "requiresQualification"
+          ],
+          "columns": {
+            "lineId": "lineId",
+            "plantId": "plantId",
+            "lineName": "lineName",
+            "family": "family",
+            "ratedRateUnitsPerMin": "ratedRateUnitsPerMin",
+            "scheduledHoursPerDay": "scheduledHoursPerDay",
+            "baselineUtilisation": "baselineUtilisation",
+            "status": "status",
+            "sunCareQualified": "sunCareQualified",
+            "preferredForHeroProduct": "preferredForHeroProduct",
+            "alternateLineForHeroProduct": "alternateLineForHeroProduct",
+            "requiresQualification": "requiresQualification"
+          }
+        },
+        {
+          "source": {
+            "type": "KustoTable",
+            "itemId": "__EVENTHOUSE_ID__",
+            "clusterUri": "__KUSTO_CLUSTER_URI__",
+            "databaseName": "__KQL_DATABASE__"
+          },
+          "table": "LineSignals",
+          "dataBindingType": "TimeSeries",
+          "timestampColumn": "timestamp",
+          "properties": [
+            "lineId",
+            "actualRateUnitsPerMin",
+            "rateFactor",
+            "utilisation",
+            "cumulativeStressIndex"
+          ],
+          "columns": {
+            "lineId": "lineId",
+            "actualRateUnitsPerMin": "actualRateUnitsPerMin",
+            "rateFactor": "rateFactor",
+            "utilisation": "utilisation",
+            "cumulativeStressIndex": "cumulativeStressIndex"
+          }
+        }
+      ]
+    },
+    "ProductionOrder": {
+      "table": "production_orders",
+      "columns": {
+        "productionOrderId": "productionOrderId",
+        "lineId": "lineId",
+        "productId": "productId",
+        "orderDate": "orderDate",
+        "plannedStartDate": "plannedStartDate",
+        "plannedEndDate": "plannedEndDate",
+        "plannedUnits": "plannedUnits",
+        "status": "status",
+        "commitmentId": "commitmentId",
+        "maintenanceWindowId": "maintenanceWindowId"
+      }
+    },
+    "MaintenanceWindow": {
+      "table": "maintenance_windows",
+      "columns": {
+        "maintenanceWindowId": "maintenanceWindowId",
+        "lineId": "lineId",
+        "maintenanceType": "maintenanceType",
+        "originalStartDate": "originalStartDate",
+        "originalEndDate": "originalEndDate",
+        "durationDays": "durationDays",
+        "operatingDaysLost": "operatingDaysLost",
+        "deferredStartDate": "deferredStartDate",
+        "deferredEndDate": "deferredEndDate",
+        "deferralDays": "deferralDays",
+        "lastMajorMaintenanceDate": "lastMajorMaintenanceDate",
+        "insideCampaignPeriod": "insideCampaignPeriod",
+        "deferredOutsideCampaignPeriod": "deferredOutsideCampaignPeriod"
+      }
+    },
+    "ProductionOption": {
+      "table": "production_options",
+      "columns": {
+        "optionId": "optionId",
+        "optionName": "optionName",
+        "summary": "summary",
+        "requiredRateFactor": "requiredRateFactor",
+        "requiredUtilisation": "requiredUtilisation",
+        "appliesFromDate": "appliesFromDate",
+        "appliesToDate": "appliesToDate",
+        "alternateLineId": "alternateLineId",
+        "expectedOutputUnits": "expectedOutputUnits",
+        "availableIncrementalUnits": "availableIncrementalUnits",
+        "incrementalUnitsDelivered": "incrementalUnitsDelivered",
+        "meetsCommitment": "meetsCommitment",
+        "shortfallUnits": "shortfallUnits",
+        "effectOnExistingOrders": "effectOnExistingOrders",
+        "materialsConstraint": "materialsConstraint",
+        "riskLevel": "riskLevel",
+        "confidence": "confidence",
+        "requiredApproverRole": "requiredApproverRole",
+        "secondaryApproverRole": "secondaryApproverRole",
+        "policyCompliant": "policyCompliant",
+        "recommended": "recommended",
+        "rejectionReason": "rejectionReason",
+        "policyBasisJson": "policyBasisJson"
+      }
+    },
+    "ExternalSignal": {
+      "table": "external_signals",
+      "columns": {
+        "signalId": "signalId",
+        "signalName": "signalName",
+        "signalType": "signalType",
+        "provenance": "provenance",
+        "sourceLabel": "sourceLabel",
+        "observationPeriodStart": "observationPeriodStart",
+        "observationPeriodEnd": "observationPeriodEnd",
+        "persistenceThrough": "persistenceThrough",
+        "persistenceProbability": "persistenceProbability",
+        "confidence": "confidence",
+        "seaSurfaceAnomalyC": "seaSurfaceAnomalyC"
+      }
+    },
+    "WeatherStation": {
+      "timeseriesProperties": [
+        "temperatureMeanC",
+        "uvIndex",
+        "temperatureMeanAnomalyC",
+        "uvIndexAnomaly",
+        "humidityPct",
+        "precipitationMm",
+        "sunshineHours",
+        "seaSurfaceTemperatureC",
+        "pressureHpa"
+      ],
+      "bindings": [
+        {
+          "table": "weather_stations",
+          "dataBindingType": "NonTimeSeries",
+          "properties": [
+            "stationId",
+            "regionId",
+            "stationName",
+            "providerId",
+            "annualMeanTempC",
+            "annualMeanUvIndex",
+            "annualMeanHumidityPct",
+            "annualMeanPressureHpa",
+            "baseSeaSurfaceTemperatureC",
+            "annualRainfallMm",
+            "isCoastal",
+            "provenance"
+          ],
+          "columns": {
+            "stationId": "stationId",
+            "regionId": "regionId",
+            "stationName": "stationName",
+            "providerId": "providerId",
+            "annualMeanTempC": "annualMeanTempC",
+            "annualMeanUvIndex": "annualMeanUvIndex",
+            "annualMeanHumidityPct": "annualMeanHumidityPct",
+            "annualMeanPressureHpa": "annualMeanPressureHpa",
+            "baseSeaSurfaceTemperatureC": "baseSeaSurfaceTemperatureC",
+            "annualRainfallMm": "annualRainfallMm",
+            "isCoastal": "isCoastal",
+            "provenance": "provenance"
+          }
+        },
+        {
+          "source": {
+            "type": "KustoTable",
+            "itemId": "__EVENTHOUSE_ID__",
+            "clusterUri": "__KUSTO_CLUSTER_URI__",
+            "databaseName": "__KQL_DATABASE__"
+          },
+          "table": "WeatherObservationsDaily",
+          "dataBindingType": "TimeSeries",
+          "timestampColumn": "timestamp",
+          "properties": [
+            "stationId",
+            "temperatureMeanC",
+            "uvIndex",
+            "temperatureMeanAnomalyC",
+            "uvIndexAnomaly",
+            "humidityPct",
+            "precipitationMm",
+            "sunshineHours",
+            "seaSurfaceTemperatureC",
+            "pressureHpa"
+          ],
+          "columns": {
+            "stationId": "stationId",
+            "temperatureMeanC": "temperatureMeanC",
+            "uvIndex": "uvIndex",
+            "temperatureMeanAnomalyC": "temperatureMeanAnomalyC",
+            "uvIndexAnomaly": "uvIndexAnomaly",
+            "humidityPct": "humidityPct",
+            "precipitationMm": "precipitationMm",
+            "sunshineHours": "sunshineHours",
+            "seaSurfaceTemperatureC": "seaSurfaceTemperatureC",
+            "pressureHpa": "pressureHpa"
+          }
+        }
+      ]
+    },
+    "WeatherForecast": {
+      "bindings": [
+        {
+          "source": {
+            "type": "KustoTable",
+            "itemId": "__EVENTHOUSE_ID__",
+            "clusterUri": "__KUSTO_CLUSTER_URI__",
+            "databaseName": "__KQL_DATABASE__"
+          },
+          "table": "WeatherForecastDaily",
+          "dataBindingType": "TimeSeries",
+          "timestampColumn": "issueTimestamp",
+          "properties": [
+            "issueDate",
+            "targetDate",
+            "regionId",
+            "providerId"
+          ],
+          "columns": {
+            "issueDate": "issueDate",
+            "targetDate": "targetDate",
+            "regionId": "regionId",
+            "providerId": "providerId"
+          }
+        }
+      ]
+    },
+    "WeatherEvent": {
+      "bindings": [
+        {
+          "table": "weather_events",
+          "dataBindingType": "NonTimeSeries",
+          "properties": [
+            "eventId",
+            "eventType",
+            "regionId",
+            "severity",
+            "startDate",
+            "endDate",
+            "durationDays",
+            "peakValue",
+            "peakMetric",
+            "signalId",
+            "relevantToHeroProduct",
+            "headline",
+            "provenance"
+          ],
+          "columns": {
+            "eventId": "eventId",
+            "eventType": "eventType",
+            "regionId": "regionId",
+            "severity": "severity",
+            "startDate": "startDate",
+            "endDate": "endDate",
+            "durationDays": "durationDays",
+            "peakValue": "peakValue",
+            "peakMetric": "peakMetric",
+            "signalId": "signalId",
+            "relevantToHeroProduct": "relevantToHeroProduct",
+            "headline": "headline",
+            "provenance": "provenance"
+          }
+        },
+        {
+          "source": {
+            "type": "KustoTable",
+            "itemId": "__EVENTHOUSE_ID__",
+            "clusterUri": "__KUSTO_CLUSTER_URI__",
+            "databaseName": "__KQL_DATABASE__"
+          },
+          "table": "WeatherEvents",
+          "dataBindingType": "TimeSeries",
+          "timestampColumn": "startDate",
+          "properties": [
+            "eventId"
+          ],
+          "columns": {
+            "eventId": "eventId"
+          }
+        }
+      ]
+    },
+    "WeatherDemandModel": {
+      "table": "weather_elasticity_params",
+      "columns": {
+        "modelId": "modelId",
+        "modelVersion": "modelVersion",
+        "status": "status",
+        "stewardRole": "stewardRole",
+        "formula": "formula",
+        "betaUv": "betaUv",
+        "betaTempC": "betaTempC",
+        "unitNote": "unitNote",
+        "coefficientsAreGlobal": "coefficientsAreGlobal",
+        "tolerancePct": "tolerancePct",
+        "effectiveFrom": "effectiveFrom",
+        "provenance": "provenance",
+        "sourceLabel": "sourceLabel"
+      }
+    },
+    "ApprovedPolicy": {
+      "table": "approved_policies",
+      "columns": {
+        "policyId": "policyId",
+        "policyVersion": "policyVersion",
+        "policyName": "policyName",
+        "status": "status",
+        "effectiveFrom": "effectiveFrom",
+        "ruleJson": "ruleJson"
+      }
+    },
+    "MetricDefinition": {
+      "table": "metric_definitions",
+      "columns": {
+        "metricId": "metricId",
+        "metricVersion": "metricVersion",
+        "metricName": "metricName",
+        "status": "status",
+        "definitionJson": "definitionJson"
+      }
+    },
+    "DecisionCase": {
+      "table": "decision_cases",
+      "columns": {
+        "caseId": "caseId",
+        "scopeKey": "scopeKey",
+        "concernsProductId": "concernsProductId",
+        "openedAt": "openedAt",
+        "resolvedAt": "resolvedAt",
+        "status": "status",
+        "title": "title"
+      }
+    },
+    "Correction": {
+      "table": "decision_corrections",
+      "columns": {
+        "correctionId": "correctionId",
+        "statement": "statement",
+        "scopeKey": "scopeKey",
+        "proposedByRole": "proposedByRole",
+        "proposedAt": "proposedAt",
+        "approvedByRole": "approvedByRole",
+        "approvedAt": "approvedAt",
+        "status": "status"
+      }
+    },
+    "Action": {
+      "table": "governed_actions",
+      "columns": {
+        "actionId": "actionId",
+        "actionType": "actionType",
+        "apiName": "apiName",
+        "requestedAt": "requestedAt",
+        "approvedAt": "approvedAt",
+        "executedAt": "executedAt",
+        "approvedByRole": "approvedByRole",
+        "policyId": "policyId",
+        "policyVersion": "policyVersion",
+        "receiptId": "receiptId",
+        "status": "status",
+        "result": "result",
+        "detailsJson": "detailsJson"
+      }
+    },
+    "Outcome": {
+      "table": "decision_outcomes",
+      "columns": {
+        "outcomeId": "outcomeId",
+        "metricName": "metricName",
+        "metricValue": "metricValue",
+        "plannedValue": "plannedValue",
+        "resultCode": "resultCode",
+        "recordedAt": "recordedAt"
+      }
+    },
+    "Persona": {
+      "table": "personas",
+      "columns": {
+        "personaId": "personaId",
+        "displayName": "displayName",
+        "title": "title",
+        "roleId": "roleId"
+      }
+    }
+  },
+  "relationships": {
+    "affects_region": {
+      "table": "signal_region_impact",
+      "sourceColumns": [
+        "signalId"
+      ],
+      "targetColumns": [
+        "regionId"
+      ]
+    },
+    "sells_product": {
+      "table": "forecast_lines",
+      "sourceColumns": [
+        "regionId"
+      ],
+      "targetColumns": [
+        "productId"
+      ]
+    },
+    "promoted_by_active_campaign": {
+      "table": "campaigns",
+      "sourceColumns": [
+        "productId"
+      ],
+      "targetColumns": [
+        "campaignId"
+      ]
+    },
+    "built_on_forecast": {
+      "table": "campaign_forecast_links",
+      "sourceColumns": [
+        "campaignId"
+      ],
+      "targetColumns": [
+        "forecastVersionId"
+      ]
+    },
+    "has_assumption": {
+      "table": "forecast_assumptions",
+      "sourceColumns": [
+        "forecastVersionId"
+      ],
+      "targetColumns": [
+        "assumptionId"
+      ]
+    },
+    "includes_campaign": {
+      "table": "campaigns",
+      "sourceColumns": [
+        "launchPlanId"
+      ],
+      "targetColumns": [
+        "campaignId"
+      ]
+    },
+    "plans_product": {
+      "table": "campaigns",
+      "sourceColumns": [
+        "launchPlanId"
+      ],
+      "targetColumns": [
+        "productId"
+      ]
+    },
+    "targets_region": {
+      "table": "campaigns",
+      "sourceColumns": [
+        "campaignId"
+      ],
+      "targetColumns": [
+        "regionId"
+      ]
+    },
+    "promotes_product": {
+      "table": "campaigns",
+      "sourceColumns": [
+        "campaignId"
+      ],
+      "targetColumns": [
+        "productId"
+      ]
+    },
+    "forecasts_product": {
+      "table": "forecast_versions",
+      "sourceColumns": [
+        "forecastVersionId"
+      ],
+      "targetColumns": [
+        "productId"
+      ]
+    },
+    "forecast_applies_to_region": {
+      "table": "forecast_lines",
+      "sourceColumns": [
+        "forecastVersionId"
+      ],
+      "targetColumns": [
+        "regionId"
+      ]
+    },
+    "invalidates_assumption": {
+      "table": "forecast_assumptions",
+      "sourceColumns": [
+        "invalidatedBySignalId"
+      ],
+      "targetColumns": [
+        "assumptionId"
+      ]
+    },
+    "scenario_allocates_region": {
+      "table": "scenario_region_allocation",
+      "sourceColumns": [
+        "scenarioId"
+      ],
+      "targetColumns": [
+        "regionId"
+      ]
+    },
+    "scenario_promotes_product": {
+      "table": "campaign_commitments",
+      "sourceColumns": [
+        "scenarioId"
+      ],
+      "targetColumns": [
+        "productId"
+      ]
+    },
+    "scenario_becomes_commitment": {
+      "table": "campaign_commitments",
+      "sourceColumns": [
+        "scenarioId"
+      ],
+      "targetColumns": [
+        "commitmentId"
+      ]
+    },
+    "commitment_for_launch_plan": {
+      "table": "campaign_commitments",
+      "sourceColumns": [
+        "commitmentId"
+      ],
+      "targetColumns": [
+        "launchPlanId"
+      ]
+    },
+    "commitment_for_product": {
+      "table": "campaign_commitments",
+      "sourceColumns": [
+        "commitmentId"
+      ],
+      "targetColumns": [
+        "productId"
+      ]
+    },
+    "commitment_origin_signal": {
+      "table": "campaign_commitments",
+      "sourceColumns": [
+        "commitmentId"
+      ],
+      "targetColumns": [
+        "originSignalId"
+      ]
+    },
+    "operates_line": {
+      "table": "production_lines",
+      "sourceColumns": [
+        "plantId"
+      ],
+      "targetColumns": [
+        "lineId"
+      ]
+    },
+    "line_produces_product": {
+      "table": "production_orders",
+      "sourceColumns": [
+        "lineId"
+      ],
+      "targetColumns": [
+        "productId"
+      ]
+    },
+    "scheduled_on_line": {
+      "table": "maintenance_windows",
+      "sourceColumns": [
+        "maintenanceWindowId"
+      ],
+      "targetColumns": [
+        "lineId"
+      ]
+    },
+    "line_runs_order": {
+      "table": "production_orders",
+      "sourceColumns": [
+        "lineId"
+      ],
+      "targetColumns": [
+        "productionOrderId"
+      ]
+    },
+    "order_serves_commitment": {
+      "table": "production_orders",
+      "sourceColumns": [
+        "productionOrderId"
+      ],
+      "targetColumns": [
+        "commitmentId"
+      ]
+    },
+    "order_builds_product": {
+      "table": "production_orders",
+      "sourceColumns": [
+        "productionOrderId"
+      ],
+      "targetColumns": [
+        "productId"
+      ]
+    },
+    "inventory_covers_region": {
+      "table": "inventory_positions",
+      "sourceColumns": [
+        "snapshotDate",
+        "regionId",
+        "productId"
+      ],
+      "targetColumns": [
+        "regionId"
+      ]
+    },
+    "inventory_covers_product": {
+      "table": "inventory_positions",
+      "sourceColumns": [
+        "snapshotDate",
+        "regionId",
+        "productId"
+      ],
+      "targetColumns": [
+        "productId"
+      ]
+    },
+    "option_adjusts_line": {
+      "table": "capacity_plan",
+      "sourceColumns": [
+        "optionId"
+      ],
+      "targetColumns": [
+        "lineId"
+      ]
+    },
+    "option_defers_maintenance": {
+      "table": "capacity_plan",
+      "sourceColumns": [
+        "optionId"
+      ],
+      "targetColumns": [
+        "maintenanceWindowId"
+      ]
+    },
+    "option_meets_commitment": {
+      "table": "capacity_plan",
+      "sourceColumns": [
+        "optionId"
+      ],
+      "targetColumns": [
+        "commitmentId"
+      ]
+    },
+    "option_evaluated_against_policy": {
+      "table": "maintenance_policy_evaluations",
+      "sourceColumns": [
+        "optionId"
+      ],
+      "targetColumns": [
+        "policyId",
+        "policyVersion"
+      ]
+    },
+    "region_monitored_by_station": {
+      "table": "weather_stations",
+      "sourceColumns": [
+        "regionId"
+      ],
+      "targetColumns": [
+        "stationId"
+      ]
+    },
+    "event_occurs_in_region": {
+      "table": "weather_events",
+      "sourceColumns": [
+        "eventId"
+      ],
+      "targetColumns": [
+        "regionId"
+      ]
+    },
+    "signal_has_weather_event": {
+      "table": "weather_events",
+      "sourceColumns": [
+        "signalId"
+      ],
+      "targetColumns": [
+        "eventId"
+      ]
+    },
+    "weather_model_estimates_region": {
+      "table": "weather_demand_response",
+      "sourceColumns": [
+        "modelId",
+        "modelVersion"
+      ],
+      "targetColumns": [
+        "regionId"
+      ]
+    },
+    "decision_concerns_product": {
+      "table": "decision_cases",
+      "sourceColumns": [
+        "caseId"
+      ],
+      "targetColumns": [
+        "concernsProductId"
+      ]
+    },
+    "decision_concerns_campaign": {
+      "table": "decision_case_campaigns",
+      "sourceColumns": [
+        "caseId"
+      ],
+      "targetColumns": [
+        "campaignId"
+      ]
+    },
+    "decision_concerns_line": {
+      "table": "decision_cases",
+      "sourceColumns": [
+        "caseId"
+      ],
+      "targetColumns": [
+        "lineId"
+      ]
+    },
+    "decision_triggered_by_signal": {
+      "table": "decision_cases",
+      "sourceColumns": [
+        "caseId"
+      ],
+      "targetColumns": [
+        "originSignalId"
+      ]
+    },
+    "decision_applies_policy": {
+      "table": "decision_case_policies",
+      "sourceColumns": [
+        "caseId"
+      ],
+      "targetColumns": [
+        "policyId",
+        "policyVersion"
+      ]
+    },
+    "decision_records_correction": {
+      "table": "decision_corrections",
+      "sourceColumns": [
+        "caseId"
+      ],
+      "targetColumns": [
+        "correctionId"
+      ]
+    },
+    "decision_requests_action": {
+      "table": "decision_case_actions",
+      "sourceColumns": [
+        "caseId"
+      ],
+      "targetColumns": [
+        "actionId"
+      ]
+    },
+    "decision_produces_outcome": {
+      "table": "decision_outcomes",
+      "sourceColumns": [
+        "caseId"
+      ],
+      "targetColumns": [
+        "outcomeId"
+      ]
+    },
+    "decision_results_in_commitment": {
+      "table": "decision_cases",
+      "sourceColumns": [
+        "caseId"
+      ],
+      "targetColumns": [
+        "commitmentId"
+      ]
+    },
+    "action_authorized_by_policy": {
+      "table": "governed_actions",
+      "sourceColumns": [
+        "actionId"
+      ],
+      "targetColumns": [
+        "policyId",
+        "policyVersion"
+      ]
+    },
+    "policy_blocks_scenario": {
+      "table": "campaign_scenarios",
+      "sourceColumns": [
+        "blockedByPolicyId",
+        "blockedByPolicyVersion"
+      ],
+      "targetColumns": [
+        "scenarioId"
+      ]
+    },
+    "persona_approves_commitment": {
+      "table": "campaign_commitments",
+      "sourceColumns": [
+        "approvedByRole"
+      ],
+      "targetColumns": [
+        "commitmentId"
+      ]
+    },
+    "persona_approves_action": {
+      "table": "governed_actions",
+      "sourceColumns": [
+        "approvedByRole"
+      ],
+      "targetColumns": [
+        "actionId"
+      ]
+    },
+    "persona_stewards_weather_model": {
+      "table": "weather_elasticity_params",
+      "sourceColumns": [
+        "stewardRole"
+      ],
+      "targetColumns": [
+        "modelId",
+        "modelVersion"
+      ]
+    },
+    "persona_approves_correction": {
+      "table": "decision_corrections",
+      "sourceColumns": [
+        "approvedByRole"
+      ],
+      "targetColumns": [
+        "correctionId"
+      ]
+    }
+  }
+}

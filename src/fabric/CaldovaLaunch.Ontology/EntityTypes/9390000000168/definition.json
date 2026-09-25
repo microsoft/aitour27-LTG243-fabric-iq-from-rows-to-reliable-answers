@@ -1,0 +1,146 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "9390000000168",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "WeatherStation",
+  "entityIdParts": [
+    "9390000000169"
+  ],
+  "displayNamePropertyId": "9390000000169",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "9390000000169",
+      "name": "stationId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000170",
+      "name": "regionId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000171",
+      "name": "stationName",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000172",
+      "name": "providerId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000173",
+      "name": "annualMeanTempC",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000174",
+      "name": "annualMeanUvIndex",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000175",
+      "name": "annualMeanHumidityPct",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000176",
+      "name": "annualMeanPressureHpa",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000177",
+      "name": "baseSeaSurfaceTemperatureC",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000178",
+      "name": "annualRainfallMm",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000179",
+      "name": "isCoastal",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    },
+    {
+      "id": "9390000000180",
+      "name": "provenance",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": [
+    {
+      "id": "9390000000182",
+      "name": "temperatureMeanC",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000183",
+      "name": "uvIndex",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000184",
+      "name": "temperatureMeanAnomalyC",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000185",
+      "name": "uvIndexAnomaly",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000186",
+      "name": "humidityPct",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000187",
+      "name": "precipitationMm",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000188",
+      "name": "sunshineHours",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000189",
+      "name": "seaSurfaceTemperatureC",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000190",
+      "name": "pressureHpa",
+      "valueType": "Double"
+    }
+  ]
+}

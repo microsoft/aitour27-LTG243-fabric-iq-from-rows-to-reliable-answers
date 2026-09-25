@@ -1,0 +1,2 @@
+modelId,modelVersion,status,stewardRole,formula,betaUv,betaTempC,unitNote,coefficientsAreGlobal,tolerancePct,effectiveFrom,provenance,sourceLabel
+WXMODEL-UPLIFT-001,1.0,approved,ROLE-DEMAND-PLANNER,upliftPct = betaUv * uvIndexAnomaly + betaTempC * temperatureMeanAnomalyC,8,3.4,betaUv is percent uplift per UV index point above normal. betaTempC is percent uplift per degree Celsius above normal.,true,0.3,2026-08-03,external,Meridian Climate Services regional observation and forecast feed

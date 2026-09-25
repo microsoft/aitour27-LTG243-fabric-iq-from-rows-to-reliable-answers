@@ -1,0 +1,7 @@
+campaign_id,campaign,region_id,region,product_id,product,channel,spend_usd,attributed_units,revenue_usd,contribution_margin_pct,signal_affected_flag
+CMP-2026-COASTAL-FIELD,Coastal Field 2026,REG-COASTAL,Coastal Region,PROD-HS-100,Hydration Sunscreen,field,968000,125467,1003736,-38.44,true
+CMP-2026-SOUTH-DIGITAL,Southern Digital 2026,REG-SOUTH,Southern Region,PROD-HS-100,Hydration Sunscreen,digital,809000,98067,784536,-45.12,true
+CMP-2026-DELTA-DIGITAL,Delta Digital 2026,REG-DELTA,Delta Region,PROD-HS-100,Hydration Sunscreen,digital,646000,81500,652000,-41.08,true
+CMP-2026-ISLAND-PARTNER,Island Partner 2026,REG-ISLAND,Island Region,PROD-HS-100,Hydration Sunscreen,partner,447000,57367,458936,-39.4,true
+CMP-2026-NORTH-DIGITAL,Northern Digital 2026,REG-NORTH,Northern Region,PROD-HS-100,Hydration Sunscreen,digital,580000,57400,459200,-68.31,false
+CMP-2026-CENTRAL-PARTNER,Central Partner 2026,REG-CENTRAL,Central Region,PROD-HS-100,Hydration Sunscreen,partner,500000,51933,415464,-62.35,false

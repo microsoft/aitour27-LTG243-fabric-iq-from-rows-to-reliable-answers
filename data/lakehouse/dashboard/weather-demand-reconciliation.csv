@@ -1,0 +1,7 @@
+region_id,region,model_id,modelled_weather_uplift_pct,actual_sales_variance_pct,difference_pct,signal_affected_flag,provenance,source_label
+REG-COASTAL,Coastal Region,WXMODEL-UPLIFT-001,31.4,31.4,0,true,external,Meridian Climate Services regional observation and forecast feed
+REG-SOUTH,Southern Region,WXMODEL-UPLIFT-001,26.8,26.8,0,true,external,Meridian Climate Services regional observation and forecast feed
+REG-DELTA,Delta Region,WXMODEL-UPLIFT-001,18.9,18.9,0,true,external,Meridian Climate Services regional observation and forecast feed
+REG-ISLAND,Island Region,WXMODEL-UPLIFT-001,22.5,22.5,0,true,external,Meridian Climate Services regional observation and forecast feed
+REG-NORTH,Northern Region,WXMODEL-UPLIFT-001,1.2,1.2,0,false,external,Meridian Climate Services regional observation and forecast feed
+REG-CENTRAL,Central Region,WXMODEL-UPLIFT-001,-0.8,-0.8,0,false,external,Meridian Climate Services regional observation and forecast feed
