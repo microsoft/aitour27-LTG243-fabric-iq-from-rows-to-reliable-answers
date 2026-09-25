@@ -19,10 +19,10 @@ evaluation but are not separate LTG243 demos.
 
 ## Related demos and exclusions
 
-- [BRK390 Act 2 applications and agents](https://github.com/microsoft/aitour27-BRK390-building-ai-applications-with-microsoft-databases-and-fabric/tree/main/src/caldova-decisions)
-  are deployed separately for the breakout session.
-- [BRK390 Act 3 Azure staffing application](https://github.com/microsoft/aitour27-BRK390-building-ai-applications-with-microsoft-databases-and-fabric/tree/main/src/act3)
-  is also deployed separately for the breakout session.
+The BRK390 breakout session uses separate applications for its Act 2 campaign
+and production decisions and its Act 3 staffing decision. They are published in
+the [BRK390 repository](https://github.com/microsoft/aitour27-BRK390-building-ai-applications-with-microsoft-databases-and-fabric).
+
 - Tenant-specific screenshots, workspace IDs, item IDs, and recordings are not
   included.
 - Fabric Data Agent response wording can vary. Validate the required facts and
