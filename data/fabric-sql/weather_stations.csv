@@ -1,0 +1,7 @@
+stationId,regionId,stationName,providerId,annualMeanTempC,annualMeanUvIndex,annualMeanHumidityPct,annualMeanPressureHpa,baseSeaSurfaceTemperatureC,annualRainfallMm,isCoastal,provenance
+WXS-COASTAL-01,REG-COASTAL,Coastway Coastal Station,WX-MCS-001,21.5,6.6,72,1014,23.4,890,true,external
+WXS-SOUTH-01,REG-SOUTH,Southmoor Station,WX-MCS-001,23.4,7.1,64,1013,24.8,640,true,external
+WXS-DELTA-01,REG-DELTA,Delta Basin Station,WX-MCS-001,25.1,7.6,78,1011,26.2,1420,true,external
+WXS-ISLAND-01,REG-ISLAND,Island Point Station,WX-MCS-001,24.2,8.1,75,1012,26.9,1180,true,external
+WXS-NORTH-01,REG-NORTH,Northgate Station,WX-MCS-001,14.8,4.3,68,1016,15.6,720,true,external
+WXS-CENTRAL-01,REG-CENTRAL,Central Plains Station,WX-MCS-001,18.2,5.4,58,1015,,520,false,external

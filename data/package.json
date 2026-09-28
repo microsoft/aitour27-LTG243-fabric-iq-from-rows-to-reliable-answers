@@ -1,0 +1,18 @@
+{
+  "name": "caldova-ltg243-dataset",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic synthetic dataset generator and validator for the LTG243 Caldova Fabric IQ demo. Runs directly on Node.js 24+ using native TypeScript type stripping; no build step.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "build": "node tools/build-ontology.ts && node tools/build-semantic-model.ts",
+    "test": "node tools/manifest.ts --check && node tools/validate.ts",
+    "generate": "node tools/generate.ts",
+    "validate": "node tools/validate.ts",
+    "manifest": "node tools/manifest.ts",
+    "all": "node tools/generate.ts && node tools/validate.ts && node tools/manifest.ts"
+  }
+}

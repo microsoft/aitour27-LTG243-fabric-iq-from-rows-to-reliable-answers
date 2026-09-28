@@ -1,0 +1,9 @@
+outcomeId,caseId,metricName,metricValue,plannedValue,resultCode,recordedAt
+OUT-HIST-001,CASE-PKG-2024-001,deliveredUnits,11520,11520,service level protected with no campaign budget change,2024-04-09T15:30:00Z
+OUT-HIST-002,CASE-SUP-2024-002,deliveredUnits,6490,6240,backlog cleared inside the coverage guardrail,2024-05-08T15:30:00Z
+OUT-HIST-003,CASE-LBL-2025-003,deliveredUnits,4212,4050,no unapproved label stock shipped,2025-06-09T15:30:00Z
+OUT-HIST-004,CASE-CAP-2025-004,deliveredUnits,4650,4650,regional orders shipped without rate escalation,2025-07-10T15:30:00Z
+OUT-HIST-005,CASE-QAL-2025-005,deliveredUnits,4805,4620,promotion demand was partially served with no policy exception,2025-08-07T15:30:00Z
+OUT-HIST-006,CASE-MNT-2025-006,deliveredUnits,3952,3800,orders were reprioritized instead of moving the maintenance date,2025-04-10T15:30:00Z
+OUT-HIST-007,CASE-BUD-2026-007,deliveredUnits,3360,3360,board approval was not required,2026-05-09T15:30:00Z
+OUT-HIST-008,CASE-DSP-2026-008,deliveredUnits,6084,5850,coverage stayed above the minimum supply guardrail,2026-06-10T15:30:00Z

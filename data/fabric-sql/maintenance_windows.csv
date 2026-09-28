@@ -1,0 +1,7 @@
+maintenanceWindowId,lineId,maintenanceType,originalStartDate,originalEndDate,durationDays,operatingDaysLost,deferredStartDate,deferredEndDate,deferralDays,lastMajorMaintenanceDate,insideCampaignPeriod,deferredOutsideCampaignPeriod
+MW-PKG-02-2026-09,PKG-02,major_preventive,2026-09-07,2026-09-11,5,5,2026-10-05,2026-10-09,28,2026-02-09,true,true
+MW-PKG-01-202603,PKG-01,minor_preventive,2026-03-23,2026-03-24,2,2,2026-03-30,2026-03-31,7,2025-09-29,false,true
+MW-PKG-03-202604,PKG-03,calibration,2026-04-15,2026-04-17,3,3,2026-04-23,2026-04-25,8,2025-10-19,false,true
+MW-PKG-04-202605,PKG-04,minor_preventive,2026-05-08,2026-05-09,2,2,2026-05-17,2026-05-18,9,2025-11-08,false,true
+MW-PKG-05-202605,PKG-05,calibration,2026-05-31,2026-06-02,3,2,2026-06-07,2026-06-09,7,2025-11-28,false,true
+MW-PKG-06-202606,PKG-06,minor_preventive,2026-06-23,2026-06-24,2,2,2026-07-01,2026-07-02,8,2025-12-18,false,true

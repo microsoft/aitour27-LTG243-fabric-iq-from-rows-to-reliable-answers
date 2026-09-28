@@ -1,0 +1,18 @@
+[
+  {
+    "question": "Which Hydration Sunscreen regions are above forecast, and are the control regions flat?",
+    "query": "EVALUATE\nSUMMARIZECOLUMNS(\n    'regions'[regionId],\n    'regions'[regionName],\n    'regions'[signalAffected],\n    TREATAS({\"PROD-HS-100\"}, 'products'[productId]),\n    \"Hero Forecast Variance %\", [Hero Forecast Variance %],\n    \"Actual Sales Variance %\", [Actual Sales Variance %],\n    \"Modelled Weather Uplift %\", [Modelled Weather Uplift %],\n    \"Weather Uplift vs Sales Variance Delta %\", [Weather Uplift vs Sales Variance Delta %]\n)\nORDER BY 'regions'[signalAffected] DESC, [Hero Forecast Variance %] DESC"
+  },
+  {
+    "question": "What is the targeted campaign opportunity for Hydration Sunscreen in the signal-affected regions?",
+    "query": "EVALUATE\nSUMMARIZECOLUMNS(\n    'campaign_scenarios'[scenarioId],\n    'campaign_scenarios'[scenarioName],\n    'campaign_scenarios'[recommended],\n    'campaign_scenarios'[approved],\n    TREATAS({\"SCN-2026-HS-B\"}, 'campaign_scenarios'[scenarioId]),\n    \"Opportunity Incremental Units\", [Opportunity Incremental Units],\n    \"Opportunity Incremental Revenue USD\", [Opportunity Incremental Revenue USD],\n    \"Recommended Scenario Budget USD\", [Recommended Scenario Budget USD],\n    \"Recommended Scenario Confidence\", [Recommended Scenario Confidence],\n    \"Commercial Approval Limit USD\", [Commercial Approval Limit USD]\n)"
+  },
+  {
+    "question": "How big is the production capacity shortfall before choosing the recommended plan?",
+    "query": "EVALUATE\nROW(\n    \"Required Incremental Units\", [Required Incremental Units],\n    \"Campaign Capacity Without Maintenance Units\", [Campaign Capacity Without Maintenance Units],\n    \"Maintenance Capacity Lost Units\", [Maintenance Capacity Lost Units],\n    \"Capacity Headroom Units\", [Capacity Headroom Units],\n    \"Capacity Shortfall Units\", [Capacity Shortfall Units],\n    \"Max Deliverable Incremental Units Under Best Plan\", [Max Deliverable Incremental Units Under Best Plan],\n    \"Recommended Option Incremental Units Delivered\", [Recommended Option Incremental Units Delivered],\n    \"Recommended Option Shortfall Units\", [Recommended Option Shortfall Units]\n)"
+  },
+  {
+    "question": "For CASE-2026-HS-001, is the decision still open and are outcomes available?",
+    "query": "EVALUATE\nSUMMARIZECOLUMNS(\n    'decision_cases'[caseId],\n    'decision_cases'[title],\n    'decision_cases'[status],\n    'decision_cases'[originSignalId],\n    TREATAS({\"CASE-2026-HS-001\"}, 'decision_cases'[caseId]),\n    \"Decision Case Count\", [Decision Case Count],\n    \"Outcome Planned Incremental Units\", [Outcome Planned Incremental Units],\n    \"Outcome Delivered Incremental Units\", [Outcome Delivered Incremental Units],\n    \"Outcome Incremental Units Variance\", [Outcome Incremental Units Variance],\n    \"Outcome Stress % at Maintenance\", [Outcome Stress % at Maintenance],\n    \"Outcome Existing Order Fulfilment %\", [Outcome Existing Order Fulfilment %]\n)"
+  }
+]

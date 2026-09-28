@@ -1,0 +1,7 @@
+region_id,region,variance_window_start,variance_window_end,mean_uv_index_anomaly,mean_temperature_mean_anomaly_c,signal_affected_flag,model_id,modelled_uplift_pct,provenance,source_label
+REG-COASTAL,Coastal Region,2026-06-22,2026-08-02,2.5053,3.3404,true,WXMODEL-UPLIFT-001,31.4,external,Meridian Climate Services regional observation and forecast feed
+REG-SOUTH,Southern Region,2026-06-22,2026-08-02,2.1382,2.8512,true,WXMODEL-UPLIFT-001,26.8,external,Meridian Climate Services regional observation and forecast feed
+REG-DELTA,Delta Region,2026-06-22,2026-08-02,1.508,2.0106,true,WXMODEL-UPLIFT-001,18.9,external,Meridian Climate Services regional observation and forecast feed
+REG-ISLAND,Island Region,2026-06-22,2026-08-02,1.7952,2.3936,true,WXMODEL-UPLIFT-001,22.5,external,Meridian Climate Services regional observation and forecast feed
+REG-NORTH,Northern Region,2026-06-22,2026-08-02,0.0956,0.1277,false,WXMODEL-UPLIFT-001,1.2,external,Meridian Climate Services regional observation and forecast feed
+REG-CENTRAL,Central Region,2026-06-22,2026-08-02,-0.0638,-0.0851,false,WXMODEL-UPLIFT-001,-0.8,external,Meridian Climate Services regional observation and forecast feed

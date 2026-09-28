@@ -1,0 +1,117 @@
+[
+  {
+    "id": "DEMO-1",
+    "demo": "Commercial Command Centre",
+    "persona": "PERSONA-TIM",
+    "act": 1,
+    "question": "What's driving the increase in Hydration Sunscreen sales, and is it likely to continue?",
+    "authoritativeSources": [
+      "Fabric SQL Database",
+      "Lakehouse"
+    ],
+    "expectedFacts": [
+      "Hydration Sunscreen",
+      "Persistent El Nino advisory",
+      "800000",
+      "four regions",
+      "4",
+      "SIG-ENSO-2026-07",
+      "Meridian Climate Services seasonal climate advisory",
+      "2026.07.20-1",
+      "2026-08-03",
+      "2026-09-02",
+      "1..30, so the horizon covers the 30 days following the issue date",
+      "78%",
+      "REG-COASTAL",
+      "REG-SOUTH",
+      "REG-DELTA",
+      "REG-ISLAND",
+      "Coastal Region",
+      "Southern Region",
+      "Delta Region",
+      "Island Region",
+      "Meridian Climate Services regional observation and forecast feed",
+      "WXMODEL-UPLIFT-001",
+      "REG-COASTAL modelled weather uplift 31.4% vs observed variance 31.4%",
+      "REG-SOUTH modelled weather uplift 26.8% vs observed variance 26.8%",
+      "REG-DELTA modelled weather uplift 18.9% vs observed variance 18.9%",
+      "REG-ISLAND modelled weather uplift 22.5% vs observed variance 22.5%",
+      "REG-NORTH modelled weather uplift 1.2% vs observed variance 1.2%",
+      "REG-CENTRAL modelled weather uplift -0.8% vs observed variance -0.8%"
+    ],
+    "mustNotClaim": [
+      "The Persistent El Nino advisory signal came from a public meteorological agency.",
+      "The MCS feed is a public agency source.",
+      "The agent approved campaign budget.",
+      "Unaffected control regions prove a global trend."
+    ]
+  },
+  {
+    "id": "DEMO-2",
+    "demo": "Campaign approval",
+    "persona": "PERSONA-TIM",
+    "act": 2,
+    "question": "If we increase campaign investment, what demand should we expect, and which regions should we prioritise?",
+    "authoritativeSources": [
+      "Fabric SQL Database",
+      "Lakehouse"
+    ],
+    "expectedFacts": [
+      "SCN-2026-HS-B",
+      "180000",
+      "POL-COMMERCIAL-004",
+      "250000"
+    ],
+    "mustNotClaim": [
+      "Aggressive multi-region push was approved.",
+      "The agent approved the commitment itself.",
+      "The commercial approver can exceed policy without board approval."
+    ]
+  },
+  {
+    "id": "DEMO-3",
+    "demo": "Production plan",
+    "persona": "PERSONA-KARIN",
+    "act": 3,
+    "question": "What would let us meet the demand without compromising maintenance or existing orders?",
+    "authoritativeSources": [
+      "Fabric SQL Database",
+      "Eventhouse",
+      "Lakehouse"
+    ],
+    "expectedFacts": [
+      "five-day maintenance window",
+      "57920",
+      "28 days",
+      "111.26",
+      "OPT-4",
+      "POL-MAINT-002"
+    ],
+    "mustNotClaim": [
+      "Maintenance can be deferred at full rate.",
+      "The agent bypassed an approver.",
+      "Existing orders were missed."
+    ]
+  },
+  {
+    "id": "DEMO-4",
+    "demo": "Decision memory",
+    "persona": "PERSONA-CARLOS",
+    "act": 5,
+    "question": "Sunscreen demand is running above forecast again in coastal regions and a climate advisory is active. Have we seen this before and what did we approve?",
+    "authoritativeSources": [
+      "Lakehouse"
+    ],
+    "expectedFacts": [
+      "CASE-2026-HS-001",
+      "SIG-ENSO-2027-04",
+      "OPT-4",
+      "POL-MAINT-002"
+    ],
+    "mustNotClaim": [
+      "The SIG-ENSO-2027-04 signal came from a public meteorological agency.",
+      "A new decision should ignore the retained CASE-2026-HS-001 case.",
+      "The corpus contains person-level business data."
+    ]
+  }
+]

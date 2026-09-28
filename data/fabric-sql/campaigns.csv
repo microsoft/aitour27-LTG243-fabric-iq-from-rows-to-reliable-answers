@@ -1,0 +1,7 @@
+campaignId,launchPlanId,regionId,productId,campaignName,channel,status,baseBudgetUsd,incrementalBudgetUsd
+CMP-2026-COASTAL-FIELD,LP-2026-SUN,REG-COASTAL,PROD-HS-100,Coastal Field 2026,field,active,900000,0
+CMP-2026-SOUTH-DIGITAL,LP-2026-SUN,REG-SOUTH,PROD-HS-100,Southern Digital 2026,digital,active,760000,0
+CMP-2026-DELTA-DIGITAL,LP-2026-SUN,REG-DELTA,PROD-HS-100,Delta Digital 2026,digital,active,610000,0
+CMP-2026-ISLAND-PARTNER,LP-2026-SUN,REG-ISLAND,PROD-HS-100,Island Partner 2026,partner,active,420000,0
+CMP-2026-NORTH-DIGITAL,LP-2026-SUN,REG-NORTH,PROD-HS-100,Northern Digital 2026,digital,active,580000,0
+CMP-2026-CENTRAL-PARTNER,LP-2026-SUN,REG-CENTRAL,PROD-HS-100,Central Partner 2026,partner,active,500000,0

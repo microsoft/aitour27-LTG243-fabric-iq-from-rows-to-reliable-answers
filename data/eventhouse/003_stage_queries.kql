@@ -1,0 +1,74 @@
+// Query 1: hero product forecast variance by region over the variance window.
+// Expected stage readout: four signal-affected regions above forecast and two control regions flat.
+let heroProductId = "PROD-HS-100";
+let baselineForecastVersion = "2026.07.20-1";
+let varianceWindowStart = datetime(2026-06-22);
+let varianceWindowEnd = datetime(2026-08-02);
+ForecastActualDaily
+| where productId == heroProductId
+| where forecastVersion == baselineForecastVersion
+| where timestamp between (varianceWindowStart .. endofday(varianceWindowEnd))
+| summarize forecastUnits=sum(forecastUnits), actualUnits=sum(actualUnits), signalAffected=any(signalAffected) by regionId
+| extend variancePct=round((todouble(actualUnits - forecastUnits) / todouble(forecastUnits)) * 100.0, 2)
+| extend cohort=iff(signalAffected, "signal-affected", "control")
+| order by signalAffected desc, variancePct desc
+
+// Query 2: climate anomaly correlated with the affected regions only.
+// Expected stage readout: affected regions cluster near the external +1.4C anomaly; controls stay near zero.
+let heroProductId = "PROD-HS-100";
+let targetSignalId = "SIG-ENSO-2026-07";
+let affectedRegionIds = dynamic(["REG-COASTAL", "REG-SOUTH", "REG-DELTA", "REG-ISLAND"]);
+let baselineForecastVersion = "2026.07.20-1";
+let varianceWindowStart = datetime(2026-06-22);
+let varianceWindowEnd = datetime(2026-08-02);
+let climateStart = datetime(2026-04-27);
+let climateEnd = datetime(2026-11-26);
+let forecastVariance =
+    ForecastActualDaily
+    | where productId == heroProductId and forecastVersion == baselineForecastVersion
+    | where timestamp between (varianceWindowStart .. endofday(varianceWindowEnd))
+    | summarize forecastUnits=sum(forecastUnits), actualUnits=sum(actualUnits) by regionId
+    | extend forecastVariancePct=round((todouble(actualUnits - forecastUnits) / todouble(forecastUnits)) * 100.0, 2);
+ClimateSignalObservations
+| where signalId == targetSignalId
+| where timestamp between (climateStart .. endofday(climateEnd))
+| summarize avgSeaSurfaceAnomalyC=round(avg(seaSurfaceAnomalyC), 3), avgAnomalyVsBaselineC=round(avg(anomalyVsBaselineC), 3), observations=count() by regionId
+| extend signalAffected=set_has_element(affectedRegionIds, regionId)
+| join kind=inner forecastVariance on regionId
+| project regionId, signalAffected, avgSeaSurfaceAnomalyC, avgAnomalyVsBaselineC, forecastVariancePct, forecastUnits, actualUnits, observations
+| order by signalAffected desc, forecastVariancePct desc
+
+// Query 3: campaign performance and attributed units by region.
+// Expected stage readout: attributed units concentrate in the four regions where the signal applies.
+let heroProductId = "PROD-HS-100";
+let campaignStart = datetime(2026-08-17);
+let campaignEnd = datetime(2026-10-02);
+CampaignSignals
+| where productId == heroProductId
+| where timestamp between (campaignStart .. endofday(campaignEnd))
+| summarize impressions=sum(impressions), engagements=sum(engagements), spendUsd=round(sum(spendUsd), 2), attributedUnits=sum(attributedUnits), revenueUsd=round(sum(revenueUsd), 2), avgContributionMarginPct=round(avgif(contributionMarginPct, revenueUsd > 0.0), 2) by regionId, campaignId
+| extend roas=round(revenueUsd / spendUsd, 3), costPerAttributedUnit=round(spendUsd / iff(attributedUnits == 0, real(null), todouble(attributedUnits)), 2)
+| order by attributedUnits desc, spendUsd desc
+
+// Query 4: PKG-02 operating plan before vs after OPT-4, with stress against policy threshold and ceiling.
+// Expected stage readout: producing samples shift from 1.0 / 0.72 to 0.9 / 0.9, while stress stays under the 115% ceiling at deferral.
+let targetLineId = "PKG-02";
+let campaignStart = datetime(2026-08-17);
+let deferredMaintenanceStart = datetime(2026-10-05);
+let thresholdStressIndex = 2073.6;
+let stressCeilingPct = 115.0;
+LineSignals
+| where lineId == targetLineId
+| where timestamp between ((campaignStart - 14d) .. endofday(deferredMaintenanceStart))
+| extend period=case(timestamp < campaignStart, "before campaign", timestamp < deferredMaintenanceStart, "after approved OPT-4", "deferred maintenance")
+| summarize producingSamples=countif(producing), avgRateFactor=round(avgif(rateFactor, producing), 3), avgUtilisation=round(avgif(utilisation, producing), 3), maxStressIndex=round(max(cumulativeStressIndex), 3), firstThresholdCrossing=minif(timestamp, cumulativeStressIndex >= thresholdStressIndex) by period
+| extend stressPctOfThreshold=round(maxStressIndex / thresholdStressIndex * 100.0, 2), policyCeilingPct=stressCeilingPct, withinCeiling=stressPctOfThreshold <= stressCeilingPct
+| order by case(period == "before campaign", 1, period == "after approved OPT-4", 2, 3)
+
+// Query 5: line and plan state transitions for the decision case.
+// Expected stage readout: the case moves from evidence to approval, then commitment, production-plan change and maintenance deferral execution.
+let targetCaseId = "CASE-2026-HS-001";
+PlanStateTransitions
+| where caseId == targetCaseId
+| project timestamp, entityType, entityId, fromState, toState, actorRole
+| order by timestamp asc, entityType asc

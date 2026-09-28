@@ -1,0 +1,10 @@
+[
+  {
+    "question": "Why is Hydration Sunscreen above forecast in four regions?",
+    "query": "Start at ExternalSignal SIG-ENSO-2026-07 (Persistent El Nino advisory), follow affects_region to Region entities REG-COASTAL, REG-SOUTH, REG-DELTA and REG-ISLAND, follow sells_product to Product PROD-HS-100, follow promoted_by_active_campaign to the active Campaign entities, follow built_on_forecast to DemandForecast FC-2026-0720-HS, then follow has_assumption and invalidates_assumption to ForecastAssumption ASM-001 and ASM-002. Return entity ids, labels and relationship names for each hop."
+  },
+  {
+    "question": "What does the open Hydration Sunscreen climate-signal case touch, and has anything been approved yet?",
+    "query": "Find DecisionCase CASE-2026-HS-001, then traverse decision_triggered_by_signal to ExternalSignal SIG-ENSO-2026-07 and decision_concerns_product to Product PROD-HS-100. Check whether decision_results_in_commitment, decision_requests_action, action_authorized_by_policy, action_produces_outcome and decision_records_correction return any artifacts. Return ids and state clearly when commitments, actions, receipts or outcomes are absent because the case is still open."
+  }
+]

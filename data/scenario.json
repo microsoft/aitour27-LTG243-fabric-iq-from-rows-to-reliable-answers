@@ -1,0 +1,1244 @@
+{
+  "$comment": "Frozen narrative contract for the Caldova demos. Every generated record and every expected demo answer derives from this file. It describes the complete story; the generator slices it at clock.asOf so the default dataset stops before the decision is taken. Change this file only with a version bump, then regenerate and revalidate.",
+  "schemaVersion": "3.0.0",
+  "dataset": "Caldova Hydration Sunscreen launch dataset",
+  "synthetic": true,
+  "fictional": true,
+  "containsPersonLevelBusinessData": false,
+  "generatorSeed": 20270607,
+  "disclosure": {
+    "summary": "All records are generated for a Microsoft AI Tour session. Caldova is a fictional company and no real sales, climate, clinical, customer, patient or employee data is present.",
+    "placement": "Disclosure is delivered out of band, by the deck, the presenter guide and the repository documentation. It is deliberately absent from the payload so that grounded agents answer as they would against a real estate.",
+    "personaNotice": "Persona names are fictional characters from the Caldova story. Authoritative approval fields use role identifiers, never persona names."
+  },
+  "clock": {
+    "decisionDay": "2026-08-03",
+    "decisionDayWeekday": "Monday",
+    "salesHistoryStart": "2026-03-02",
+    "varianceWindowStart": "2026-06-22",
+    "varianceWindowEnd": "2026-08-02",
+    "campaignStart": "2026-08-17",
+    "campaignEnd": "2026-10-02",
+    "campaignCalendarDays": 47,
+    "campaignOperatingDays": 41,
+    "commitmentApprovedAt": "2026-08-07T14:20:00Z",
+    "productionApprovedAt": "2026-08-10T09:05:00Z",
+    "caseOpenedAt": "2026-08-03T08:12:00Z",
+    "caseResolvedAt": "2026-10-05T16:40:00Z",
+    "operatingDays": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "operatingDaysNote": "ISO weekday numbers. Monday-Saturday are production operating days; Sunday is non-operating.",
+    "asOf": "2026-08-03",
+    "asOfNote": "The dataset represents the estate as it stands on this date. Observed facts, transactions and telemetry stop here. Plans, schedules and issued forecasts may legitimately extend beyond it."
+  },
+  "personas": [
+    {
+      "personaId": "PERSONA-TIM",
+      "displayName": "Tim de Boer",
+      "title": "Marketing Manager",
+      "roleId": "ROLE-COMMERCIAL-APPROVER",
+      "act": 1
+    },
+    {
+      "personaId": "PERSONA-KARIN",
+      "displayName": "Karin Blair",
+      "title": "Factory Supervisor",
+      "roleId": "ROLE-OPERATIONS-APPROVER",
+      "act": 3
+    },
+    {
+      "personaId": "PERSONA-CARLOS",
+      "displayName": "Carlos Slattery",
+      "title": "Chief Technology Officer",
+      "roleId": "ROLE-KNOWLEDGE-STEWARD",
+      "act": 5
+    }
+  ],
+  "approverRoles": [
+    "ROLE-COMMERCIAL-APPROVER",
+    "ROLE-OPERATIONS-APPROVER",
+    "ROLE-MAINTENANCE-APPROVER",
+    "ROLE-QUALITY-APPROVER",
+    "ROLE-DEMAND-PLANNER",
+    "ROLE-KNOWLEDGE-STEWARD"
+  ],
+  "heroProductId": "PROD-HS-100",
+  "unitPriceUsd": 8,
+  "products": [
+    {
+      "productId": "PROD-HS-100",
+      "name": "Hydration Sunscreen",
+      "category": "Sun Care",
+      "handlingClass": "ambient",
+      "unitPriceUsd": 8,
+      "hero": true
+    },
+    {
+      "productId": "PROD-HS-110",
+      "name": "Hydration Sunscreen Kids",
+      "category": "Sun Care",
+      "handlingClass": "ambient",
+      "unitPriceUsd": 9,
+      "hero": false
+    },
+    {
+      "productId": "PROD-AS-200",
+      "name": "After Sun Recovery Gel",
+      "category": "Sun Care",
+      "handlingClass": "ambient",
+      "unitPriceUsd": 6.5,
+      "hero": false
+    },
+    {
+      "productId": "PROD-LB-400",
+      "name": "Lip Care Balm",
+      "category": "Sun Care",
+      "handlingClass": "ambient",
+      "unitPriceUsd": 3.5,
+      "hero": false
+    },
+    {
+      "productId": "PROD-DM-300",
+      "name": "Daily Moisturiser",
+      "category": "Skin Health",
+      "handlingClass": "ambient",
+      "unitPriceUsd": 7,
+      "hero": false
+    },
+    {
+      "productId": "PROD-VD-500",
+      "name": "Vitamin D Supplement",
+      "category": "Supplements",
+      "handlingClass": "controlled",
+      "unitPriceUsd": 12,
+      "hero": false
+    }
+  ],
+  "regions": [
+    {
+      "regionId": "REG-COASTAL",
+      "name": "Coastal Region",
+      "marketCode": "COASTAL",
+      "signalAffected": true,
+      "baselineForecastUnits30d": 64000,
+      "variancePct": 31.4,
+      "incrementalUnits": 38000
+    },
+    {
+      "regionId": "REG-SOUTH",
+      "name": "Southern Region",
+      "marketCode": "SOUTH",
+      "signalAffected": true,
+      "baselineForecastUnits30d": 52000,
+      "variancePct": 26.8,
+      "incrementalUnits": 27000
+    },
+    {
+      "regionId": "REG-DELTA",
+      "name": "Delta Region",
+      "marketCode": "DELTA",
+      "signalAffected": true,
+      "baselineForecastUnits30d": 45000,
+      "variancePct": 18.9,
+      "incrementalUnits": 20000
+    },
+    {
+      "regionId": "REG-ISLAND",
+      "name": "Island Region",
+      "marketCode": "ISLAND",
+      "signalAffected": true,
+      "baselineForecastUnits30d": 31000,
+      "variancePct": 22.5,
+      "incrementalUnits": 15000
+    },
+    {
+      "regionId": "REG-NORTH",
+      "name": "Northern Region",
+      "marketCode": "NORTH",
+      "signalAffected": false,
+      "baselineForecastUnits30d": 42000,
+      "variancePct": 1.2,
+      "incrementalUnits": 0
+    },
+    {
+      "regionId": "REG-CENTRAL",
+      "name": "Central Region",
+      "marketCode": "CENTRAL",
+      "signalAffected": false,
+      "baselineForecastUnits30d": 38000,
+      "variancePct": -0.8,
+      "incrementalUnits": 0
+    }
+  ],
+  "regionControlNote": "Exactly four of six regions are signal-affected and above forecast. The two unaffected regions are the control group that proves the uplift is not a global trend.",
+  "launchPlan": {
+    "launchPlanId": "LP-2026-SUN",
+    "name": "Sun Care Season 2026",
+    "status": "active",
+    "startsOn": "2026-04-27",
+    "endsOn": "2026-11-26"
+  },
+  "campaigns": [
+    {
+      "campaignId": "CMP-2026-COASTAL-FIELD",
+      "regionId": "REG-COASTAL",
+      "name": "Coastal Field 2026",
+      "channel": "field",
+      "baseBudgetUsd": 900000,
+      "incrementalBudgetUsd": 68000
+    },
+    {
+      "campaignId": "CMP-2026-SOUTH-DIGITAL",
+      "regionId": "REG-SOUTH",
+      "name": "Southern Digital 2026",
+      "channel": "digital",
+      "baseBudgetUsd": 760000,
+      "incrementalBudgetUsd": 49000
+    },
+    {
+      "campaignId": "CMP-2026-DELTA-DIGITAL",
+      "regionId": "REG-DELTA",
+      "name": "Delta Digital 2026",
+      "channel": "digital",
+      "baseBudgetUsd": 610000,
+      "incrementalBudgetUsd": 36000
+    },
+    {
+      "campaignId": "CMP-2026-ISLAND-PARTNER",
+      "regionId": "REG-ISLAND",
+      "name": "Island Partner 2026",
+      "channel": "partner",
+      "baseBudgetUsd": 420000,
+      "incrementalBudgetUsd": 27000
+    },
+    {
+      "campaignId": "CMP-2026-NORTH-DIGITAL",
+      "regionId": "REG-NORTH",
+      "name": "Northern Digital 2026",
+      "channel": "digital",
+      "baseBudgetUsd": 580000,
+      "incrementalBudgetUsd": 0
+    },
+    {
+      "campaignId": "CMP-2026-CENTRAL-PARTNER",
+      "regionId": "REG-CENTRAL",
+      "name": "Central Partner 2026",
+      "channel": "partner",
+      "baseBudgetUsd": 500000,
+      "incrementalBudgetUsd": 0
+    }
+  ],
+  "forecast": {
+    "baselineVersion": "2026.07.20-1",
+    "baselineForecastDate": "2026-07-20",
+    "revisedVersion": "2026.08.03-2",
+    "revisedForecastDate": "2026-08-03",
+    "horizonDays": 30,
+    "assumptions": [
+      {
+        "assumptionId": "ASM-001",
+        "statement": "Seasonal UV index tracks the ten-year regional average.",
+        "heldAfterSignal": false,
+        "invalidatedBySignalId": "SIG-ENSO-2026-07"
+      },
+      {
+        "assumptionId": "ASM-002",
+        "statement": "No sustained regional climate anomaly during the forecast horizon.",
+        "heldAfterSignal": false,
+        "invalidatedBySignalId": "SIG-ENSO-2026-07"
+      },
+      {
+        "assumptionId": "ASM-003",
+        "statement": "Campaign spend remains flat against the prior quarter.",
+        "heldAfterSignal": true,
+        "invalidatedBySignalId": null
+      },
+      {
+        "assumptionId": "ASM-004",
+        "statement": "No competitor product launch in the Sun Care category.",
+        "heldAfterSignal": true,
+        "invalidatedBySignalId": null
+      },
+      {
+        "assumptionId": "ASM-005",
+        "statement": "Retail distribution coverage remains unchanged.",
+        "heldAfterSignal": true,
+        "invalidatedBySignalId": null
+      }
+    ]
+  },
+  "externalSignal": {
+    "signalId": "SIG-ENSO-2026-07",
+    "name": "Persistent El Nino advisory",
+    "signalType": "climate",
+    "provenance": "external",
+    "sourceLabel": "Meridian Climate Services seasonal climate advisory",
+    "observationPeriodStart": "2026-05-01",
+    "observationPeriodEnd": "2026-07-31",
+    "persistenceThrough": "2026-11-26",
+    "persistenceProbability": 0.78,
+    "confidence": 0.78,
+    "seaSurfaceAnomalyC": 1.4,
+    "affectedRegionIds": [
+      "REG-COASTAL",
+      "REG-SOUTH",
+      "REG-DELTA",
+      "REG-ISLAND"
+    ],
+    "unaffectedRegionIds": [
+      "REG-NORTH",
+      "REG-CENTRAL"
+    ],
+    "issuedBy": "WX-MCS-001"
+  },
+  "weather": {
+    "$comment": "External weather feed backing the Act 1 signal. Sea-surface temperature stays a basin-scale ENSO index that CAUSES regional UV and temperature anomalies; the demand model responds to those local variables, not to the index directly. This keeps externalSignal.seaSurfaceAnomalyC = 1.4 intact as a single basin figure.",
+    "provider": {
+      "providerId": "WX-MCS-001",
+      "name": "Meridian Climate Services",
+      "shortName": "MCS",
+      "provenance": "external",
+      "sourceLabel": "Meridian Climate Services regional observation and forecast feed",
+      "licence": "Commercial subscription, internal analytical use",
+      "refreshCadence": "daily",
+      "issueTimeUtc": "05:00:00"
+    },
+    "variables": [
+      "temperatureMinC",
+      "temperatureMaxC",
+      "temperatureMeanC",
+      "feelsLikeC",
+      "heatIndexC",
+      "uvIndex",
+      "uvAlertLevel",
+      "humidityPct",
+      "precipitationMm",
+      "rainDay",
+      "cloudCoverPct",
+      "sunshineHours",
+      "windSpeedKph",
+      "seaSurfaceTemperatureC",
+      "pressureHpa"
+    ],
+    "anomalyVariables": [
+      "temperatureMeanAnomalyC",
+      "uvIndexAnomaly",
+      "humidityAnomalyPct",
+      "precipitationAnomalyMm",
+      "sunshineAnomalyHours",
+      "seaSurfaceAnomalyC"
+    ],
+    "climatology": {
+      "baselinePeriodStart": "2015-01-01",
+      "baselinePeriodEnd": "2024-12-31",
+      "baselineLabel": "10-year climate normal",
+      "grain": "day-of-year"
+    },
+    "observationWindow": {
+      "dailyStart": "2026-02-27",
+      "dailyEnd": "2026-11-26",
+      "hourlyStart": "2026-06-22",
+      "hourlyEnd": "2026-09-01"
+    },
+    "forecast": {
+      "horizonDays": 30,
+      "issueStart": "2026-05-28",
+      "issueEnd": "2026-10-27",
+      "quantiles": [
+        10,
+        50,
+        90
+      ],
+      "skillNote": "Forecast error shrinks as lead time shortens; p50 converges toward the eventually observed value and the p10-p90 band narrows.",
+      "revisionNote": "Anomaly forecasts are revised upward through May and early June, which is itself evidence that the signal is strengthening rather than fading.",
+      "decisionDayIssue": "2026-08-03",
+      "decisionDayHorizonEnd": "2026-09-02",
+      "leadDayRange": "1..30, so the horizon covers the 30 days following the issue date"
+    },
+    "seasonalOutlook": {
+      "signalId": "SIG-ENSO-2026-07",
+      "persistenceThrough": "2026-11-26",
+      "persistenceProbability": 0.78,
+      "note": "The 30-day forecast answers the near term. The ENSO seasonal outlook carries the remaining campaign horizon to 2026-10-02 and beyond."
+    },
+    "demandResponse": {
+      "modelId": "WXMODEL-UPLIFT-001",
+      "version": "1.0",
+      "status": "approved",
+      "stewardRole": "ROLE-DEMAND-PLANNER",
+      "formula": "upliftPct = betaUv * uvIndexAnomaly + betaTempC * temperatureMeanAnomalyC",
+      "betaUv": 8,
+      "betaTempC": 3.4,
+      "unitNote": "betaUv is percent uplift per UV index point above normal. betaTempC is percent uplift per degree Celsius above normal.",
+      "coefficientsAreGlobal": true,
+      "coefficientNote": "Coefficients are identical for every region, so all regional differences in uplift come from regional differences in weather. This is what makes the causal claim demonstrable rather than asserted.",
+      "intensityShape": {
+        "uvIndexAnomalyPerUnit": 1.5,
+        "temperatureMeanAnomalyCPerUnit": 2,
+        "sensitivityPctPerUnit": 18.8
+      },
+      "calibration": "Region intensity k is solved so the modelled uplift over the variance window equals the frozen regions[].variancePct. The ramp and noise series are normalised so the window mean is exact.",
+      "tolerancePct": 0.3
+    },
+    "regionIntensity": [
+      {
+        "regionId": "REG-COASTAL",
+        "intensity": 1.670213,
+        "uvIndexAnomaly": 2.5053,
+        "temperatureMeanAnomalyC": 3.3404,
+        "targetUpliftPct": 31.4
+      },
+      {
+        "regionId": "REG-SOUTH",
+        "intensity": 1.425532,
+        "uvIndexAnomaly": 2.1383,
+        "temperatureMeanAnomalyC": 2.8511,
+        "targetUpliftPct": 26.8
+      },
+      {
+        "regionId": "REG-DELTA",
+        "intensity": 1.005319,
+        "uvIndexAnomaly": 1.508,
+        "temperatureMeanAnomalyC": 2.0106,
+        "targetUpliftPct": 18.9
+      },
+      {
+        "regionId": "REG-ISLAND",
+        "intensity": 1.196809,
+        "uvIndexAnomaly": 1.7952,
+        "temperatureMeanAnomalyC": 2.3936,
+        "targetUpliftPct": 22.5
+      },
+      {
+        "regionId": "REG-NORTH",
+        "intensity": 0.06383,
+        "uvIndexAnomaly": 0.0957,
+        "temperatureMeanAnomalyC": 0.1277,
+        "targetUpliftPct": 1.2
+      },
+      {
+        "regionId": "REG-CENTRAL",
+        "intensity": -0.042553,
+        "uvIndexAnomaly": -0.0638,
+        "temperatureMeanAnomalyC": -0.0851,
+        "targetUpliftPct": -0.8
+      }
+    ],
+    "regionClimate": [
+      {
+        "regionId": "REG-COASTAL",
+        "stationId": "WXS-COASTAL-01",
+        "stationName": "Coastway Coastal Station",
+        "annualMeanTempC": 21.5,
+        "seasonalAmplitudeC": 6.5,
+        "peakDayOfYear": 257,
+        "annualMeanUvIndex": 6.6,
+        "uvSeasonalAmplitude": 3.2,
+        "annualMeanHumidityPct": 72,
+        "annualMeanPressureHpa": 1014,
+        "baseSeaSurfaceTemperatureC": 23.4,
+        "annualRainfallMm": 890
+      },
+      {
+        "regionId": "REG-SOUTH",
+        "stationId": "WXS-SOUTH-01",
+        "stationName": "Southmoor Station",
+        "annualMeanTempC": 23.4,
+        "seasonalAmplitudeC": 5.8,
+        "peakDayOfYear": 262,
+        "annualMeanUvIndex": 7.1,
+        "uvSeasonalAmplitude": 3.4,
+        "annualMeanHumidityPct": 64,
+        "annualMeanPressureHpa": 1013,
+        "baseSeaSurfaceTemperatureC": 24.8,
+        "annualRainfallMm": 640
+      },
+      {
+        "regionId": "REG-DELTA",
+        "stationId": "WXS-DELTA-01",
+        "stationName": "Delta Basin Station",
+        "annualMeanTempC": 25.1,
+        "seasonalAmplitudeC": 4.9,
+        "peakDayOfYear": 252,
+        "annualMeanUvIndex": 7.6,
+        "uvSeasonalAmplitude": 3,
+        "annualMeanHumidityPct": 78,
+        "annualMeanPressureHpa": 1011,
+        "baseSeaSurfaceTemperatureC": 26.2,
+        "annualRainfallMm": 1420
+      },
+      {
+        "regionId": "REG-ISLAND",
+        "stationId": "WXS-ISLAND-01",
+        "stationName": "Island Point Station",
+        "annualMeanTempC": 24.2,
+        "seasonalAmplitudeC": 3.6,
+        "peakDayOfYear": 267,
+        "annualMeanUvIndex": 8.1,
+        "uvSeasonalAmplitude": 2.6,
+        "annualMeanHumidityPct": 75,
+        "annualMeanPressureHpa": 1012,
+        "baseSeaSurfaceTemperatureC": 26.9,
+        "annualRainfallMm": 1180
+      },
+      {
+        "regionId": "REG-NORTH",
+        "stationId": "WXS-NORTH-01",
+        "stationName": "Northgate Station",
+        "annualMeanTempC": 14.8,
+        "seasonalAmplitudeC": 9.2,
+        "peakDayOfYear": 257,
+        "annualMeanUvIndex": 4.3,
+        "uvSeasonalAmplitude": 3.1,
+        "annualMeanHumidityPct": 68,
+        "annualMeanPressureHpa": 1016,
+        "baseSeaSurfaceTemperatureC": 15.6,
+        "annualRainfallMm": 720
+      },
+      {
+        "regionId": "REG-CENTRAL",
+        "stationId": "WXS-CENTRAL-01",
+        "stationName": "Central Plains Station",
+        "annualMeanTempC": 18.2,
+        "seasonalAmplitudeC": 8.4,
+        "peakDayOfYear": 255,
+        "annualMeanUvIndex": 5.4,
+        "uvSeasonalAmplitude": 3.3,
+        "annualMeanHumidityPct": 58,
+        "annualMeanPressureHpa": 1015,
+        "baseSeaSurfaceTemperatureC": null,
+        "annualRainfallMm": 520
+      }
+    ],
+    "anomalyRamp": {
+      "onsetStart": "2026-03-30",
+      "plateauStart": "2026-06-16",
+      "decayStart": "2026-10-28",
+      "decayEnd": "2026-11-26",
+      "decayFloor": 0.82,
+      "normalisationWindowStart": "2026-06-22",
+      "normalisationWindowEnd": "2026-08-02",
+      "note": "The ramp is normalised so its mean over the variance window is exactly 1.0, which makes the elasticity calibration exact."
+    },
+    "uvAlertLevels": [
+      {
+        "level": "low",
+        "minUvIndex": 0,
+        "maxUvIndexExclusive": 3
+      },
+      {
+        "level": "moderate",
+        "minUvIndex": 3,
+        "maxUvIndexExclusive": 6
+      },
+      {
+        "level": "high",
+        "minUvIndex": 6,
+        "maxUvIndexExclusive": 8
+      },
+      {
+        "level": "very-high",
+        "minUvIndex": 8,
+        "maxUvIndexExclusive": 11
+      },
+      {
+        "level": "extreme",
+        "minUvIndex": 11,
+        "maxUvIndexExclusive": 21
+      }
+    ],
+    "uvAlertLevelRule": "Select the band where minUvIndex <= uvIndex < maxUvIndexExclusive. Bands are contiguous and half-open so no UV value can fall between two bands; values at or above 21 clamp to extreme.",
+    "eventCatalogue": [
+      {
+        "eventType": "enso_phase",
+        "name": "El Nino / La Nina oscillation phase",
+        "severityScale": "weak|moderate|strong",
+        "relevantToHeroProduct": true
+      },
+      {
+        "eventType": "heatwave",
+        "name": "Heatwave",
+        "severityScale": "minor|moderate|severe",
+        "relevantToHeroProduct": true
+      },
+      {
+        "eventType": "uv_alert",
+        "name": "Extreme UV advisory",
+        "severityScale": "very-high|extreme",
+        "relevantToHeroProduct": true
+      },
+      {
+        "eventType": "marine_heatwave",
+        "name": "Marine heatwave",
+        "severityScale": "moderate|strong|severe",
+        "relevantToHeroProduct": true
+      },
+      {
+        "eventType": "rain_storm",
+        "name": "Rainfall and storm event",
+        "severityScale": "minor|moderate|severe",
+        "relevantToHeroProduct": false
+      },
+      {
+        "eventType": "cold_snap",
+        "name": "Unseasonal cold snap",
+        "severityScale": "minor|moderate|severe",
+        "relevantToHeroProduct": false
+      },
+      {
+        "eventType": "air_quality",
+        "name": "Air quality or dust event",
+        "severityScale": "moderate|poor|very-poor",
+        "relevantToHeroProduct": false
+      },
+      {
+        "eventType": "tropical_storm_watch",
+        "name": "Tropical storm watch",
+        "severityScale": "watch|warning",
+        "relevantToHeroProduct": false
+      }
+    ],
+    "eventCatalogueNote": "Events that are irrelevant to sunscreen demand, and events in the two unaffected regions, are generated deliberately so an agent must discriminate rather than select the only record present."
+  },
+  "evidenceChain": {
+    "description": "Act 1 evidence trace shown on stage. Every hop must be reproducible from the loaded data.",
+    "hops": [
+      {
+        "step": 1,
+        "from": "SIG-ENSO-2026-07",
+        "to": [
+          "REG-COASTAL",
+          "REG-SOUTH",
+          "REG-DELTA",
+          "REG-ISLAND"
+        ],
+        "relation": "signal_affects_region"
+      },
+      {
+        "step": 2,
+        "from": "regions",
+        "to": "PROD-HS-100",
+        "relation": "region_sells_product"
+      },
+      {
+        "step": 3,
+        "from": "PROD-HS-100",
+        "to": [
+          "CMP-2026-COASTAL-FIELD",
+          "CMP-2026-SOUTH-DIGITAL",
+          "CMP-2026-DELTA-DIGITAL",
+          "CMP-2026-ISLAND-PARTNER"
+        ],
+        "relation": "product_promoted_by_active_campaign"
+      },
+      {
+        "step": 4,
+        "from": "campaigns",
+        "to": "FC-2026-0720-HS",
+        "relation": "campaign_built_on_forecast_version"
+      },
+      {
+        "step": 5,
+        "from": "FC-2026-0720-HS",
+        "to": [
+          "ASM-001",
+          "ASM-002"
+        ],
+        "relation": "forecast_assumption_invalidated"
+      }
+    ]
+  },
+  "opportunity": {
+    "incrementalUnits": 100000,
+    "incrementalRevenueUsd": 800000,
+    "spokenRevenuePhrase": "about eight hundred thousand",
+    "affectedRegionCount": 4,
+    "note": "incrementalRevenueUsd MUST equal incrementalUnits * unitPriceUsd and MUST equal the sum of region incrementalUnits * unitPriceUsd."
+  },
+  "scenarios": [
+    {
+      "scenarioId": "SCN-2026-HS-A",
+      "name": "Hold current plan",
+      "incrementalBudgetUsd": 0,
+      "incrementalUnits": 34000,
+      "incrementalRevenueUsd": 272000,
+      "confidence": 0.82,
+      "supplyFeasible": true,
+      "recommended": false,
+      "rationale": "Captures organic uplift only. No budget risk, but leaves most of the signal-driven demand uncaptured."
+    },
+    {
+      "scenarioId": "SCN-2026-HS-B",
+      "name": "Targeted uplift in signal-affected regions",
+      "incrementalBudgetUsd": 180000,
+      "incrementalUnits": 100000,
+      "incrementalRevenueUsd": 800000,
+      "confidence": 0.74,
+      "supplyFeasible": true,
+      "recommended": true,
+      "rationale": "Concentrates incremental spend in the four signal-affected regions. Demand is within achievable production capacity under an approved plan."
+    },
+    {
+      "scenarioId": "SCN-2026-HS-C",
+      "name": "Aggressive multi-region push",
+      "incrementalBudgetUsd": 420000,
+      "incrementalUnits": 138000,
+      "incrementalRevenueUsd": 1104000,
+      "confidence": 0.51,
+      "supplyFeasible": true,
+      "approvableByCommercialRole": false,
+      "blockedByPolicyId": "POL-COMMERCIAL-004",
+      "blockedByPolicyVersion": "1.0",
+      "recommended": false,
+      "rationale": "Highest modelled revenue and physically producible, but the 420000 USD incremental budget exceeds the 250000 USD limit that POL-COMMERCIAL-004 v1.0 allows a commercial approver to commit without board approval. It also spends budget in the two regions the signal does not affect, where modelled confidence is lowest."
+    }
+  ],
+  "approvedScenarioId": "SCN-2026-HS-B",
+  "commitment": {
+    "commitmentId": "CMT-2026-HS-001",
+    "scenarioId": "SCN-2026-HS-B",
+    "launchPlanId": "LP-2026-SUN",
+    "productId": "PROD-HS-100",
+    "committedUnits": 100000,
+    "committedRevenueUsd": 800000,
+    "approvedByRole": "ROLE-COMMERCIAL-APPROVER",
+    "approvedByPersonaId": "PERSONA-TIM",
+    "approvedAt": "2026-08-07T14:20:00Z",
+    "status": "approved",
+    "originSignalId": "SIG-ENSO-2026-07",
+    "originCaseId": "CASE-2026-HS-001"
+  },
+  "plants": [
+    {
+      "plantId": "PLANT-01",
+      "name": "Northgate Packaging Plant",
+      "regionCode": "NORTH"
+    },
+    {
+      "plantId": "PLANT-02",
+      "name": "Coastway Packaging Plant",
+      "regionCode": "COASTAL"
+    }
+  ],
+  "productionLines": [
+    {
+      "lineId": "PKG-01",
+      "plantId": "PLANT-01",
+      "name": "Packaging Line 1",
+      "family": "Skin Health",
+      "ratedRateUnitsPerMin": 30,
+      "scheduledHoursPerDay": 16,
+      "baselineUtilisation": 0.74,
+      "status": "running",
+      "sunCareQualified": false
+    },
+    {
+      "lineId": "PKG-02",
+      "plantId": "PLANT-02",
+      "name": "Packaging Line 2",
+      "family": "Sun Care",
+      "ratedRateUnitsPerMin": 25,
+      "scheduledHoursPerDay": 16,
+      "baselineUtilisation": 0.72,
+      "status": "running",
+      "sunCareQualified": true,
+      "preferredForHeroProduct": true
+    },
+    {
+      "lineId": "PKG-03",
+      "plantId": "PLANT-02",
+      "name": "Packaging Line 3",
+      "family": "Sun Care",
+      "ratedRateUnitsPerMin": 20,
+      "scheduledHoursPerDay": 8,
+      "baselineUtilisation": 0.81,
+      "status": "running",
+      "sunCareQualified": true
+    },
+    {
+      "lineId": "PKG-04",
+      "plantId": "PLANT-01",
+      "name": "Packaging Line 4",
+      "family": "Supplements",
+      "ratedRateUnitsPerMin": 15,
+      "scheduledHoursPerDay": 8,
+      "baselineUtilisation": 0.69,
+      "status": "running",
+      "sunCareQualified": false
+    },
+    {
+      "lineId": "PKG-05",
+      "plantId": "PLANT-01",
+      "name": "Packaging Line 5",
+      "family": "Sun Care",
+      "ratedRateUnitsPerMin": 18,
+      "scheduledHoursPerDay": 8,
+      "baselineUtilisation": 0.7,
+      "status": "running",
+      "sunCareQualified": false,
+      "alternateLineForHeroProduct": true,
+      "requiresQualification": true
+    },
+    {
+      "lineId": "PKG-06",
+      "plantId": "PLANT-02",
+      "name": "Packaging Line 6",
+      "family": "Skin Health",
+      "ratedRateUnitsPerMin": 22,
+      "scheduledHoursPerDay": 8,
+      "baselineUtilisation": 0.76,
+      "status": "running",
+      "sunCareQualified": false
+    }
+  ],
+  "capacityModel": {
+    "lineId": "PKG-02",
+    "ratedRateUnitsPerMin": 25,
+    "scheduledHoursPerDay": 16,
+    "baselineUtilisation": 0.72,
+    "baselineRateFactor": 1,
+    "planUtilisation": 0.9,
+    "planRateFactor": 0.9,
+    "baselineProducingHoursPerDay": 11.52,
+    "planProducingHoursPerDay": 14.4,
+    "baselineUnitsPerOperatingDay": 17280,
+    "planUnitsPerOperatingDay": 19440,
+    "campaignOperatingDays": 41,
+    "maintenanceOperatingDaysLost": 5,
+    "existingCommittedUnitsInCampaign": 580000,
+    "derivations": {
+      "baselineProducingHoursPerDay": "scheduledHoursPerDay * baselineUtilisation",
+      "planProducingHoursPerDay": "scheduledHoursPerDay * planUtilisation",
+      "baselineUnitsPerOperatingDay": "baselineProducingHoursPerDay * 60 * ratedRateUnitsPerMin * baselineRateFactor",
+      "planUnitsPerOperatingDay": "planProducingHoursPerDay * 60 * ratedRateUnitsPerMin * planRateFactor",
+      "capacityWithoutMaintenance": "campaignOperatingDays * baselineUnitsPerOperatingDay",
+      "capacityWithMaintenance": "(campaignOperatingDays - maintenanceOperatingDaysLost) * baselineUnitsPerOperatingDay"
+    },
+    "expected": {
+      "capacityWithoutMaintenanceUnits": 708480,
+      "capacityWithMaintenanceUnits": 622080,
+      "headroomWithoutMaintenanceUnits": 128480,
+      "headroomWithMaintenanceUnits": 42080,
+      "requiredIncrementalUnits": 100000,
+      "shortfallUnits": 57920,
+      "maxDeliverableIncrementalUnitsUnderBestPlan": 217040,
+      "conflictCause": "The five-day maintenance window removes 86400 units of capacity, which is the entire reason the approved campaign commitment cannot be met."
+    }
+  },
+  "maintenance": {
+    "maintenanceWindowId": "MW-PKG-02-2026-09",
+    "lineId": "PKG-02",
+    "type": "major_preventive",
+    "originalStart": "2026-09-07",
+    "originalEnd": "2026-09-11",
+    "durationDays": 5,
+    "operatingDaysLost": 5,
+    "deferredStart": "2026-10-05",
+    "deferredEnd": "2026-10-09",
+    "deferralDays": 28,
+    "lastMajorMaintenance": "2026-02-09",
+    "insideCampaignPeriod": true,
+    "deferredOutsideCampaignPeriod": true
+  },
+  "stressModel": {
+    "description": "Modelled equipment-wear rule. Stress accrues per producing hour and scales with the cube of the rate factor, so running slower for longer accrues less cumulative stress while producing more units.",
+    "formula": "stressPerOperatingDay = producingHoursPerDay * rateFactor^3",
+    "rateExponent": 3,
+    "baselineStressPerOperatingDay": 11.52,
+    "planStressPerOperatingDay": 10.4976,
+    "operatingDaysLastMaintenanceToOriginalDue": 180,
+    "operatingDaysLastMaintenanceToPlanStart": 162,
+    "operatingDaysPlanStartToDeferredDue": 42,
+    "thresholdStressIndex": 2073.6,
+    "cumulativeAtPlanStart": 1866.24,
+    "projectedStressAtDeferredMaintenance": 2307.1392,
+    "projectedStressPctOfThreshold": 111.26,
+    "stressCeilingPct": 115,
+    "withinCeiling": true,
+    "note": "thresholdStressIndex is calibrated so the originally scheduled window 2026-09-07 is exactly the nominal due date under baseline operation."
+  },
+  "options": [
+    {
+      "optionId": "OPT-1",
+      "name": "Prebuild inventory before the maintenance window",
+      "summary": "Raise utilisation to 90 percent at 90 percent rate during the prebuild period only, and let the maintenance window proceed as scheduled.",
+      "requiredRateFactor": 0.9,
+      "requiredUtilisation": 0.9,
+      "appliesFrom": "2026-08-17",
+      "appliesTo": "2026-09-06",
+      "prebuildOperatingDays": 18,
+      "expectedOutputUnits": 660960,
+      "availableIncrementalUnits": 80960,
+      "incrementalUnitsDelivered": 80960,
+      "meetsCommitment": false,
+      "shortfallUnits": 19040,
+      "effectOnExistingOrders": "none",
+      "materialsConstraint": "Requires 8 percent additional pump-cap supply in the prebuild period; supplier confirmed.",
+      "riskLevel": "low",
+      "confidence": 0.86,
+      "requiredApproverRole": "ROLE-OPERATIONS-APPROVER",
+      "policyCompliant": true,
+      "rejectionReason": "Delivers only 80960 of the 100000 committed incremental units."
+    },
+    {
+      "optionId": "OPT-2",
+      "name": "Move part of production to alternate line PKG-05",
+      "summary": "Qualify PKG-05 for Hydration Sunscreen and move part of the volume there while the maintenance window proceeds.",
+      "requiredRateFactor": 1,
+      "requiredUtilisation": 0.72,
+      "alternateLineId": "PKG-05",
+      "alternateLineFreeUnitsPerOperatingDay": 2000,
+      "alternateLineOperatingDays": 41,
+      "alternateLineUnits": 82000,
+      "expectedOutputUnits": 704080,
+      "availableIncrementalUnits": 124080,
+      "incrementalUnitsDelivered": 100000,
+      "meetsCommitment": true,
+      "shortfallUnits": 0,
+      "effectOnExistingOrders": "Displaces 12000 units of Skin Health volume on PKG-05.",
+      "materialsConstraint": "Requires a dedicated changeover kit and a second filling head.",
+      "riskLevel": "high",
+      "confidence": 0.58,
+      "requiredApproverRole": "ROLE-QUALITY-APPROVER",
+      "policyCompliant": true,
+      "rejectionReason": "PKG-05 is not qualified for Sun Care. Qualification takes an estimated 18 days and would displace existing Skin Health commitments."
+    },
+    {
+      "optionId": "OPT-3",
+      "name": "Defer the maintenance window at current rate",
+      "summary": "Postpone the maintenance window by four weeks while continuing to run the line at its full rated speed.",
+      "requiredRateFactor": 1,
+      "requiredUtilisation": 0.72,
+      "expectedOutputUnits": 708480,
+      "availableIncrementalUnits": 128480,
+      "incrementalUnitsDelivered": 100000,
+      "meetsCommitment": true,
+      "shortfallUnits": 0,
+      "effectOnExistingOrders": "none",
+      "materialsConstraint": "none",
+      "riskLevel": "blocked",
+      "confidence": 0,
+      "requiredApproverRole": "ROLE-MAINTENANCE-APPROVER",
+      "policyCompliant": false,
+      "rejectionReason": "POL-MAINT-002 v2.1 permits zero deferral days when the sustained peak rate exceeds 95 percent of rated speed. Deferring at full rate is a policy violation, not a trade-off."
+    },
+    {
+      "optionId": "OPT-4",
+      "name": "Reduced-rate higher-utilisation plan with policy-permitted deferral",
+      "summary": "Run PKG-02 at 90 percent rate and 90 percent utilisation for the whole campaign, which raises output and lowers stress accrual, and defer maintenance by the 28 days the policy permits at that sustained rate.",
+      "requiredRateFactor": 0.9,
+      "requiredUtilisation": 0.9,
+      "appliesFrom": "2026-08-17",
+      "appliesTo": "2026-10-04",
+      "expectedOutputUnits": 797040,
+      "availableIncrementalUnits": 217040,
+      "incrementalUnitsDelivered": 100000,
+      "meetsCommitment": true,
+      "shortfallUnits": 0,
+      "marginUnits": 117040,
+      "effectOnExistingOrders": "none",
+      "materialsConstraint": "Requires 14 percent additional pump-cap and carton supply across the campaign; supplier confirmed on 2026-07-31.",
+      "riskLevel": "low",
+      "confidence": 0.81,
+      "requiredApproverRole": "ROLE-OPERATIONS-APPROVER",
+      "secondaryApproverRole": "ROLE-MAINTENANCE-APPROVER",
+      "policyCompliant": true,
+      "recommended": true,
+      "policyBasis": [
+        "POL-MAINT-002:2.1",
+        "POL-CAPACITY-003:1.3"
+      ]
+    }
+  ],
+  "recommendedOptionId": "OPT-4",
+  "policies": [
+    {
+      "policyId": "POL-SUPPLY-001",
+      "version": "1.0",
+      "name": "Campaign destination supply guardrail",
+      "status": "approved",
+      "effectiveFrom": "2026-03-01T00:00:00Z",
+      "rule": {
+        "minimumCoverageDays": 14,
+        "effect": "recommendation_block"
+      }
+    },
+    {
+      "policyId": "POL-MAINT-002",
+      "version": "2.1",
+      "name": "Preventive maintenance deferral limits",
+      "status": "approved",
+      "effectiveFrom": "2026-04-01T00:00:00Z",
+      "rule": {
+        "deferralTable": [
+          {
+            "maxSustainedRateFactor": 0.85,
+            "maxDeferralDays": 42
+          },
+          {
+            "maxSustainedRateFactor": 0.9,
+            "maxDeferralDays": 28
+          },
+          {
+            "maxSustainedRateFactor": 0.95,
+            "maxDeferralDays": 14
+          },
+          {
+            "maxSustainedRateFactor": 1,
+            "maxDeferralDays": 0
+          }
+        ],
+        "stressCeilingPct": 115,
+        "requiredApproverRole": "ROLE-MAINTENANCE-APPROVER",
+        "effect": "conditional_permit"
+      }
+    },
+    {
+      "policyId": "POL-CAPACITY-003",
+      "version": "1.3",
+      "name": "Approved line utilisation limits",
+      "status": "approved",
+      "effectiveFrom": "2026-04-01T00:00:00Z",
+      "rule": {
+        "maxSustainedUtilisation": 0.9,
+        "utilisationRequiringApproval": 0.85,
+        "maxSustainedRateFactor": 1,
+        "requiredApproverRole": "ROLE-OPERATIONS-APPROVER",
+        "effect": "conditional_permit"
+      }
+    },
+    {
+      "policyId": "POL-COMMERCIAL-004",
+      "version": "1.0",
+      "name": "Campaign budget commitment authority",
+      "status": "approved",
+      "effectiveFrom": "2026-03-01T00:00:00Z",
+      "rule": {
+        "maxIncrementalBudgetUsdWithoutBoardApproval": 250000,
+        "requiredApproverRole": "ROLE-COMMERCIAL-APPROVER",
+        "effect": "conditional_permit"
+      }
+    }
+  ],
+  "metrics": [
+    {
+      "metricId": "METRIC-CM-001",
+      "name": "Contribution margin percent",
+      "version": "1.0",
+      "expression": "(revenue_usd - variable_cost_usd) / revenue_usd * 100",
+      "status": "approved"
+    },
+    {
+      "metricId": "METRIC-COVERAGE-001",
+      "name": "Supply coverage days",
+      "version": "1.0",
+      "expression": "net_available_units / average_daily_forecast_units",
+      "status": "approved"
+    },
+    {
+      "metricId": "METRIC-FCSTVAR-001",
+      "name": "Forecast variance percent",
+      "version": "1.0",
+      "expression": "(actual_units - forecast_units) / forecast_units * 100",
+      "status": "approved"
+    },
+    {
+      "metricId": "METRIC-STRESS-001",
+      "name": "Cumulative equipment stress index",
+      "version": "1.0",
+      "expression": "sum(producing_hours * pow(rate_factor, 3))",
+      "status": "approved"
+    }
+  ],
+  "actions": [
+    {
+      "actionId": "ACT-CAMPAIGN-001",
+      "type": "campaign_commitment",
+      "api": "commercial-planning-api",
+      "requestedAt": "2026-08-07T13:55:00Z",
+      "approvedAt": "2026-08-07T14:20:00Z",
+      "executedAt": "2026-08-07T14:21:00Z",
+      "approvedByRole": "ROLE-COMMERCIAL-APPROVER",
+      "approvedByPersonaId": "PERSONA-TIM",
+      "receiptId": "RCPT-CMP-2026-0807-001",
+      "status": "executed",
+      "result": "success",
+      "details": {
+        "commitmentId": "CMT-2026-HS-001",
+        "scenarioId": "SCN-2026-HS-B",
+        "committedUnits": 100000,
+        "incrementalBudgetUsd": 180000
+      }
+    },
+    {
+      "actionId": "ACT-PROD-002",
+      "type": "production_plan_change",
+      "api": "production-api",
+      "requestedAt": "2026-08-10T08:40:00Z",
+      "approvedAt": "2026-08-10T09:05:00Z",
+      "executedAt": "2026-08-10T09:06:00Z",
+      "approvedByRole": "ROLE-OPERATIONS-APPROVER",
+      "approvedByPersonaId": "PERSONA-KARIN",
+      "receiptId": "RCPT-PRD-2026-0810-002",
+      "status": "executed",
+      "result": "success",
+      "details": {
+        "lineId": "PKG-02",
+        "optionId": "OPT-4",
+        "rateFactor": 0.9,
+        "utilisation": 0.9,
+        "appliesFrom": "2026-08-17",
+        "appliesTo": "2026-10-04"
+      }
+    },
+    {
+      "actionId": "ACT-MAINT-003",
+      "type": "maintenance_deferral",
+      "api": "maintenance-api",
+      "requestedAt": "2026-08-10T08:41:00Z",
+      "approvedAt": "2026-08-10T09:12:00Z",
+      "executedAt": "2026-08-10T09:13:00Z",
+      "approvedByRole": "ROLE-MAINTENANCE-APPROVER",
+      "receiptId": "RCPT-MNT-2026-0810-003",
+      "status": "executed",
+      "result": "success",
+      "details": {
+        "maintenanceWindowId": "MW-PKG-02-2026-09",
+        "deferralDays": 28,
+        "newStart": "2026-10-05",
+        "newEnd": "2026-10-09",
+        "policyId": "POL-MAINT-002",
+        "policyVersion": "2.1"
+      }
+    }
+  ],
+  "decisionCase": {
+    "caseId": "CASE-2026-HS-001",
+    "scopeKey": "LP-2026-SUN/PROD-HS-100",
+    "concernsProductId": "PROD-HS-100",
+    "openedAt": "2026-08-03T08:12:00Z",
+    "resolvedAt": "2026-10-05T16:40:00Z",
+    "status": "resolved",
+    "title": "Persistent El Nino signal drives Hydration Sunscreen demand above forecast in four regions",
+    "states": [
+      {
+        "state": "opened",
+        "at": "2026-08-03T08:12:00Z"
+      },
+      {
+        "state": "evidence_gathered",
+        "at": "2026-08-03T09:35:00Z"
+      },
+      {
+        "state": "options_proposed",
+        "at": "2026-08-06T11:10:00Z"
+      },
+      {
+        "state": "approved",
+        "at": "2026-08-07T14:20:00Z"
+      },
+      {
+        "state": "executing",
+        "at": "2026-08-10T09:13:00Z"
+      },
+      {
+        "state": "resolved",
+        "at": "2026-10-05T16:40:00Z"
+      }
+    ],
+    "triggers": [
+      {
+        "type": "forecastVariance",
+        "id": "FCV-2026-HS-001"
+      },
+      {
+        "type": "externalSignal",
+        "id": "SIG-ENSO-2026-07"
+      }
+    ],
+    "appliedPolicies": [
+      {
+        "policyId": "POL-MAINT-002",
+        "version": "2.1"
+      },
+      {
+        "policyId": "POL-CAPACITY-003",
+        "version": "1.3"
+      },
+      {
+        "policyId": "POL-COMMERCIAL-004",
+        "version": "1.0"
+      }
+    ],
+    "corrections": [
+      {
+        "correctionId": "CORR-2026-001",
+        "statement": "Sun Care forecast assumptions must include an ENSO persistence check for coastal and southern regions before a forecast version is published.",
+        "scopeKey": "forecast-assumptions/sun-care",
+        "proposedByRole": "ROLE-DEMAND-PLANNER",
+        "proposedAt": "2026-08-07T15:02:00Z",
+        "approvedByRole": "ROLE-KNOWLEDGE-STEWARD",
+        "approvedAt": "2026-08-08T10:15:00Z",
+        "status": "approved"
+      }
+    ],
+    "outcomes": [
+      {
+        "outcomeId": "OUT-DEMAND-001",
+        "metricName": "incrementalUnitsDelivered",
+        "metricValue": 104300,
+        "plannedValue": 100000,
+        "resultCode": "commitment_met",
+        "recordedAt": "2026-10-03T06:00:00Z"
+      },
+      {
+        "outcomeId": "OUT-REVENUE-002",
+        "metricName": "incrementalRevenueUsd",
+        "metricValue": 834400,
+        "plannedValue": 800000,
+        "resultCode": "revenue_realised",
+        "recordedAt": "2026-10-03T06:00:00Z"
+      },
+      {
+        "outcomeId": "OUT-MAINT-003",
+        "metricName": "stressPctOfThresholdAtMaintenance",
+        "metricValue": 111.26,
+        "plannedValue": 111.26,
+        "resultCode": "within_policy_ceiling",
+        "recordedAt": "2026-10-05T16:40:00Z"
+      },
+      {
+        "outcomeId": "OUT-SERVICE-004",
+        "metricName": "existingOrderFulfilmentPct",
+        "metricValue": 100,
+        "plannedValue": 100,
+        "resultCode": "no_commitments_missed",
+        "recordedAt": "2026-10-03T06:00:00Z"
+      }
+    ]
+  },
+  "retrieval": {
+    "futureSignalId": "SIG-ENSO-2027-04",
+    "futureQuery": "Sunscreen demand is running above forecast again in coastal regions and a climate advisory is active. Have we seen this before and what did we approve?",
+    "mustRetrieveCaseId": "CASE-2026-HS-001",
+    "expectedReuse": [
+      "OPT-4 reduced-rate higher-utilisation plan with policy-permitted deferral",
+      "POL-MAINT-002 v2.1 deferral table",
+      "CORR-2026-001 ENSO persistence check",
+      "OUT-DEMAND-001 delivered 104300 units against a 100000 unit commitment"
+    ]
+  },
+  "volume": {
+    "targetTotalRecords": 1000000,
+    "note": "Approximate total row count across all generated data files. Stage-critical records are deterministic and always present regardless of scale.",
+    "salesObservationsPerDayPerRegionPerProduct": 4,
+    "lineSignalIntervalMinutes": 15,
+    "campaignSignalIntervalMinutes": 60
+  }
+}

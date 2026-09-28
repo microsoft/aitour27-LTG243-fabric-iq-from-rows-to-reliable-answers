@@ -1,0 +1,3 @@
+forecastVersionId,versionName,versionType,forecastDate,productId,horizonDays,analysisWindowStartDate,analysisWindowEndDate
+FC-2026-0720-HS,2026.07.20-1,baseline,2026-07-20,PROD-HS-100,30,2026-06-22,2026-08-02
+FC-2026-0803-HS,2026.08.03-2,revised,2026-08-03,PROD-HS-100,30,2026-06-22,2026-08-02

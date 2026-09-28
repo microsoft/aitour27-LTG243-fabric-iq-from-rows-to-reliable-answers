@@ -1,0 +1,10 @@
+caseId,title,scopeKey,status,concernsProductId,openedAt,resolvedAt,originSignalId,lineId,commitmentId
+CASE-2026-HS-001,Persistent El Nino signal drives Hydration Sunscreen demand above forecast in four regions,LP-2026-SUN/PROD-HS-100,open,PROD-HS-100,2026-08-03T08:12:00Z,,SIG-ENSO-2026-07,PKG-02,
+CASE-PKG-2024-001,packaging changeover for Hydration Sunscreen Kids in Coastal Region,historical/2024/PROD-HS-110/REG-COASTAL,resolved,PROD-HS-110,2024-04-01T09:00:00Z,2024-04-09T15:30:00Z,,PKG-03,
+CASE-SUP-2024-002,supplier delay for After Sun Recovery Gel in Southern Region,historical/2024/PROD-AS-200/REG-SOUTH,resolved,PROD-AS-200,2024-04-30T09:00:00Z,2024-05-08T15:30:00Z,,PKG-02,
+CASE-LBL-2025-003,label revision for Daily Moisturiser in Delta Region,historical/2025/PROD-DM-300/REG-DELTA,resolved,PROD-DM-300,2025-06-01T09:00:00Z,2025-06-09T15:30:00Z,,PKG-04,
+CASE-CAP-2025-004,capacity rebalance for Lip Care Balm in Island Region,historical/2025/PROD-LB-400/REG-ISLAND,resolved,PROD-LB-400,2025-07-02T09:00:00Z,2025-07-10T15:30:00Z,,PKG-06,
+CASE-QAL-2025-005,quality hold release for After Sun Recovery Gel in Northern Region,historical/2025/PROD-AS-200/REG-NORTH,resolved,PROD-AS-200,2025-07-30T09:00:00Z,2025-08-07T15:30:00Z,,PKG-01,
+CASE-MNT-2025-006,maintenance schedule for Hydration Sunscreen Kids in Central Region,historical/2025/PROD-HS-110/REG-CENTRAL,resolved,PROD-HS-110,2025-04-02T09:00:00Z,2025-04-10T15:30:00Z,,PKG-05,
+CASE-BUD-2026-007,budget guardrail for Vitamin D Supplement in Northern Region,historical/2026/PROD-VD-500/REG-NORTH,resolved,PROD-VD-500,2026-05-01T09:00:00Z,2026-05-09T15:30:00Z,,PKG-04,
+CASE-DSP-2026-008,distribution shift for Lip Care Balm in Delta Region,historical/2026/PROD-LB-400/REG-DELTA,resolved,PROD-LB-400,2026-06-02T09:00:00Z,2026-06-10T15:30:00Z,,PKG-06,

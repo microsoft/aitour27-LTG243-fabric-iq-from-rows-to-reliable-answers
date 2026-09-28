@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "9390000000312",
+  "name": "commitment_for_launch_plan",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "9390000000066"
+  },
+  "target": {
+    "entityTypeId": "9390000000001"
+  }
+}

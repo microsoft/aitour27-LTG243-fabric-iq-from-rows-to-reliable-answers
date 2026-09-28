@@ -1,0 +1,132 @@
+eventId,eventType,regionId,severity,startDate,endDate,peakValue,peakMetric,signalId,relevantToHeroProduct,headline,provenance,providerId
+WXE-AIR-QUALITY-REG-COASTAL-001,air_quality,REG-COASTAL,moderate,2026-02-27,2026-02-27,16.68,windSpeedKph,,false,REG-COASTAL dust and air-quality advisory follows dry winds,external,WX-MCS-001
+WXE-COLD-SNAP-REG-COASTAL-001,cold_snap,REG-COASTAL,minor,2026-02-27,2026-02-27,12.04,temperatureMinC,,false,REG-COASTAL unseasonal cold snap dips to 12C,external,WX-MCS-001
+WXE-AIR-QUALITY-REG-CENTRAL-001,air_quality,REG-CENTRAL,poor,2026-03-01,2026-03-01,22.56,windSpeedKph,,false,REG-CENTRAL dust and air-quality advisory follows dry winds,external,WX-MCS-001
+WXE-AIR-QUALITY-REG-SOUTH-001,air_quality,REG-SOUTH,moderate,2026-03-01,2026-03-01,17.88,windSpeedKph,,false,REG-SOUTH dust and air-quality advisory follows dry winds,external,WX-MCS-001
+WXE-AIR-QUALITY-REG-COASTAL-002,air_quality,REG-COASTAL,poor,2026-03-03,2026-03-03,22.02,windSpeedKph,,false,REG-COASTAL dust and air-quality advisory follows dry winds,external,WX-MCS-001
+WXE-AIR-QUALITY-REG-NORTH-001,air_quality,REG-NORTH,poor,2026-03-03,2026-03-03,20.4,windSpeedKph,,false,REG-NORTH dust and air-quality advisory follows dry winds,external,WX-MCS-001
+WXE-COLD-SNAP-REG-CENTRAL-001,cold_snap,REG-CENTRAL,minor,2026-03-03,2026-03-03,5.3,temperatureMinC,,false,REG-CENTRAL unseasonal cold snap dips to 5.3C,external,WX-MCS-001
+WXE-RAIN-STORM-REG-ISLAND-001,rain_storm,REG-ISLAND,moderate,2026-03-03,2026-03-03,17.35,precipitationMm,,false,REG-ISLAND rainfall event brings 17.4 mm,external,WX-MCS-001
+WXE-COLD-SNAP-REG-CENTRAL-002,cold_snap,REG-CENTRAL,minor,2026-03-05,2026-03-05,5.43,temperatureMinC,,false,REG-CENTRAL unseasonal cold snap dips to 5.4C,external,WX-MCS-001
+WXE-AIR-QUALITY-REG-SOUTH-002,air_quality,REG-SOUTH,moderate,2026-03-06,2026-03-06,17.98,windSpeedKph,,false,REG-SOUTH dust and air-quality advisory follows dry winds,external,WX-MCS-001
+WXE-COLD-SNAP-REG-ISLAND-001,cold_snap,REG-ISLAND,minor,2026-03-06,2026-03-06,17.22,temperatureMinC,,false,REG-ISLAND unseasonal cold snap dips to 17.2C,external,WX-MCS-001
+WXE-RAIN-STORM-REG-SOUTH-001,rain_storm,REG-SOUTH,minor,2026-03-06,2026-03-06,9.13,precipitationMm,,false,REG-SOUTH rainfall event brings 9.1 mm,external,WX-MCS-001
+WXE-AIR-QUALITY-REG-NORTH-002,air_quality,REG-NORTH,very-poor,2026-03-07,2026-03-07,24.8,windSpeedKph,,false,REG-NORTH dust and air-quality advisory follows dry winds,external,WX-MCS-001
+WXE-COLD-SNAP-REG-NORTH-001,cold_snap,REG-NORTH,minor,2026-03-09,2026-03-09,1.56,temperatureMinC,,false,REG-NORTH unseasonal cold snap dips to 1.6C,external,WX-MCS-001
+WXE-COLD-SNAP-REG-ISLAND-002,cold_snap,REG-ISLAND,minor,2026-03-10,2026-03-10,16.97,temperatureMinC,,false,REG-ISLAND unseasonal cold snap dips to 17C,external,WX-MCS-001
+WXE-COLD-SNAP-REG-NORTH-002,cold_snap,REG-NORTH,minor,2026-03-10,2026-03-10,1.31,temperatureMinC,,false,REG-NORTH unseasonal cold snap dips to 1.3C,external,WX-MCS-001
+WXE-RAIN-STORM-REG-ISLAND-002,rain_storm,REG-ISLAND,moderate,2026-03-12,2026-03-13,19.12,precipitationMm,,false,REG-ISLAND rainfall event brings 19.1 mm,external,WX-MCS-001
+WXE-AIR-QUALITY-REG-CENTRAL-002,air_quality,REG-CENTRAL,poor,2026-03-13,2026-03-13,20.48,windSpeedKph,,false,REG-CENTRAL dust and air-quality advisory follows dry winds,external,WX-MCS-001
+WXE-COLD-SNAP-REG-DELTA-001,cold_snap,REG-DELTA,minor,2026-03-14,2026-03-14,17.02,temperatureMinC,,false,REG-DELTA unseasonal cold snap dips to 17C,external,WX-MCS-001
+WXE-COLD-SNAP-REG-DELTA-002,cold_snap,REG-DELTA,minor,2026-03-15,2026-03-15,16.82,temperatureMinC,,false,REG-DELTA unseasonal cold snap dips to 16.8C,external,WX-MCS-001
+WXE-COLD-SNAP-REG-SOUTH-001,cold_snap,REG-SOUTH,minor,2026-03-15,2026-03-15,13.84,temperatureMinC,,false,REG-SOUTH unseasonal cold snap dips to 13.8C,external,WX-MCS-001
+WXE-RAIN-STORM-REG-COASTAL-001,rain_storm,REG-COASTAL,moderate,2026-03-17,2026-03-17,15.25,precipitationMm,,false,REG-COASTAL rainfall event brings 15.3 mm,external,WX-MCS-001
+WXE-COLD-SNAP-REG-SOUTH-002,cold_snap,REG-SOUTH,minor,2026-03-19,2026-03-19,14.16,temperatureMinC,,false,REG-SOUTH unseasonal cold snap dips to 14.2C,external,WX-MCS-001
+WXE-RAIN-STORM-REG-DELTA-001,rain_storm,REG-DELTA,severe,2026-03-20,2026-03-21,25.26,precipitationMm,,false,REG-DELTA rainfall event brings 25.3 mm,external,WX-MCS-001
+WXE-COLD-SNAP-REG-COASTAL-002,cold_snap,REG-COASTAL,minor,2026-03-22,2026-03-22,12.1,temperatureMinC,,false,REG-COASTAL unseasonal cold snap dips to 12.1C,external,WX-MCS-001
+WXE-RAIN-STORM-REG-CENTRAL-001,rain_storm,REG-CENTRAL,minor,2026-03-22,2026-03-22,6.62,precipitationMm,,false,REG-CENTRAL rainfall event brings 6.6 mm,external,WX-MCS-001
+WXE-RAIN-STORM-REG-NORTH-001,rain_storm,REG-NORTH,moderate,2026-03-22,2026-03-22,12.8,precipitationMm,,false,REG-NORTH rainfall event brings 12.8 mm,external,WX-MCS-001
+WXE-RAIN-STORM-REG-CENTRAL-002,rain_storm,REG-CENTRAL,minor,2026-03-28,2026-03-28,7.38,precipitationMm,,false,REG-CENTRAL rainfall event brings 7.4 mm,external,WX-MCS-001
+WXE-RAIN-STORM-REG-ISLAND-003,rain_storm,REG-ISLAND,moderate,2026-03-28,2026-03-29,18.01,precipitationMm,,false,REG-ISLAND rainfall event brings 18 mm,external,WX-MCS-001
+WXE-RAIN-STORM-REG-COASTAL-002,rain_storm,REG-COASTAL,moderate,2026-03-31,2026-03-31,14.69,precipitationMm,,false,REG-COASTAL rainfall event brings 14.7 mm,external,WX-MCS-001
+WXE-RAIN-STORM-REG-SOUTH-002,rain_storm,REG-SOUTH,minor,2026-04-03,2026-04-03,8.75,precipitationMm,,false,REG-SOUTH rainfall event brings 8.8 mm,external,WX-MCS-001
+WXE-RAIN-STORM-REG-COASTAL-003,rain_storm,REG-COASTAL,moderate,2026-04-11,2026-04-11,14.84,precipitationMm,,false,REG-COASTAL rainfall event brings 14.8 mm,external,WX-MCS-001
+WXE-RAIN-STORM-REG-ISLAND-004,rain_storm,REG-ISLAND,moderate,2026-04-17,2026-04-18,18.5,precipitationMm,,false,REG-ISLAND rainfall event brings 18.5 mm,external,WX-MCS-001
+WXE-RAIN-STORM-REG-DELTA-002,rain_storm,REG-DELTA,moderate,2026-04-18,2026-04-19,23.24,precipitationMm,,false,REG-DELTA rainfall event brings 23.2 mm,external,WX-MCS-001
+WXE-RAIN-STORM-REG-NORTH-002,rain_storm,REG-NORTH,moderate,2026-04-21,2026-04-21,12.12,precipitationMm,,false,REG-NORTH rainfall event brings 12.1 mm,external,WX-MCS-001
+WXE-RAIN-STORM-REG-NORTH-003,rain_storm,REG-NORTH,minor,2026-04-26,2026-04-26,11.7,precipitationMm,,false,REG-NORTH rainfall event brings 11.7 mm,external,WX-MCS-001
+WXE-RAIN-STORM-REG-CENTRAL-003,rain_storm,REG-CENTRAL,minor,2026-04-30,2026-04-30,8.43,precipitationMm,,false,REG-CENTRAL rainfall event brings 8.4 mm,external,WX-MCS-001
+WXE-ENSO-PHASE-REG-COASTAL-001,enso_phase,REG-COASTAL,strong,2026-05-01,2026-11-26,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,Persistent El Nino advisory persists over REG-COASTAL,external,WX-MCS-001
+WXE-ENSO-PHASE-REG-DELTA-001,enso_phase,REG-DELTA,strong,2026-05-01,2026-11-26,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,Persistent El Nino advisory persists over REG-DELTA,external,WX-MCS-001
+WXE-ENSO-PHASE-REG-ISLAND-001,enso_phase,REG-ISLAND,strong,2026-05-01,2026-11-26,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,Persistent El Nino advisory persists over REG-ISLAND,external,WX-MCS-001
+WXE-ENSO-PHASE-REG-SOUTH-001,enso_phase,REG-SOUTH,strong,2026-05-01,2026-11-26,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,Persistent El Nino advisory persists over REG-SOUTH,external,WX-MCS-001
+WXE-AIR-QUALITY-REG-ISLAND-001,air_quality,REG-ISLAND,poor,2026-05-05,2026-05-05,20.92,windSpeedKph,,false,REG-ISLAND dust and air-quality advisory follows dry winds,external,WX-MCS-001
+WXE-RAIN-STORM-REG-SOUTH-003,rain_storm,REG-SOUTH,minor,2026-05-13,2026-05-13,8.78,precipitationMm,,false,REG-SOUTH rainfall event brings 8.8 mm,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-COASTAL-001,marine_heatwave,REG-COASTAL,severe,2026-06-16,2026-06-25,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-COASTAL marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-DELTA-001,marine_heatwave,REG-DELTA,severe,2026-06-16,2026-06-25,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-DELTA marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-ISLAND-001,marine_heatwave,REG-ISLAND,severe,2026-06-16,2026-06-25,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-ISLAND marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-SOUTH-001,marine_heatwave,REG-SOUTH,severe,2026-06-16,2026-06-25,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-SOUTH marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-UV-ALERT-REG-COASTAL-001,uv_alert,REG-COASTAL,very-high,2026-06-16,2026-06-19,8.939,uvIndex,SIG-ENSO-2026-07,true,REG-COASTAL UV advisory peaks at index 8.9,external,WX-MCS-001
+WXE-UV-ALERT-REG-DELTA-001,uv_alert,REG-DELTA,very-high,2026-06-16,2026-06-19,9.143,uvIndex,SIG-ENSO-2026-07,true,REG-DELTA UV advisory peaks at index 9.1,external,WX-MCS-001
+WXE-UV-ALERT-REG-SOUTH-001,uv_alert,REG-SOUTH,very-high,2026-06-16,2026-06-19,8.985,uvIndex,SIG-ENSO-2026-07,true,REG-SOUTH UV advisory peaks at index 9,external,WX-MCS-001
+WXE-HEATWAVE-REG-ISLAND-001,heatwave,REG-ISLAND,minor,2026-06-17,2026-06-20,31.23,temperatureMaxC,SIG-ENSO-2026-07,true,REG-ISLAND heatwave reaches 31.2C,external,WX-MCS-001
+WXE-UV-ALERT-REG-ISLAND-001,uv_alert,REG-ISLAND,very-high,2026-06-17,2026-06-20,9.15,uvIndex,SIG-ENSO-2026-07,true,REG-ISLAND UV advisory peaks at index 9.2,external,WX-MCS-001
+WXE-HEATWAVE-REG-COASTAL-001,heatwave,REG-COASTAL,minor,2026-06-18,2026-06-22,30.64,temperatureMaxC,SIG-ENSO-2026-07,true,REG-COASTAL heatwave reaches 30.6C,external,WX-MCS-001
+WXE-HEATWAVE-REG-DELTA-001,heatwave,REG-DELTA,moderate,2026-06-18,2026-06-20,32.82,temperatureMaxC,SIG-ENSO-2026-07,true,REG-DELTA heatwave reaches 32.8C,external,WX-MCS-001
+WXE-UV-ALERT-REG-COASTAL-002,uv_alert,REG-COASTAL,very-high,2026-06-20,2026-06-23,9.27,uvIndex,SIG-ENSO-2026-07,true,REG-COASTAL UV advisory peaks at index 9.3,external,WX-MCS-001
+WXE-UV-ALERT-REG-DELTA-002,uv_alert,REG-DELTA,very-high,2026-06-20,2026-06-23,9.262,uvIndex,SIG-ENSO-2026-07,true,REG-DELTA UV advisory peaks at index 9.3,external,WX-MCS-001
+WXE-UV-ALERT-REG-SOUTH-002,uv_alert,REG-SOUTH,very-high,2026-06-20,2026-06-23,9.398,uvIndex,SIG-ENSO-2026-07,true,REG-SOUTH UV advisory peaks at index 9.4,external,WX-MCS-001
+WXE-HEATWAVE-REG-SOUTH-001,heatwave,REG-SOUTH,moderate,2026-06-21,2026-06-25,32.32,temperatureMaxC,SIG-ENSO-2026-07,true,REG-SOUTH heatwave reaches 32.3C,external,WX-MCS-001
+WXE-UV-ALERT-REG-ISLAND-002,uv_alert,REG-ISLAND,very-high,2026-06-21,2026-06-24,9.196,uvIndex,SIG-ENSO-2026-07,true,REG-ISLAND UV advisory peaks at index 9.2,external,WX-MCS-001
+WXE-HEATWAVE-REG-COASTAL-002,heatwave,REG-COASTAL,moderate,2026-06-23,2026-06-27,31.76,temperatureMaxC,SIG-ENSO-2026-07,true,REG-COASTAL heatwave reaches 31.8C,external,WX-MCS-001
+WXE-UV-ALERT-REG-COASTAL-003,uv_alert,REG-COASTAL,very-high,2026-06-24,2026-06-27,9.445,uvIndex,SIG-ENSO-2026-07,true,REG-COASTAL UV advisory peaks at index 9.4,external,WX-MCS-001
+WXE-UV-ALERT-REG-DELTA-003,uv_alert,REG-DELTA,very-high,2026-06-24,2026-06-27,9.403,uvIndex,SIG-ENSO-2026-07,true,REG-DELTA UV advisory peaks at index 9.4,external,WX-MCS-001
+WXE-UV-ALERT-REG-SOUTH-003,uv_alert,REG-SOUTH,very-high,2026-06-24,2026-06-27,9.418,uvIndex,SIG-ENSO-2026-07,true,REG-SOUTH UV advisory peaks at index 9.4,external,WX-MCS-001
+WXE-RAIN-STORM-REG-DELTA-003,rain_storm,REG-DELTA,severe,2026-06-25,2026-06-26,24.69,precipitationMm,,false,REG-DELTA rainfall event brings 24.7 mm,external,WX-MCS-001
+WXE-UV-ALERT-REG-ISLAND-003,uv_alert,REG-ISLAND,very-high,2026-06-25,2026-06-28,9.344,uvIndex,SIG-ENSO-2026-07,true,REG-ISLAND UV advisory peaks at index 9.3,external,WX-MCS-001
+WXE-HEATWAVE-REG-SOUTH-002,heatwave,REG-SOUTH,moderate,2026-06-26,2026-06-29,32.71,temperatureMaxC,SIG-ENSO-2026-07,true,REG-SOUTH heatwave reaches 32.7C,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-COASTAL-002,marine_heatwave,REG-COASTAL,severe,2026-06-26,2026-07-05,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-COASTAL marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-DELTA-002,marine_heatwave,REG-DELTA,severe,2026-06-26,2026-07-05,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-DELTA marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-ISLAND-002,marine_heatwave,REG-ISLAND,severe,2026-06-26,2026-07-05,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-ISLAND marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-SOUTH-002,marine_heatwave,REG-SOUTH,severe,2026-06-26,2026-07-05,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-SOUTH marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-HEATWAVE-REG-COASTAL-003,heatwave,REG-COASTAL,moderate,2026-06-28,2026-07-02,31.91,temperatureMaxC,SIG-ENSO-2026-07,true,REG-COASTAL heatwave reaches 31.9C,external,WX-MCS-001
+WXE-UV-ALERT-REG-COASTAL-004,uv_alert,REG-COASTAL,very-high,2026-06-28,2026-07-01,9.729,uvIndex,SIG-ENSO-2026-07,true,REG-COASTAL UV advisory peaks at index 9.7,external,WX-MCS-001
+WXE-UV-ALERT-REG-DELTA-004,uv_alert,REG-DELTA,very-high,2026-06-28,2026-07-01,9.388,uvIndex,SIG-ENSO-2026-07,true,REG-DELTA UV advisory peaks at index 9.4,external,WX-MCS-001
+WXE-UV-ALERT-REG-SOUTH-004,uv_alert,REG-SOUTH,very-high,2026-06-28,2026-07-01,9.705,uvIndex,SIG-ENSO-2026-07,true,REG-SOUTH UV advisory peaks at index 9.7,external,WX-MCS-001
+WXE-HEATWAVE-REG-ISLAND-002,heatwave,REG-ISLAND,minor,2026-06-29,2026-07-01,30.96,temperatureMaxC,SIG-ENSO-2026-07,true,REG-ISLAND heatwave reaches 31C,external,WX-MCS-001
+WXE-UV-ALERT-REG-ISLAND-004,uv_alert,REG-ISLAND,very-high,2026-06-29,2026-07-02,9.56,uvIndex,SIG-ENSO-2026-07,true,REG-ISLAND UV advisory peaks at index 9.6,external,WX-MCS-001
+WXE-RAIN-STORM-REG-COASTAL-004,rain_storm,REG-COASTAL,moderate,2026-06-30,2026-06-30,13.79,precipitationMm,,false,REG-COASTAL rainfall event brings 13.8 mm,external,WX-MCS-001
+WXE-HEATWAVE-REG-SOUTH-003,heatwave,REG-SOUTH,moderate,2026-07-01,2026-07-05,32.47,temperatureMaxC,SIG-ENSO-2026-07,true,REG-SOUTH heatwave reaches 32.5C,external,WX-MCS-001
+WXE-RAIN-STORM-REG-DELTA-004,rain_storm,REG-DELTA,moderate,2026-07-02,2026-07-03,23.13,precipitationMm,,false,REG-DELTA rainfall event brings 23.1 mm,external,WX-MCS-001
+WXE-UV-ALERT-REG-COASTAL-005,uv_alert,REG-COASTAL,very-high,2026-07-02,2026-07-05,9.915,uvIndex,SIG-ENSO-2026-07,true,REG-COASTAL UV advisory peaks at index 9.9,external,WX-MCS-001
+WXE-UV-ALERT-REG-DELTA-005,uv_alert,REG-DELTA,very-high,2026-07-02,2026-07-05,9.599,uvIndex,SIG-ENSO-2026-07,true,REG-DELTA UV advisory peaks at index 9.6,external,WX-MCS-001
+WXE-UV-ALERT-REG-SOUTH-005,uv_alert,REG-SOUTH,very-high,2026-07-02,2026-07-05,9.633,uvIndex,SIG-ENSO-2026-07,true,REG-SOUTH UV advisory peaks at index 9.6,external,WX-MCS-001
+WXE-HEATWAVE-REG-DELTA-002,heatwave,REG-DELTA,moderate,2026-07-03,2026-07-05,32.67,temperatureMaxC,SIG-ENSO-2026-07,true,REG-DELTA heatwave reaches 32.7C,external,WX-MCS-001
+WXE-HEATWAVE-REG-ISLAND-003,heatwave,REG-ISLAND,minor,2026-07-03,2026-07-05,31.46,temperatureMaxC,SIG-ENSO-2026-07,true,REG-ISLAND heatwave reaches 31.5C,external,WX-MCS-001
+WXE-UV-ALERT-REG-ISLAND-005,uv_alert,REG-ISLAND,very-high,2026-07-03,2026-07-06,9.663,uvIndex,SIG-ENSO-2026-07,true,REG-ISLAND UV advisory peaks at index 9.7,external,WX-MCS-001
+WXE-HEATWAVE-REG-COASTAL-004,heatwave,REG-COASTAL,moderate,2026-07-05,2026-07-09,32.05,temperatureMaxC,SIG-ENSO-2026-07,true,REG-COASTAL heatwave reaches 32.1C,external,WX-MCS-001
+WXE-HEATWAVE-REG-SOUTH-004,heatwave,REG-SOUTH,moderate,2026-07-06,2026-07-08,32.49,temperatureMaxC,SIG-ENSO-2026-07,true,REG-SOUTH heatwave reaches 32.5C,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-COASTAL-003,marine_heatwave,REG-COASTAL,severe,2026-07-06,2026-07-15,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-COASTAL marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-DELTA-003,marine_heatwave,REG-DELTA,severe,2026-07-06,2026-07-15,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-DELTA marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-ISLAND-003,marine_heatwave,REG-ISLAND,severe,2026-07-06,2026-07-15,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-ISLAND marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-SOUTH-003,marine_heatwave,REG-SOUTH,severe,2026-07-06,2026-07-15,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-SOUTH marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-UV-ALERT-REG-COASTAL-006,uv_alert,REG-COASTAL,very-high,2026-07-06,2026-07-09,10.045,uvIndex,SIG-ENSO-2026-07,true,REG-COASTAL UV advisory peaks at index 10,external,WX-MCS-001
+WXE-UV-ALERT-REG-DELTA-006,uv_alert,REG-DELTA,very-high,2026-07-06,2026-07-09,9.696,uvIndex,SIG-ENSO-2026-07,true,REG-DELTA UV advisory peaks at index 9.7,external,WX-MCS-001
+WXE-UV-ALERT-REG-SOUTH-006,uv_alert,REG-SOUTH,very-high,2026-07-06,2026-07-09,9.798,uvIndex,SIG-ENSO-2026-07,true,REG-SOUTH UV advisory peaks at index 9.8,external,WX-MCS-001
+WXE-HEATWAVE-REG-DELTA-003,heatwave,REG-DELTA,moderate,2026-07-07,2026-07-11,33.71,temperatureMaxC,SIG-ENSO-2026-07,true,REG-DELTA heatwave reaches 33.7C,external,WX-MCS-001
+WXE-HEATWAVE-REG-ISLAND-004,heatwave,REG-ISLAND,moderate,2026-07-07,2026-07-11,32.19,temperatureMaxC,SIG-ENSO-2026-07,true,REG-ISLAND heatwave reaches 32.2C,external,WX-MCS-001
+WXE-UV-ALERT-REG-ISLAND-006,uv_alert,REG-ISLAND,very-high,2026-07-07,2026-07-10,9.971,uvIndex,SIG-ENSO-2026-07,true,REG-ISLAND UV advisory peaks at index 10,external,WX-MCS-001
+WXE-RAIN-STORM-REG-CENTRAL-004,rain_storm,REG-CENTRAL,minor,2026-07-09,2026-07-09,7.7,precipitationMm,,false,REG-CENTRAL rainfall event brings 7.7 mm,external,WX-MCS-001
+WXE-HEATWAVE-REG-COASTAL-005,heatwave,REG-COASTAL,moderate,2026-07-10,2026-07-14,31.87,temperatureMaxC,SIG-ENSO-2026-07,true,REG-COASTAL heatwave reaches 31.9C,external,WX-MCS-001
+WXE-HEATWAVE-REG-SOUTH-005,heatwave,REG-SOUTH,moderate,2026-07-10,2026-07-14,32.89,temperatureMaxC,SIG-ENSO-2026-07,true,REG-SOUTH heatwave reaches 32.9C,external,WX-MCS-001
+WXE-UV-ALERT-REG-COASTAL-007,uv_alert,REG-COASTAL,very-high,2026-07-10,2026-07-13,10.13,uvIndex,SIG-ENSO-2026-07,true,REG-COASTAL UV advisory peaks at index 10.1,external,WX-MCS-001
+WXE-UV-ALERT-REG-DELTA-007,uv_alert,REG-DELTA,very-high,2026-07-10,2026-07-13,9.908,uvIndex,SIG-ENSO-2026-07,true,REG-DELTA UV advisory peaks at index 9.9,external,WX-MCS-001
+WXE-UV-ALERT-REG-SOUTH-007,uv_alert,REG-SOUTH,very-high,2026-07-10,2026-07-13,10.011,uvIndex,SIG-ENSO-2026-07,true,REG-SOUTH UV advisory peaks at index 10,external,WX-MCS-001
+WXE-UV-ALERT-REG-ISLAND-007,uv_alert,REG-ISLAND,very-high,2026-07-11,2026-07-14,10.148,uvIndex,SIG-ENSO-2026-07,true,REG-ISLAND UV advisory peaks at index 10.1,external,WX-MCS-001
+WXE-HEATWAVE-REG-DELTA-004,heatwave,REG-DELTA,moderate,2026-07-12,2026-07-16,34.19,temperatureMaxC,SIG-ENSO-2026-07,true,REG-DELTA heatwave reaches 34.2C,external,WX-MCS-001
+WXE-HEATWAVE-REG-ISLAND-005,heatwave,REG-ISLAND,moderate,2026-07-12,2026-07-16,32.72,temperatureMaxC,SIG-ENSO-2026-07,true,REG-ISLAND heatwave reaches 32.7C,external,WX-MCS-001
+WXE-TROPICAL-STORM-WATCH-REG-COASTAL-001,tropical_storm_watch,REG-COASTAL,watch,2026-07-12,2026-07-14,17.24,windSpeedKph,,false,REG-COASTAL tropical storm watch stays unrelated to sunscreen signal,external,WX-MCS-001
+WXE-HEATWAVE-REG-NORTH-001,heatwave,REG-NORTH,minor,2026-07-14,2026-07-18,24.36,temperatureMaxC,,true,REG-NORTH heatwave reaches 24.4C,external,WX-MCS-001
+WXE-UV-ALERT-REG-COASTAL-008,uv_alert,REG-COASTAL,very-high,2026-07-14,2026-07-17,10.471,uvIndex,SIG-ENSO-2026-07,true,REG-COASTAL UV advisory peaks at index 10.5,external,WX-MCS-001
+WXE-UV-ALERT-REG-DELTA-008,uv_alert,REG-DELTA,very-high,2026-07-14,2026-07-17,10.063,uvIndex,SIG-ENSO-2026-07,true,REG-DELTA UV advisory peaks at index 10.1,external,WX-MCS-001
+WXE-UV-ALERT-REG-SOUTH-008,uv_alert,REG-SOUTH,very-high,2026-07-14,2026-07-17,9.992,uvIndex,SIG-ENSO-2026-07,true,REG-SOUTH UV advisory peaks at index 10,external,WX-MCS-001
+WXE-HEATWAVE-REG-COASTAL-006,heatwave,REG-COASTAL,moderate,2026-07-15,2026-07-19,33.06,temperatureMaxC,SIG-ENSO-2026-07,true,REG-COASTAL heatwave reaches 33.1C,external,WX-MCS-001
+WXE-HEATWAVE-REG-SOUTH-006,heatwave,REG-SOUTH,moderate,2026-07-15,2026-07-19,33.74,temperatureMaxC,SIG-ENSO-2026-07,true,REG-SOUTH heatwave reaches 33.7C,external,WX-MCS-001
+WXE-UV-ALERT-REG-ISLAND-008,uv_alert,REG-ISLAND,very-high,2026-07-15,2026-07-18,10.379,uvIndex,SIG-ENSO-2026-07,true,REG-ISLAND UV advisory peaks at index 10.4,external,WX-MCS-001
+WXE-HEATWAVE-REG-CENTRAL-001,heatwave,REG-CENTRAL,minor,2026-07-16,2026-07-20,27.42,temperatureMaxC,,true,REG-CENTRAL heatwave reaches 27.4C,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-COASTAL-004,marine_heatwave,REG-COASTAL,severe,2026-07-16,2026-07-25,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-COASTAL marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-DELTA-004,marine_heatwave,REG-DELTA,severe,2026-07-16,2026-07-25,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-DELTA marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-ISLAND-004,marine_heatwave,REG-ISLAND,severe,2026-07-16,2026-07-25,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-ISLAND marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-MARINE-HEATWAVE-REG-SOUTH-004,marine_heatwave,REG-SOUTH,severe,2026-07-16,2026-07-25,1.4,seaSurfaceAnomalyC,SIG-ENSO-2026-07,true,REG-SOUTH marine heatwave sustains warm basin conditions,external,WX-MCS-001
+WXE-HEATWAVE-REG-DELTA-005,heatwave,REG-DELTA,moderate,2026-07-17,2026-07-21,34.62,temperatureMaxC,SIG-ENSO-2026-07,true,REG-DELTA heatwave reaches 34.6C,external,WX-MCS-001
+WXE-HEATWAVE-REG-ISLAND-006,heatwave,REG-ISLAND,moderate,2026-07-17,2026-07-21,32.92,temperatureMaxC,SIG-ENSO-2026-07,true,REG-ISLAND heatwave reaches 32.9C,external,WX-MCS-001
+WXE-HEATWAVE-REG-DELTA-006,heatwave,REG-DELTA,severe,2026-07-22,2026-07-26,35,temperatureMaxC,SIG-ENSO-2026-07,true,REG-DELTA heatwave reaches 35C,external,WX-MCS-001
+WXE-TROPICAL-STORM-WATCH-REG-COASTAL-002,tropical_storm_watch,REG-COASTAL,watch,2026-07-25,2026-07-27,16.13,windSpeedKph,,false,REG-COASTAL tropical storm watch stays unrelated to sunscreen signal,external,WX-MCS-001
+WXE-TROPICAL-STORM-WATCH-REG-DELTA-001,tropical_storm_watch,REG-DELTA,watch,2026-07-26,2026-07-28,21.29,windSpeedKph,,false,REG-DELTA tropical storm watch stays unrelated to sunscreen signal,external,WX-MCS-001
+WXE-RAIN-STORM-REG-SOUTH-004,rain_storm,REG-SOUTH,minor,2026-07-27,2026-07-27,11.52,precipitationMm,,false,REG-SOUTH rainfall event brings 11.5 mm,external,WX-MCS-001
+WXE-TROPICAL-STORM-WATCH-REG-ISLAND-001,tropical_storm_watch,REG-ISLAND,watch,2026-07-29,2026-07-31,20.91,windSpeedKph,,false,REG-ISLAND tropical storm watch stays unrelated to sunscreen signal,external,WX-MCS-001
+WXE-TROPICAL-STORM-WATCH-REG-SOUTH-001,tropical_storm_watch,REG-SOUTH,watch,2026-07-29,2026-07-31,16.92,windSpeedKph,,false,REG-SOUTH tropical storm watch stays unrelated to sunscreen signal,external,WX-MCS-001
+WXE-TROPICAL-STORM-WATCH-REG-DELTA-002,tropical_storm_watch,REG-DELTA,watch,2026-07-31,2026-08-02,23.68,windSpeedKph,,false,REG-DELTA tropical storm watch stays unrelated to sunscreen signal,external,WX-MCS-001
+WXE-TROPICAL-STORM-WATCH-REG-ISLAND-002,tropical_storm_watch,REG-ISLAND,watch,2026-08-01,2026-08-03,20.91,windSpeedKph,,false,REG-ISLAND tropical storm watch stays unrelated to sunscreen signal,external,WX-MCS-001
+WXE-TROPICAL-STORM-WATCH-REG-SOUTH-002,tropical_storm_watch,REG-SOUTH,watch,2026-08-01,2026-08-03,17.88,windSpeedKph,,false,REG-SOUTH tropical storm watch stays unrelated to sunscreen signal,external,WX-MCS-001
+WXE-RAIN-STORM-REG-NORTH-004,rain_storm,REG-NORTH,minor,2026-08-02,2026-08-02,11.97,precipitationMm,,false,REG-NORTH rainfall event brings 12 mm,external,WX-MCS-001
