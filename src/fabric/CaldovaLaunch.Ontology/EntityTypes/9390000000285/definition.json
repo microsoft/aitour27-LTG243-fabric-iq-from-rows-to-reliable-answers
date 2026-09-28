@@ -1,0 +1,58 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "9390000000285",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "Outcome",
+  "entityIdParts": [
+    "9390000000286"
+  ],
+  "displayNamePropertyId": "9390000000286",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "9390000000286",
+      "name": "outcomeId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000287",
+      "name": "metricName",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000288",
+      "name": "metricValue",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000289",
+      "name": "plannedValue",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000290",
+      "name": "resultCode",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000291",
+      "name": "recordedAt",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    }
+  ],
+  "timeseriesProperties": []
+}

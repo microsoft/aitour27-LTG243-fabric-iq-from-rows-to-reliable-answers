@@ -1,0 +1,121 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "9390000000089",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "ProductionLine",
+  "entityIdParts": [
+    "9390000000090"
+  ],
+  "displayNamePropertyId": "9390000000090",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "9390000000090",
+      "name": "lineId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000091",
+      "name": "plantId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000092",
+      "name": "lineName",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000093",
+      "name": "family",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000094",
+      "name": "ratedRateUnitsPerMin",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000095",
+      "name": "scheduledHoursPerDay",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000096",
+      "name": "baselineUtilisation",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000097",
+      "name": "status",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000098",
+      "name": "sunCareQualified",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    },
+    {
+      "id": "9390000000099",
+      "name": "preferredForHeroProduct",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    },
+    {
+      "id": "9390000000100",
+      "name": "alternateLineForHeroProduct",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    },
+    {
+      "id": "9390000000101",
+      "name": "requiresQualification",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    }
+  ],
+  "timeseriesProperties": [
+    {
+      "id": "9390000000102",
+      "name": "actualRateUnitsPerMin",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000103",
+      "name": "rateFactor",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000104",
+      "name": "utilisation",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000105",
+      "name": "cumulativeStressIndex",
+      "valueType": "Double"
+    }
+  ]
+}

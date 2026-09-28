@@ -1,0 +1,5 @@
+policyId,policyVersion,policyName,status,effectiveFrom,ruleJson
+POL-SUPPLY-001,1.0,Campaign destination supply guardrail,approved,2026-03-01T00:00:00Z,"{""minimumCoverageDays"":14,""effect"":""recommendation_block""}"
+POL-MAINT-002,2.1,Preventive maintenance deferral limits,approved,2026-04-01T00:00:00Z,"{""deferralTable"":[{""maxSustainedRateFactor"":0.85,""maxDeferralDays"":42},{""maxSustainedRateFactor"":0.9,""maxDeferralDays"":28},{""maxSustainedRateFactor"":0.95,""maxDeferralDays"":14},{""maxSustainedRateFactor"":1,""maxDeferralDays"":0}],""stressCeilingPct"":115,""requiredApproverRole"":""ROLE-MAINTENANCE-APPROVER"",""effect"":""conditional_permit""}"
+POL-CAPACITY-003,1.3,Approved line utilisation limits,approved,2026-04-01T00:00:00Z,"{""maxSustainedUtilisation"":0.9,""utilisationRequiringApproval"":0.85,""maxSustainedRateFactor"":1,""requiredApproverRole"":""ROLE-OPERATIONS-APPROVER"",""effect"":""conditional_permit""}"
+POL-COMMERCIAL-004,1.0,Campaign budget commitment authority,approved,2026-03-01T00:00:00Z,"{""maxIncrementalBudgetUsdWithoutBoardApproval"":250000,""requiredApproverRole"":""ROLE-COMMERCIAL-APPROVER"",""effect"":""conditional_permit""}"

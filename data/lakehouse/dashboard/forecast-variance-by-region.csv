@@ -1,0 +1,7 @@
+region_id,region,product_id,product,forecast_units,actual_units,variance_pct,signal_affected_flag
+REG-COASTAL,Coastal Region,PROD-HS-100,Hydration Sunscreen,64000,84096,31.4,true
+REG-SOUTH,Southern Region,PROD-HS-100,Hydration Sunscreen,52000,65936,26.8,true
+REG-DELTA,Delta Region,PROD-HS-100,Hydration Sunscreen,45000,53505,18.9,true
+REG-ISLAND,Island Region,PROD-HS-100,Hydration Sunscreen,31000,37975,22.5,true
+REG-NORTH,Northern Region,PROD-HS-100,Hydration Sunscreen,42000,42504,1.2,false
+REG-CENTRAL,Central Region,PROD-HS-100,Hydration Sunscreen,38000,37696,-0.8,false

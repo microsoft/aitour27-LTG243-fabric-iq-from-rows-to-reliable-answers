@@ -1,0 +1,6 @@
+assumptionId,forecastVersionId,statement,heldAfterSignal,invalidatedBySignalId
+ASM-001,FC-2026-0720-HS,Seasonal UV index tracks the ten-year regional average.,false,SIG-ENSO-2026-07
+ASM-002,FC-2026-0720-HS,No sustained regional climate anomaly during the forecast horizon.,false,SIG-ENSO-2026-07
+ASM-003,FC-2026-0720-HS,Campaign spend remains flat against the prior quarter.,true,
+ASM-004,FC-2026-0720-HS,No competitor product launch in the Sun Care category.,true,
+ASM-005,FC-2026-0720-HS,Retail distribution coverage remains unchanged.,true,

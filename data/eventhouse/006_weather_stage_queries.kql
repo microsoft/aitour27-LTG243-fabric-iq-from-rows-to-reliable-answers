@@ -1,0 +1,70 @@
+// Query 1: observed UV and temperature anomaly by region over the variance window.
+// Expected stage readout: four signal-affected regions are elevated; REG-NORTH and REG-CENTRAL remain flat controls.
+let varianceWindowStart = datetime(2026-06-22);
+let varianceWindowEnd = datetime(2026-08-02);
+let affectedRegionIds = dynamic(["REG-COASTAL", "REG-SOUTH", "REG-DELTA", "REG-ISLAND"]);
+WeatherObservationsDaily
+| where timestamp between (varianceWindowStart .. endofday(varianceWindowEnd))
+| summarize avgUvIndexAnomaly=round(avg(uvIndexAnomaly), 3), avgTemperatureMeanAnomalyC=round(avg(temperatureMeanAnomalyC), 3), avgUvIndex=round(avg(uvIndex), 3), observations=count() by regionId
+| extend signalAffected=set_has_element(affectedRegionIds, regionId)
+| extend cohort=iff(signalAffected, "signal-affected", "control")
+| order by signalAffected desc, avgUvIndexAnomaly desc
+
+// Query 2: decision-day forecast fan chart for a signal-affected region.
+// Expected stage readout: even the p10 UV path remains above normal for REG-COASTAL.
+let decisionIssueDate = datetime(2026-08-03);
+let targetRegionId = "REG-COASTAL";
+WeatherForecastDaily
+| where issueDate == decisionIssueDate and regionId == targetRegionId
+| project leadDays, targetDate, uvIndex_p10, uvIndex_p50, uvIndex_p90, temperatureMeanC_p10, temperatureMeanC_p50, temperatureMeanC_p90, uvIndexAnomaly_p50, temperatureMeanAnomalyC_p50, confidence
+| order by leadDays asc
+
+// Query 3: forecast revision history for a fixed variance-window target date.
+// Expected stage readout: earlier issues under-predict the anomaly, then later issues revise it upward.
+let targetRegionId = "REG-COASTAL";
+let fixedTargetDate = datetime(2026-08-01);
+WeatherForecastDaily
+| where regionId == targetRegionId and targetDate == fixedTargetDate
+| project issueDate, leadDays, uvIndexAnomaly_p50, temperatureMeanAnomalyC_p50, uvIndex_p10, uvIndex_p50, uvIndex_p90, confidence
+| order by issueDate asc
+
+// Query 4: elasticity reconciliation from observed weather anomalies to actual sales variance.
+// Expected stage readout: betaUv and betaTempC reproduce the region-level sales variance from ForecastActualDaily.
+let varianceWindowStart = datetime(2026-06-22);
+let varianceWindowEnd = datetime(2026-08-02);
+let betaUv = 8.0;
+let betaTempC = 3.4;
+let heroProductId = "PROD-HS-100";
+let baselineForecastVersion = "2026.07.20-1";
+let observedWeather =
+    WeatherObservationsDaily
+    | where timestamp between (varianceWindowStart .. endofday(varianceWindowEnd))
+    | summarize meanUvIndexAnomaly=avg(uvIndexAnomaly), meanTemperatureMeanAnomalyC=avg(temperatureMeanAnomalyC) by regionId
+    | extend predictedUpliftPct=round(betaUv * meanUvIndexAnomaly + betaTempC * meanTemperatureMeanAnomalyC, 2);
+let actualSalesVariance =
+    ForecastActualDaily
+    | where productId == heroProductId and forecastVersion == baselineForecastVersion
+    | where timestamp between (varianceWindowStart .. endofday(varianceWindowEnd))
+    | summarize forecastUnits=sum(forecastUnits), actualUnits=sum(actualUnits) by regionId
+    | extend actualVariancePct=round((todouble(actualUnits - forecastUnits) / todouble(forecastUnits)) * 100.0, 2);
+observedWeather
+| join kind=inner actualSalesVariance on regionId
+| project regionId, meanUvIndexAnomaly=round(meanUvIndexAnomaly, 3), meanTemperatureMeanAnomalyC=round(meanTemperatureMeanAnomalyC, 3), predictedUpliftPct, actualVariancePct, differencePct=round(predictedUpliftPct - actualVariancePct, 2), forecastUnits, actualUnits
+| order by actualVariancePct desc
+
+// Query 5: weather events joined to region labels, separating hero-product-relevant events from distractors.
+// Expected stage readout: signal evidence is concentrated in affected regions, while unrelated events remain visible for discrimination.
+let regions = datatable(regionId:string, regionName:string, signalAffected:bool)
+[
+  "REG-COASTAL", "Coastal Region", true,
+  "REG-SOUTH", "Southern Region", true,
+  "REG-DELTA", "Delta Region", true,
+  "REG-ISLAND", "Island Region", true,
+  "REG-NORTH", "Northern Region", false,
+  "REG-CENTRAL", "Central Region", false
+];
+WeatherEvents
+| join kind=inner regions on regionId
+| extend relevance=iff(relevantToHeroProduct, "hero-product relevant", "irrelevant distractor")
+| summarize events=count(), peak=max(peakValue), sampleHeadline=any(headline) by relevance, eventType, regionId, regionName, signalAffected
+| order by relevance asc, signalAffected desc, events desc, eventType asc

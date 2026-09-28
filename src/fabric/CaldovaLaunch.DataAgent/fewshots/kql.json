@@ -1,0 +1,18 @@
+[
+  {
+    "question": "Show the raw forecast variance by region for Hydration Sunscreen during the signal window.",
+    "query": "ForecastActualDaily\n| where productId == \"PROD-HS-100\"\n| where timestamp between (datetime(2026-06-22) .. datetime(2026-08-02))\n| summarize forecastUnits = sum(forecastUnits), actualUnits = sum(actualUnits), avgVariancePct = round(avg(variancePct), 1) by regionId, signalAffected\n| order by signalAffected desc, avgVariancePct desc"
+  },
+  {
+    "question": "What raw climate-signal observations support SIG-ENSO-2026-07?",
+    "query": "ClimateSignalObservations\n| where signalId == \"SIG-ENSO-2026-07\"\n| summarize avgSeaSurfaceAnomalyC = round(avg(seaSurfaceAnomalyC), 2), avgUvIndex = round(avg(uvIndex), 2), avgAnomalyVsBaselineC = round(avg(anomalyVsBaselineC), 2), provenance = take_any(provenance) by regionId\n| order by avgAnomalyVsBaselineC desc"
+  },
+  {
+    "question": "On decision day, does the 30-day weather forecast still show elevated UV and temperature in affected regions?",
+    "query": "WeatherForecastDaily\n| where issueDate == datetime(2026-08-03)\n| where regionId in (\"REG-COASTAL\", \"REG-SOUTH\", \"REG-DELTA\", \"REG-ISLAND\", \"REG-NORTH\", \"REG-CENTRAL\")\n| summarize horizonStart = min(targetDate), horizonEnd = max(targetDate), meanUvIndexAnomalyP50 = round(avg(uvIndexAnomaly_p50), 2), meanTemperatureAnomalyCP50 = round(avg(temperatureMeanAnomalyC_p50), 2), avgConfidence = round(avg(confidence), 2), provenance = take_any(provenance) by regionId\n| order by meanUvIndexAnomalyP50 desc"
+  },
+  {
+    "question": "What line telemetry supports the reduced-rate higher-utilisation production plan?",
+    "query": "LineSignals\n| where lineId == \"PKG-02\"\n| where timestamp between (datetime(2026-08-17) .. datetime(2026-10-04))\n| summarize avgRateFactor = round(avg(rateFactor), 2), avgUtilisation = round(avg(utilisation), 2), maxCumulativeStressIndex = round(max(cumulativeStressIndex), 2), producingSamples = countif(producing) by state\n| order by state asc"
+  }
+]

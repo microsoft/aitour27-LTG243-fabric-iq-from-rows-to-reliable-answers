@@ -1,129 +1,110 @@
-## Before you're done
-
-This repo has been created for your AI Tour 2027 session. Here's how to get it ready.
-
-**Easiest path — use the agent (recommended):**
-
-- Open GitHub Copilot Chat and say `help me initialize repo`. The agent will walk you through getting the README populated.
-- When you're ready to publish, say `help me finalize repo`. The agent will clean up unused folders, validate everything, and remove this "Before you're done" section and other extra stuff that attendees don't need to see.
-- Curious how it works? Read the [agent workflow](.github/AGENT-WORKFLOW.md).
-
-**Doing it manually?**
-
-Fill in the sections below yourself, then:
-
-- Delete any placeholder folders you don't need (`data/`, `infra/`, etc.)
-- Delete this "Before you're done" section
-- Delete `.github/agents/`, `.github/tests/`, `.github/copilot-instructions.md`, and `.github/AGENT-WORKFLOW.md` — these are template tooling, not part of your published repo
-
-**Folder conventions:**
-
-- Attendee step-by-step guidance goes in `instructions/`. If you use MkDocs or a docs site instead, put it in `docs/` and link to it from this README.
-- Reference material and background reading go in `docs/`.
-- Presenter notes, deck link, recordings, and re-delivery materials go in `delivery-resources/`. Fill in [`delivery-resources/README.md`](delivery-resources/README.md).
-- You can add a `.devcontainer/` folder if needed.
-
----
-
-<a name="start-building"></a>
-
 <p align="center">
 <img src="img/banner-ai-tour-27.png" alt="Microsoft AI Tour 2027" width="100%"/>
 </p>
 
-# [Microsoft AI Tour 2027](https://aitour.microsoft.com)
+# Microsoft AI Tour 2027
 
-## 🔥 LTG243: Fabric IQ: From rows to reliable answers
+## LTG243: Fabric IQ - From rows to reliable answers
 
-### Session description
+This lightning talk follows one Hydration Sunscreen decision from synthetic rows
+to governed business meaning, a grounded Fabric data-agent answer, and reusable
+organizational knowledge. This repository contains the deployable Microsoft
+Fabric estate used for that demonstration: the synthetic Caldova data, Fabric IQ
+ontology, Direct Lake semantic model, Fabric data agent, deployment automation,
+and verification checks.
 
-Add your session description here. Keep it concise — 2-3 sentences about what attendees will learn and why it matters.
+All business records are synthetic and fictional.
 
-### 🚀 Getting started
+> **Recommended:** Run the setup with GitHub Copilot or your preferred coding
+> agent using the [agent runbook](instructions/copilot.md). The complete manual
+> steps remain below.
 
-#### In a guided session
+## Fastest setup
 
-If you're following along during a live session:
+The demo is Fabric-only. It does not require an Azure subscription, Azure SQL
+logical server, Azure OpenAI deployment, or a separate application host.
 
-1. Step 1
-2. Step 2
-3. Open [`instructions/`](instructions/README.md) when this session includes
-   attendee step-by-step guidance
+1. Install Node.js 24 or later, Bash or PowerShell 7, and
+   [Fabio CLI](https://github.com/iemejia/fabio) 0.71.0 or later.
+2. Use a Microsoft Fabric tenant with capacity and an empty or disposable
+   workspace where you can create and load the required item types.
+3. Authenticate and review a dry run:
 
-#### On your own
+   ```sh
+   fabio auth login --browser
+   ./create-data.sh --workspace <workspace-id> --dry-run
+   ```
 
-If you're learning at your own pace:
+4. Deploy and verify:
 
-1. Clone this repository
-2. Set up your environment
-3. Follow the session guidance in [`instructions/`](instructions/README.md), or
-   use the linked docs-site entry point when this repository uses that pattern
+   ```sh
+   ./create-data.sh --workspace <workspace-id>
+   ./create-data.sh --workspace <workspace-id> --verify-only --evaluate-agent
+   ```
 
-### 🎯 Learning outcomes
+PowerShell presenters can use `pwsh ./create-data.ps1` with the same options.
+For the complete walkthrough, see the
+[setup and demo guide](instructions/README.md).
+
+## What the deployment creates
+
+| Fabric item | Default name | Role in LTG243 |
+| --- | --- | --- |
+| Lakehouse | `CaldovaAnalytics` | Narrative evidence and analytical Delta tables |
+| Eventhouse and KQL database | `CaldovaSignals` | Forecast, sales, weather, and line signals |
+| Fabric SQL Database | `CaldovaOperations` | Governed relational business records |
+| Fabric IQ ontology | `CaldovaBusinessMeaning` | Entities, relationships, and bound business meaning |
+| Direct Lake semantic model | `CaldovaLaunchModel` | Named measures and analytical grounding |
+| Fabric data agent | `CaldovaAnalyst` | Grounded question, answer, and source inspection |
+
+The exact hero question is:
+
+> What's driving the increase in Hydration Sunscreen sales, and is it likely to continue?
+
+The data agent is non-deterministic. Evaluate the returned facts and sources
+rather than expecting byte-identical prose.
+
+## Repository contents
+
+| Path | Contents |
+| --- | --- |
+| [`data/`](data/README.md) | Deterministic synthetic data, generator, validator, manifest, and expected-answer checks |
+| [`src/fabric/`](src/README.md) | Fabric IQ ontology, semantic model, and data-agent definitions |
+| [`create-data.sh`](create-data.sh) | One-command Bash deployment and verification entry point |
+| [`create-data.ps1`](create-data.ps1) | Equivalent PowerShell deployment entry point |
+| [`instructions/`](instructions/README.md) | Presenter and self-paced environment setup |
+| [`docs/`](docs/README.md) | Scenario and technical reference |
+| [`delivery-resources/`](delivery-resources/README.md) | Re-delivery preflight and demo cues |
+
+Workspace IDs, item IDs, tokens, screenshots, and deployment output stay local.
+
+## Learning outcomes
 
 By the end of this session, you will be able to:
 
-- Outcome 1
-- Outcome 2
-- Outcome 3
+- Explain how Fabric IQ binds governed business meaning to operational and
+  analytical data.
+- Ground a Fabric data agent in configured semantic, KQL, Lakehouse, and ontology
+  surfaces.
+- Check a generated answer against retained sources and expected facts.
 
-### 💻 Technologies used
+## Continue learning
 
-- Technology 1
-- Technology 2
-- Technology 3
+- [Session recording](https://aka.ms/aitour27/LTG243/youtube)
+- [Microsoft Learn](https://learn.microsoft.com)
+- [AI Tour 2027 Resource Center](https://aka.ms/aitour27-resource-center)
+- [Microsoft Foundry Community](https://aka.ms/MicrosoftFoundryDiscord-AITour27)
 
-### 📚 Continue your learning
+The [Microsoft Learn MCP Server](https://aka.ms/learnmcp) can give an AI coding
+agent current first-party documentation while it helps with setup.
 
-Pick your next step based on your learning style:
+## Deliver this session
 
-| Resource | What you'll get |
-|----------|-----------------|
-| **[Session Recording](https://aka.ms/aitour27/LTG243/youtube)** | A recording of session LTG243 by the session creator |
-| **[Microsoft Learn](https://learn.microsoft.com)** | Official documentation and guided learning paths on these topics |
-| **[AI Tour 2027 Resource Center](https://aka.ms/aitour27-resource-center)** | Additional session repos and materials from AI Tour 2027 |
-| **[Microsoft Foundry Community](https://aka.ms/MicrosoftFoundryDiscord-AITour27)** | Connect with other learners and experts in our Discord community |
+Presenters and re-delivery partners should follow the
+[delivery runbook](delivery-resources/README.md).
 
-### 🌟 Microsoft Learn MCP Server
+## Trademarks
 
-<!-- Remove this section if the Microsoft Learn MCP Server is not relevant to the session. -->
-
-The Microsoft Learn MCP Server gives your AI agent direct access to Microsoft's official documentation — grounded, up-to-date answers about the topics in this session.
-
-**GitHub Copilot CLI** — Install with:
-
-```shell
-copilot plugin install microsoftdocs/mcp
-```
-
-**VS Code** — One-click install:  
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Microsoft_Learn_MCP-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect/mcp/install?name=microsoft-learn&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Flearn.microsoft.com%2Fapi%2Fmcp%22%7D)
-
-For more information, visit the [Learn MCP Server repo](https://aka.ms/learnmcp).
-
-### 👥 Content owners
-
-<!-- TODO: Add yourself as a content owner
-1. Change the src in the image tag to {your github url}.png
-2. Change INSERT NAME HERE to your name
-3. Change the github url in the final href to your url. -->
-
-<table>
-<tr>
-    <td align="center"><a href="http://github.com/yourGitHubHandle">
-        <img src="https://github.com/yourGitHubHandle.png" width="100px;" alt="INSERT NAME HERE"/><br />
-        <sub><b>INSERT NAME HERE</b></sub></a><br />
-            <a href="https://github.com/yourGitHubHandle" title="talk">📢</a>
-    </td>
-</tr></table>
-
-### Deliver this session
-
-Presenters and re-delivery partners can find the deck, recordings, presenter
-notes, and delivery guidance in [`delivery-resources/`](delivery-resources/README.md).
-
-### ⚖️ Trademarks
-
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general). Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+This project may contain trademarks or logos for projects, products, or
+services. Authorized use of Microsoft trademarks or logos is subject to
+[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general).

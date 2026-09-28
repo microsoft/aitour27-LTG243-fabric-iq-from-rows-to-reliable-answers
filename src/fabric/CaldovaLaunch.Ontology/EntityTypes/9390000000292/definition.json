@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "9390000000292",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "Persona",
+  "entityIdParts": [
+    "9390000000296"
+  ],
+  "displayNamePropertyId": "9390000000294",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "9390000000293",
+      "name": "personaId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000294",
+      "name": "displayName",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000295",
+      "name": "title",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000296",
+      "name": "roleId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": []
+}

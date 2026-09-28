@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "9390000000117",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "MaintenanceWindow",
+  "entityIdParts": [
+    "9390000000118"
+  ],
+  "displayNamePropertyId": "9390000000118",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "9390000000118",
+      "name": "maintenanceWindowId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000119",
+      "name": "lineId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000120",
+      "name": "maintenanceType",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000121",
+      "name": "originalStartDate",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "9390000000122",
+      "name": "originalEndDate",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "9390000000123",
+      "name": "durationDays",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000124",
+      "name": "operatingDaysLost",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000125",
+      "name": "deferredStartDate",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "9390000000126",
+      "name": "deferredEndDate",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "9390000000127",
+      "name": "deferralDays",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000128",
+      "name": "lastMajorMaintenanceDate",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "9390000000129",
+      "name": "insideCampaignPeriod",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    },
+    {
+      "id": "9390000000130",
+      "name": "deferredOutsideCampaignPeriod",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    }
+  ],
+  "timeseriesProperties": []
+}

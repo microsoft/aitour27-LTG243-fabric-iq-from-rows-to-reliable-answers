@@ -1,0 +1,5 @@
+optionId,policyId,policyVersion,sustainedRateFactor,requiredUtilisation,requestedDeferralDays,permittedDeferralDays,projectedStressIndex,projectedStressPctOfThreshold,stressCeilingPct,withinStressCeiling,policyPass
+OPT-1,POL-MAINT-002,2.1,0.9,0.9,0,28,2055.1968,99.11,115,true,true
+OPT-2,POL-MAINT-002,2.1,1,0.72,0,0,2073.6,100,115,true,true
+OPT-3,POL-MAINT-002,2.1,1,0.72,28,0,2350.08,113.33,115,true,false
+OPT-4,POL-MAINT-002,2.1,0.9,0.9,28,28,2307.1392,111.26,115,true,true

@@ -1,0 +1,7 @@
+lineId,plantId,lineName,family,ratedRateUnitsPerMin,scheduledHoursPerDay,baselineUtilisation,status,sunCareQualified,preferredForHeroProduct,alternateLineForHeroProduct,requiresQualification
+PKG-01,PLANT-01,Packaging Line 1,Skin Health,30,16,0.74,running,false,false,false,false
+PKG-02,PLANT-02,Packaging Line 2,Sun Care,25,16,0.72,running,true,true,false,false
+PKG-03,PLANT-02,Packaging Line 3,Sun Care,20,8,0.81,running,true,false,false,false
+PKG-04,PLANT-01,Packaging Line 4,Supplements,15,8,0.69,running,false,false,false,false
+PKG-05,PLANT-01,Packaging Line 5,Sun Care,18,8,0.7,running,false,false,true,true
+PKG-06,PLANT-02,Packaging Line 6,Skin Health,22,8,0.76,running,false,false,false,false

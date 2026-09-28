@@ -1,0 +1,279 @@
+{
+  "dataset": "Caldova Hydration Sunscreen launch dataset",
+  "schemaVersion": "3.0.0",
+  "generatedFrom": "data/scenario.json",
+  "demos": [
+    {
+      "id": "DEMO-1",
+      "sources": [
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/dashboard/forecast-variance-by-region.csv"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/dashboard/hero-demand-trend.csv"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/dashboard/weather-anomaly-by-region.csv"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/dashboard/weather-forecast-outlook.csv"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/dashboard/weather-demand-reconciliation.csv"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/external-signals/climate-advisories.jsonl"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/external-signals/signal-evidence-trace.jsonl"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/external-signals/weather-provider.json"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/external-signals/weather-events.jsonl"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/external-signals/forecast-briefings.jsonl"
+        }
+      ],
+      "expectedNumericValues": {
+        "affectedRegionCount": 4,
+        "incrementalUnits": 100000,
+        "incrementalRevenueUsd": 800000,
+        "unitPriceUsd": 8,
+        "persistenceProbability": 0.78,
+        "confidence": 0.78,
+        "seaSurfaceAnomalyC": 1.4,
+        "regionVariancePct": {
+          "REG-COASTAL": 31.4,
+          "REG-SOUTH": 26.8,
+          "REG-DELTA": 18.9,
+          "REG-ISLAND": 22.5,
+          "REG-NORTH": 1.2,
+          "REG-CENTRAL": -0.8
+        },
+        "decisionDayHorizonDays": 30,
+        "decisionDayForecastTargetDays": 30,
+        "seasonalPersistenceProbability": 0.78,
+        "decisionDayForecastMeanAnomalyByRegion": {
+          "REG-COASTAL": {
+            "meanUvIndexAnomalyP50": 2.35,
+            "minUvIndexAnomalyP50": 2.12,
+            "maxUvIndexAnomalyP50": 2.58,
+            "meanTemperatureMeanAnomalyCP50": 3.13,
+            "minTemperatureMeanAnomalyCP50": 2.81,
+            "maxTemperatureMeanAnomalyCP50": 3.44,
+            "meanConfidence": 0.86
+          },
+          "REG-SOUTH": {
+            "meanUvIndexAnomalyP50": 1.95,
+            "minUvIndexAnomalyP50": 1.8,
+            "maxUvIndexAnomalyP50": 2.09,
+            "meanTemperatureMeanAnomalyCP50": 2.59,
+            "minTemperatureMeanAnomalyCP50": 2.38,
+            "maxTemperatureMeanAnomalyCP50": 2.79,
+            "meanConfidence": 0.86
+          },
+          "REG-DELTA": {
+            "meanUvIndexAnomalyP50": 1.44,
+            "minUvIndexAnomalyP50": 1.35,
+            "maxUvIndexAnomalyP50": 1.53,
+            "meanTemperatureMeanAnomalyCP50": 1.91,
+            "minTemperatureMeanAnomalyCP50": 1.79,
+            "maxTemperatureMeanAnomalyCP50": 2.05,
+            "meanConfidence": 0.86
+          },
+          "REG-ISLAND": {
+            "meanUvIndexAnomalyP50": 1.84,
+            "minUvIndexAnomalyP50": 1.75,
+            "maxUvIndexAnomalyP50": 1.99,
+            "meanTemperatureMeanAnomalyCP50": 2.46,
+            "minTemperatureMeanAnomalyCP50": 2.32,
+            "maxTemperatureMeanAnomalyCP50": 2.68,
+            "meanConfidence": 0.86
+          },
+          "REG-NORTH": {
+            "meanUvIndexAnomalyP50": 0.09,
+            "minUvIndexAnomalyP50": 0.08,
+            "maxUvIndexAnomalyP50": 0.11,
+            "meanTemperatureMeanAnomalyCP50": 0.12,
+            "minTemperatureMeanAnomalyCP50": 0.1,
+            "maxTemperatureMeanAnomalyCP50": 0.15,
+            "meanConfidence": 0.85
+          },
+          "REG-CENTRAL": {
+            "meanUvIndexAnomalyP50": -0.05,
+            "minUvIndexAnomalyP50": -0.07,
+            "maxUvIndexAnomalyP50": -0.04,
+            "meanTemperatureMeanAnomalyCP50": -0.07,
+            "minTemperatureMeanAnomalyCP50": -0.09,
+            "maxTemperatureMeanAnomalyCP50": -0.06,
+            "meanConfidence": 0.85
+          }
+        },
+        "weatherDemandReconciliation": {
+          "REG-COASTAL": {
+            "modelledWeatherUpliftPct": 31.4,
+            "actualSalesVariancePct": 31.4,
+            "differencePct": 0
+          },
+          "REG-SOUTH": {
+            "modelledWeatherUpliftPct": 26.8,
+            "actualSalesVariancePct": 26.8,
+            "differencePct": 0
+          },
+          "REG-DELTA": {
+            "modelledWeatherUpliftPct": 18.9,
+            "actualSalesVariancePct": 18.9,
+            "differencePct": 0
+          },
+          "REG-ISLAND": {
+            "modelledWeatherUpliftPct": 22.5,
+            "actualSalesVariancePct": 22.5,
+            "differencePct": 0
+          },
+          "REG-NORTH": {
+            "modelledWeatherUpliftPct": 1.2,
+            "actualSalesVariancePct": 1.2,
+            "differencePct": 0
+          },
+          "REG-CENTRAL": {
+            "modelledWeatherUpliftPct": -0.8,
+            "actualSalesVariancePct": -0.8,
+            "differencePct": 0
+          }
+        }
+      },
+      "expectedIds": {
+        "signalId": "SIG-ENSO-2026-07",
+        "heroProductId": "PROD-HS-100",
+        "affectedRegionIds": [
+          "REG-COASTAL",
+          "REG-SOUTH",
+          "REG-DELTA",
+          "REG-ISLAND"
+        ],
+        "invalidatedAssumptionIds": [
+          "ASM-001",
+          "ASM-002"
+        ],
+        "weatherProviderId": "WX-MCS-001",
+        "weatherProviderSourceLabel": "Meridian Climate Services regional observation and forecast feed",
+        "decisionDayForecastIssueDate": "2026-08-03",
+        "decisionDayHorizonEnd": "2026-09-02",
+        "decisionDayLeadDayRange": "1..30, so the horizon covers the 30 days following the issue date",
+        "decisionDayForecastBriefingId": "WX-BRIEF-20260803"
+      }
+    },
+    {
+      "id": "DEMO-2",
+      "sources": [
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/decision-cases/decision-cases.jsonl"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/receipts/action-receipts.json"
+        }
+      ],
+      "expectedNumericValues": {
+        "blockedScenarioBudgetUsd": 420000,
+        "commercialApprovalLimitUsd": 250000,
+        "candidateIncrementalBudgetUsd": 180000
+      },
+      "expectedIds": {
+        "caseId": "CASE-2026-HS-001",
+        "blockingPolicy": "POL-COMMERCIAL-004:1.0",
+        "scenarioUnderReviewId": "SCN-2026-HS-B"
+      }
+    },
+    {
+      "id": "DEMO-3",
+      "sources": [
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/decision-cases/decision-cases.jsonl"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/decision-cases/decision-case-timeline.jsonl"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/receipts/action-receipts.json"
+        }
+      ],
+      "expectedNumericValues": {
+        "maintenanceOperatingDaysLost": 5,
+        "capacityWithoutMaintenanceUnits": 708480,
+        "capacityWithMaintenanceUnits": 622080,
+        "headroomWithoutMaintenanceUnits": 128480,
+        "headroomWithMaintenanceUnits": 42080,
+        "requiredIncrementalUnits": 100000,
+        "shortfallUnits": 57920,
+        "deferralDays": 28,
+        "projectedStressPctOfThreshold": 111.26,
+        "stressCeilingPct": 115,
+        "rateFactor": 0.9,
+        "utilisation": 0.9,
+        "maxDeliverableIncrementalUnitsUnderBestPlan": 217040
+      },
+      "expectedIds": {
+        "recommendedOptionId": "OPT-4",
+        "lineId": "PKG-02",
+        "maintenanceWindowId": "MW-PKG-02-2026-09",
+        "policy": "POL-MAINT-002:2.1"
+      }
+    },
+    {
+      "id": "DEMO-4",
+      "sources": [
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/retrieval/retrieval-corpus.jsonl"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/retrieval/retrieval-probes.jsonl"
+        },
+        {
+          "store": "Lakehouse",
+          "file": "data/lakehouse/decision-cases/decision-cases.jsonl"
+        }
+      ],
+      "expectedNumericValues": {
+        "retrievalCorpusRows": 351,
+        "plannedIncrementalUnits": 100000,
+        "plannedIncrementalRevenueUsd": 800000,
+        "stressPctOfThresholdAtMaintenance": 111.26
+      },
+      "expectedIds": {
+        "mustRetrieveCaseId": "CASE-2026-HS-001",
+        "futureSignalId": "SIG-ENSO-2027-04",
+        "expectedReuse": [
+          "OPT-4",
+          "POL-MAINT-002:2.1"
+        ],
+        "receiptIds": [],
+        "expectedChunkIds": [
+          "case-2026-hs-001-future-reuse",
+          "case-2026-hs-001-overview",
+          "case-2026-hs-001-option-opt-4",
+          "case-2026-hs-001-policy-pol-maint-002-v-2-1"
+        ]
+      }
+    }
+  ]
+}

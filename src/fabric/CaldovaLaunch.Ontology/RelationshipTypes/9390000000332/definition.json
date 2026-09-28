@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "9390000000332",
+  "name": "weather_model_explains_signal",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "9390000000226"
+  },
+  "target": {
+    "entityTypeId": "9390000000155"
+  }
+}

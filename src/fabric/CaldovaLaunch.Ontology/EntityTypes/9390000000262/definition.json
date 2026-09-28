@@ -1,0 +1,72 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "9390000000262",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "Correction",
+  "entityIdParts": [
+    "9390000000263"
+  ],
+  "displayNamePropertyId": "9390000000263",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "9390000000263",
+      "name": "correctionId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000264",
+      "name": "statement",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000265",
+      "name": "scopeKey",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000266",
+      "name": "proposedByRole",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000267",
+      "name": "proposedAt",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "9390000000268",
+      "name": "approvedByRole",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000269",
+      "name": "approvedAt",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "9390000000270",
+      "name": "status",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": []
+}

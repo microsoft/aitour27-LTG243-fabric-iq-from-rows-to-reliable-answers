@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "9390000000351",
+  "name": "policy_authorizes_commitment",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "9390000000241"
+  },
+  "target": {
+    "entityTypeId": "9390000000066"
+  }
+}

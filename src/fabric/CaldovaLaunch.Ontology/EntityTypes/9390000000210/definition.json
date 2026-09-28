@@ -1,0 +1,114 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "9390000000210",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "WeatherEvent",
+  "entityIdParts": [
+    "9390000000211"
+  ],
+  "displayNamePropertyId": "9390000000211",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "9390000000211",
+      "name": "eventId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000212",
+      "name": "eventType",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000213",
+      "name": "regionId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000214",
+      "name": "severity",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000215",
+      "name": "startDate",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "9390000000216",
+      "name": "endDate",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "DateTime"
+    },
+    {
+      "id": "9390000000217",
+      "name": "durationDays",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000218",
+      "name": "peakValue",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000219",
+      "name": "peakMetric",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000220",
+      "name": "signalId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000221",
+      "name": "relevantToHeroProduct",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    },
+    {
+      "id": "9390000000222",
+      "name": "headline",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000223",
+      "name": "provenance",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000225",
+      "name": "providerId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": []
+}

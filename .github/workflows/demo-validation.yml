@@ -1,0 +1,25 @@
+name: Demo validation
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check deployment entry points
+        run: |
+          bash -n create-data.sh
+          pwsh -NoProfile -Command '$null = [System.Management.Automation.Language.Parser]::ParseFile("create-data.ps1", [ref]$null, [ref]$null)'
+      - name: Verify deterministic payload
+        run: node data/tools/manifest.ts --check
+      - name: Validate data and Fabric contracts
+        run: node data/tools/validate.ts

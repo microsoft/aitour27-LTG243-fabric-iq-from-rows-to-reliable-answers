@@ -1,10 +1,12 @@
-# Docs
+# LTG243 technical reference
 
-<!-- AI TOUR TEMPLATE PLACEHOLDER: remove this folder when the session needs no additional documentation. -->
+- [LTG243 scenario](scenario-boundary.md)
+- [What the deployment creates](../instructions/README.md#what-this-deploys)
+- [Synthetic dataset reference](../data/README.md)
+- [Fabric IQ ontology](../src/fabric/CaldovaLaunch.Ontology/README.md)
+- [Direct Lake semantic model](../src/fabric/CaldovaLaunch.SemanticModel/README.md)
+- [Fabric data agent](../src/fabric/CaldovaLaunch.DataAgent/README.md)
+- [Agent-assisted deployment](../instructions/copilot.md)
 
-Use this folder for supporting documentation such as reference material and
-architecture/context.
-
-If this repository intentionally uses MkDocs or another docs-site pattern,
-attendee instructions can remain here. Link the attendee entry point clearly
-from the root README.
+Workspace screenshots and URLs stay with the presenter rather than in the
+deployable source.

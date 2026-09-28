@@ -1,8 +1,6 @@
-# Delivery resources
+# LTG243 presenter runbook
 
-<!-- AI TOUR TEMPLATE PLACEHOLDER: replace the required deck link before publication. Optional recording links can remain unavailable. -->
-
-Presenter, re-delivery, and train-the-trainer materials for this session.
+This repository owns the reproducible demo environment.
 
 ## Core materials
 
@@ -12,34 +10,44 @@ Presenter, re-delivery, and train-the-trainer materials for this session.
 | Attendee landing page | [Session README](../README.md) | Public starting point |
 | Workshop/lab instructions | [Instructions](../instructions/README.md) | Remove this row when not applicable |
 
-## Delivery checklist
+## Before travel
 
-- Review the session README
-- Review the attendee instructions
-- Open the deck
-- Review the presenter guidance below
-- Review live demo reproducibility guidance
-- Validate any required environment or setup
+1. Install Node.js 24+, Fabio 0.71.0+, and Bash or PowerShell 7.
+2. Deploy into a dedicated demo workspace by following
+   [the setup guide](../instructions/README.md).
+3. Run local validation, `--verify-only`, and `--evaluate-agent`.
+4. Confirm the presenter account can open the ontology, semantic model, and
+   `CaldovaAnalyst`.
+5. Keep the workspace and item IDs in private presenter notes, not in Git.
 
-## Session preparation
+## Before the session
 
-- Review the attendee entry point from the root README.
-- Review the delivery deck.
-- Validate the required environment and setup.
+1. Re-run:
 
-## Run of show
+   ```sh
+   ./create-data.sh --workspace <workspace-id> --verify-only --evaluate-agent
+   ```
 
-Add timing, transitions, and delivery notes.
+2. Open the ontology and Data Agent tabs before the talk.
+3. Ask the hero question once and inspect the source rows.
+4. Preserve the default open-decision dataset. Do not regenerate the optional
+   outcome slice.
 
-## Demo reproducibility
+## Live demo
 
-If the session includes live demos, link to or include the steps, code, setup,
-and notes required to reproduce them.
+Ask:
 
-## Setup notes
+```text
+What's driving the increase in Hydration Sunscreen sales, and is it likely to continue?
+```
 
-Use this section for short setup reminders. Link to detailed setup notes if needed.
+Show the grounded answer and its source rows. The wording can vary; check the
+facts and sources.
 
-## Support
+## Fallback
 
-Content owner or contact:
+If the tenant surface is unavailable, use the checked-in
+[`questions.json`](../data/evaluation/questions.json) and
+[`expected-results.json`](../data/evaluation/expected-results.json) to explain
+the expected result. Say that it is the expected result rather than a live
+tenant response.

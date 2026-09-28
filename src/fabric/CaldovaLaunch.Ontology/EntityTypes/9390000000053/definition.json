@@ -1,0 +1,100 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "9390000000053",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "CampaignScenario",
+  "entityIdParts": [
+    "9390000000054"
+  ],
+  "displayNamePropertyId": "9390000000054",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "9390000000054",
+      "name": "scenarioId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000055",
+      "name": "scenarioName",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000056",
+      "name": "incrementalBudgetUsd",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000057",
+      "name": "incrementalUnits",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000058",
+      "name": "incrementalRevenueUsd",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000059",
+      "name": "confidence",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000060",
+      "name": "supplyFeasible",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    },
+    {
+      "id": "9390000000061",
+      "name": "recommended",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    },
+    {
+      "id": "9390000000062",
+      "name": "approved",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Boolean"
+    },
+    {
+      "id": "9390000000063",
+      "name": "blockedByPolicyId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000064",
+      "name": "blockedByPolicyVersion",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000065",
+      "name": "rationale",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    }
+  ],
+  "timeseriesProperties": []
+}

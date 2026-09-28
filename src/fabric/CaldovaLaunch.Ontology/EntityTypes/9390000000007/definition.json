@@ -1,0 +1,110 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/entityType/1.0.0/schema.json",
+  "id": "9390000000007",
+  "namespace": "usertypes",
+  "baseEntityTypeId": null,
+  "name": "Campaign",
+  "entityIdParts": [
+    "9390000000008"
+  ],
+  "displayNamePropertyId": "9390000000008",
+  "namespaceType": "Custom",
+  "visibility": "Visible",
+  "properties": [
+    {
+      "id": "9390000000008",
+      "name": "campaignId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000009",
+      "name": "launchPlanId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000010",
+      "name": "regionId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000011",
+      "name": "productId",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000012",
+      "name": "campaignName",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000013",
+      "name": "channel",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000014",
+      "name": "status",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "String"
+    },
+    {
+      "id": "9390000000015",
+      "name": "baseBudgetUsd",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000016",
+      "name": "incrementalBudgetUsd",
+      "redefines": null,
+      "baseTypeNamespaceType": null,
+      "valueType": "Double"
+    }
+  ],
+  "timeseriesProperties": [
+    {
+      "id": "9390000000017",
+      "name": "impressions",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000018",
+      "name": "engagements",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000019",
+      "name": "spendUsd",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000020",
+      "name": "attributedUnits",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000021",
+      "name": "revenueUsd",
+      "valueType": "Double"
+    },
+    {
+      "id": "9390000000022",
+      "name": "contributionMarginPct",
+      "valueType": "Double"
+    }
+  ]
+}

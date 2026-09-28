@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/relationshipType/1.0.0/schema.json",
+  "namespace": "usertypes",
+  "id": "9390000000319",
+  "name": "order_serves_commitment",
+  "namespaceType": "Custom",
+  "source": {
+    "entityTypeId": "9390000000106"
+  },
+  "target": {
+    "entityTypeId": "9390000000066"
+  }
+}

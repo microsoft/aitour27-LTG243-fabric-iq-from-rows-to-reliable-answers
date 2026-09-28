@@ -1,0 +1,7 @@
+productId,productName,category,handlingClass,unitPriceUsd,hero
+PROD-HS-100,Hydration Sunscreen,Sun Care,ambient,8,true
+PROD-HS-110,Hydration Sunscreen Kids,Sun Care,ambient,9,false
+PROD-AS-200,After Sun Recovery Gel,Sun Care,ambient,6.5,false
+PROD-LB-400,Lip Care Balm,Sun Care,ambient,3.5,false
+PROD-DM-300,Daily Moisturiser,Skin Health,ambient,7,false
+PROD-VD-500,Vitamin D Supplement,Supplements,controlled,12,false

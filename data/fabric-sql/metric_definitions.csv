@@ -1,0 +1,5 @@
+metricId,metricVersion,metricName,status,definitionJson
+METRIC-CM-001,1.0,Contribution margin percent,approved,"{""expression"":""(revenue_usd - variable_cost_usd) / revenue_usd * 100""}"
+METRIC-COVERAGE-001,1.0,Supply coverage days,approved,"{""expression"":""net_available_units / average_daily_forecast_units""}"
+METRIC-FCSTVAR-001,1.0,Forecast variance percent,approved,"{""expression"":""(actual_units - forecast_units) / forecast_units * 100""}"
+METRIC-STRESS-001,1.0,Cumulative equipment stress index,approved,"{""expression"":""sum(producing_hours * pow(rate_factor, 3))""}"
