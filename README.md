@@ -97,10 +97,21 @@ By the end of this session, you will be able to:
 The [Microsoft Learn MCP Server](https://aka.ms/learnmcp) can give an AI coding
 agent current first-party documentation while it helps with setup.
 
-## Deliver this session
+### 👥 Content owners
 
-Presenters and re-delivery partners should follow the
-[delivery runbook](delivery-resources/README.md).
+<table>
+<tr>
+    <td align="center"><a href="https://github.com/videlalvaro">
+        <img src="https://avatars.githubusercontent.com/u/30834?v=4" width="100px;" alt="Alvaro Videla"/><br />
+        <sub><b>Alvaro Videla</b></sub></a><br />
+            <a href="https://github.com/videlalvaro" title="talk">📢</a>
+    </td>
+</tr></table>
+
+### Deliver this session
+
+Presenters and re-delivery partners can find the deck, recordings, presenter
+notes, and delivery guidance in [`delivery-resources/`](delivery-resources/README.md).
 
 ## Trademarks
 
